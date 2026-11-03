@@ -109,63 +109,64 @@ flowchart LR
 
 ---
 
-## 4. Cấu trúc thư mục
+## 4. Cấu trúc thư mục tổng thể dự án
 
-```text
 GioHangOnline/
-├── CMakeLists.txt
-├── README.md
-├── .gitignore                    # build/, *.exe, *.o, logs/
+├── README.md                 # hướng dẫn build/chạy, phân công nhóm
+├── Makefile                  # hoặc CMakeLists.txt
+│
+├── include/                  # file header (.h)
+│   ├── core/
+│   │   ├── Node.h
+│   │   └── DoublyLinkedList.h   # template, dùng cho TẤT CẢ danh sách
+│   ├── model/
+│   │   ├── Product.h
+│   │   ├── CartItem.h
+│   │   ├── Order.h
+│   │   ├── User.h
+│   │   └── Voucher.h
+│   ├── service/
+│   │   ├── Catalog.h
+│   │   ├── Cart.h
+│   │   ├── UndoManager.h
+│   │   ├── OrderService.h
+│   │   ├── PaymentService.h
+│   │   └── AuthService.h
+│   └── util/
+│       ├── FileIO.h
+│       ├── Validator.h       # kiểm tra input
+│       └── Logger.h
+│
+├── src/                      # cài đặt (.cpp) – cấu trúc song song với include/
+│   ├── core/ model/ service/ util/
+│   ├── ui/
+│   │   ├── ConsoleUI.cpp     # V1–V3
+│   │   └── WebServer.cpp     # V4
+│   └── main.cpp
+│
+├── web/                      # chỉ có ở V4
+│   ├── index.html
+│   ├── style.css
+│   └── app.js
+│
 ├── data/
-│   ├── san_pham_mau.csv          # kho mẫu, >= 30 dòng
-│   ├── gio_hang.csv              # tự sinh khi lưu
-│   └── don_hang.csv
-├── docs/
-│   ├── quyet_dinh_thiet_ke.md    # các điểm "cần quy ước" đã chốt
-│   ├── quy_uoc_api.md            # hợp đồng API (đóng băng GĐ0)
-│   ├── nhat_ky_AI.md
-│   ├── bang_test_case.xlsx
-│   └── bao_cao.pdf
-├── include/                      # file .h = hợp đồng giao diện
-│   ├── KetQua.h                  # enum KetQua + thongBaoTuKetQua()
-│   ├── QuyDinh.h                 # hằng số + hàm kiểm tra hợp lệ dùng chung
-│   ├── MatHang.h
-│   ├── DanhSachLienKetDoi.h
-│   ├── GioHang.h
-│   ├── DonHang.h                 # DonHang + QuanLyDonHang
-│   ├── KhoHang.h
-│   ├── KhuyenMai.h
-│   ├── NganXep.h                 # Stack cho Undo/Redo
-│   ├── LuuTru.h
-│   ├── TienIch.h
-│   ├── Menu.h
-│   └── api/
-│       ├── MayChu.h              # khởi tạo server, đăng ký route
-│       └── ChuyenDoiJson.h      # MatHang/DonHang <-> JSON
-├── src/                          # file .cpp tương ứng
-│   ├── main.cpp                  # entry point console
-│   ├── main_web.cpp              # entry point web server
-│   └── api/
+│   ├── products.csv
+│   ├── users.csv
+│   ├── vouchers.csv
+│   ├── orders.csv
+│   ├── carts/                # mỗi user một file giỏ
+│   └── backup/               # bản sao tự động trước mỗi lần ghi
+│
 ├── tests/
-│   ├── kiem_tra.h                # mini framework test
-│   └── test_*.cpp
-├── benchmark/
-│   └── do_hieu_nang.cpp
-├── third_party/                  # httplib.h, json.hpp (ghi rõ phiên bản)
-│   └── README.md
-└── web/                          # Frontend
-    ├── index.html
-    ├── css/style.css
-    ├── js/
-    │   ├── cauHinh.js
-    │   ├── apiKhach.js
-    │   ├── tienIch.js
-    │   ├── giaoDien.js
-    │   └── main.js
-    └── mock/                     # JSON giả để làm UI khi backend chưa xong
-```
-
----
+│   ├── test_dll.cpp          # test DLL: rỗng, 1 node, đầu/giữa/cuối
+│   ├── test_cart.cpp
+│   └── test_payment.cpp
+│
+├── logs/app.log
+└── docs/
+    ├── thiet-ke.md           # sơ đồ + giải thích
+    ├── phan-cong.md          
+    └── slide-demo/
 
 ## 5. Yêu cầu môi trường
 

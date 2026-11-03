@@ -1,121 +1,320 @@
-# 🛒 GioHangOnline — Hệ thống quản lý giỏ hàng trực tuyến
+# 🛒 HỆ THỐNG GIỎ HÀNG TRỰC TUYẾN
 
-> Bài tập dự án nhóm cuối kì — **Cấu trúc dữ liệu và giải thuật (C++)** · Đề tài 2
-> Giỏ hàng được cài đặt bằng **danh sách liên kết đôi tự viết**, có giao diện console và giao diện web (Frontend + Backend).
-
-![C++17](https://img.shields.io/badge/C%2B%2B-17-blue) ![CMake](https://img.shields.io/badge/CMake-%E2%89%A5%203.16-green) ![Status](https://img.shields.io/badge/status-in%20development-orange) ![License](https://img.shields.io/badge/license-academic-lightgrey)
+> Đồ án cuối kì môn **Cấu trúc dữ liệu và giải thuật**
+> Cấu trúc dữ liệu lõi: **Danh sách liên kết đôi (Doubly Linked List)**
 
 ---
 
-## Mục lục
+## 📑 Mục lục
 
-1. [Giới thiệu](#1-giới-thiệu)
-2. [Tính năng](#2-tính-năng)
-3. [Kiến trúc hệ thống](#3-kiến-trúc-hệ-thống)
-4. [Cấu trúc thư mục](#4-cấu-trúc-thư-mục)
-5. [Yêu cầu môi trường](#5-yêu-cầu-môi-trường)
-6. [Build và chạy](#6-build-và-chạy)
-7. [Tài liệu API](#7-tài-liệu-api)
-8. [Frontend](#8-frontend)
-9. [Quy ước code](#9-quy-ước-code)
-10. [Kiểm thử và chất lượng](#10-kiểm-thử-và-chất-lượng)
-11. [Độ phức tạp thuật toán](#11-độ-phức-tạp-thuật-toán)
-12. [Quy trình làm việc nhóm](#12-quy-trình-làm-việc-nhóm)
-13. [Lộ trình](#13-lộ-trình)
-14. [Tiêu chí hoàn thành (Definition of Done)](#14-tiêu-chí-hoàn-thành-definition-of-done)
-15. [Thành viên và phân công](#15-thành-viên-và-phân-công)
-16. [Minh bạch việc dùng AI](#16-minh-bạch-việc-dùng-ai)
-17. [Xử lý sự cố thường gặp](#17-xử-lý-sự-cố-thường-gặp)
-18. [Giấy phép và ghi nhận](#18-giấy-phép-và-ghi-nhận)
-
----
-
-## 1. Giới thiệu
-
-**GioHangOnline** mô phỏng phần lõi của giỏ hàng một cửa hàng trực tuyến: người dùng thêm, xem, sửa, xóa mặt hàng và tạo đơn hàng từ giỏ.
-
-Điểm cốt lõi của đề tài không nằm ở giao diện mà ở **cấu trúc dữ liệu**: giỏ hàng là một **danh sách liên kết đôi (Doubly Linked List) tự cài đặt**, mỗi node lưu một mặt hàng và hai con trỏ `truoc` / `sau`.
-
-Mục tiêu của dự án:
-
-| # | Mục tiêu | Cách chứng minh |
-|---|----------|-----------------|
-| 1 | Cài đúng danh sách liên kết đôi, không rò rỉ bộ nhớ | Bộ test + AddressSanitizer/Valgrind |
-| 2 | Giải thích được vì sao chọn cấu trúc này | Bảng độ phức tạp + benchmark (mục 11) |
-| 3 | Kiểm thử có hệ thống | 23 test case TC01–TC23 (mục 10) |
-| 4 | Mỗi thành viên giải thích được code của mình | Hỏi đáp chéo hằng tuần, nhật ký AI |
-| 5 | Sản phẩm demo thao tác được | Console ổn định + giao diện web |
-
-> **Lưu ý phạm vi:** giao diện không phải tiêu chí chấm chính. Console là bản demo bắt buộc và là phương án dự phòng; web chỉ được tích hợp sau khi lõi và nghiệp vụ đã đạt kiểm thử (xem [mục 13](#13-lộ-trình)).
+1. [Thông tin dự án](#1-thông-tin-dự-án)
+2. [Giới thiệu sản phẩm](#2-giới-thiệu-sản-phẩm)
+3. [Vì sao dùng danh sách liên kết đôi](#3-vì-sao-dùng-danh-sách-liên-kết-đôi)
+4. [Chức năng và điểm khác biệt](#4-chức-năng-và-điểm-khác-biệt)
+5. [Kiến trúc hệ thống](#5-kiến-trúc-hệ-thống)
+6. [Mô hình dữ liệu](#6-mô-hình-dữ-liệu)
+7. [Luồng chương trình](#7-luồng-chương-trình)
+8. [Cấu trúc thư mục tổng thể](#8-cấu-trúc-thư-mục-tổng-thể)
+9. [Bốn phiên bản của dự án](#9-bốn-phiên-bản-của-dự-án)
+10. [Quy trình thực hiện](#10-quy-trình-thực-hiện)
+11. [Cài đặt, biên dịch và chạy](#11-cài-đặt-biên-dịch-và-chạy)
+12. [Định dạng dữ liệu](#12-định-dạng-dữ-liệu)
+13. [Kiểm thử](#13-kiểm-thử)
+14. [Quản lý rủi ro](#14-quản-lý-rủi-ro)
+15. [Phân công thành viên](#15-phân-công-thành-viên)
+16. [Chuẩn bị báo cáo và vấn đáp](#16-chuẩn-bị-báo-cáo-và-vấn-đáp)
+17. [Hướng phát triển](#17-hướng-phát-triển)
+18. [Theo dõi tiến độ](#18-theo-dõi-tiến-độ)
 
 ---
 
-## 2. Tính năng
+## 1. Thông tin dự án
 
-### 2.1 Chức năng bắt buộc theo đề
+| Mục | Nội dung |
+|---|---|
+| Tên dự án | Hệ thống giỏ hàng trực tuyến |
+| Môn học | Cấu trúc dữ liệu và giải thuật |
+| Loại bài | Bài tập lớn cuối kì (dự án nhóm) |
+| Yêu cầu bắt buộc | Sử dụng danh sách liên kết đôi (theo yêu cầu giảng viên) |
+| Ngôn ngữ | C++ (chuẩn C++11 trở lên) |
+| Số thành viên | 5 |
+| Nhóm trưởng | _Nguyễn Văn Luyến_ |
+| Giảng viên hướng dẫn | _TS.Lê Văn Quốc Anh_ |
 
-| Mã | Chức năng | Quy tắc chính | Trạng thái |
-|----|-----------|---------------|:----------:|
-| F1 | Thêm mặt hàng vào giỏ | Hợp lệ: mã không rỗng, giá > 0, số lượng ≥ 1; trùng mã thì cộng dồn số lượng | ⬜ |
-| F2 | Xem giỏ hàng | Bảng STT/mã/tên/đơn giá/số lượng/thành tiền; tổng số lượng; tổng tiền (64-bit); xem xuôi và ngược | ⬜ |
-| F3a | Sửa mặt hàng | Sửa tên/giá/số lượng; không sửa mã; giá trị sai thì giữ nguyên | ⬜ |
-| F3b | Xóa mặt hàng | Xử lý 4 trường hợp: node duy nhất / đầu / cuối / giữa; giải phóng bộ nhớ | ⬜ |
-| F4 | Tạo đơn hàng | Từ chối giỏ rỗng; đơn là bản sao sâu; chỉ làm rỗng giỏ sau khi tạo đơn thành công | ⬜ |
 
-### 2.2 Tính năng mở rộng (theo mức ưu tiên)
 
-| Mức | Tính năng | Trạng thái |
-|-----|-----------|:----------:|
-| Nên làm | Lưu/đọc giỏ và đơn bằng CSV · Kho sản phẩm mẫu (≥ 30 dòng) · Chế độ **Xem cấu trúc** (in node và con trỏ) | ⬜ |
-| Nâng cao (chọn 2–3) | Mã giảm giá + phí vận chuyển · Sắp xếp giỏ (Bubble → Merge Sort) · Undo/Redo bằng Stack tự cài · Lịch sử đơn và thống kê | ⬜ |
-| Tối ưu (bắt buộc 1) | Chỉ mục bảng băm `maHang → Nut*` · Benchmark n = 1.000 / 10.000 / 100.000 | ⬜ |
-| Dài hạn | Nhiều người dùng · SQLite/MySQL · Docker | ⬜ |
+### Yêu cầu từ giảng viên
 
-*(Cập nhật ô trạng thái: ⬜ chưa làm · 🟨 đang làm · ✅ xong và đã qua test.)*
+Nhóm phải đáp ứng đủ 4 nội dung khi báo cáo:
+
+1. Giới thiệu và demo sản phẩm.
+2. Cho biết chức năng của hệ thống và điểm khác so với các hệ thống giỏ hàng hiện tại.
+3. Vấn đáp phần việc của từng thành viên, mỗi người giải thích phần mình làm.
+4. Nêu hướng phát triển và nâng cấp sau này.
 
 ---
 
-## 3. Kiến trúc hệ thống
+## 2. Giới thiệu sản phẩm
 
-### 3.1 Sơ đồ tổng thể
+Hệ thống mô phỏng quy trình mua sắm trực tuyến từ lúc **xem sản phẩm**, **thêm vào giỏ**, **chỉnh sửa giỏ** đến **thanh toán** và **xem lịch sử đơn hàng**.
 
-```mermaid
-flowchart LR
-    subgraph Client["Trình duyệt (Frontend)"]
-        UI["HTML / CSS / JavaScript thuần"]
-    end
-    subgraph Server["Tiến trình C++ (Backend)"]
-        API["Lớp API<br/>MayChu, ChuyenDoiJson"]
-        CON["Console UI<br/>Menu"]
-        NV["Lớp nghiệp vụ<br/>GioHang, DonHang, KhoHang, KhuyenMai"]
-        CORE["Lõi CTDL<br/>DanhSachLienKetDoi"]
-        LT["Lưu trữ / Tiện ích<br/>LuuTru, TienIch"]
-    end
-    UI -- "HTTP + JSON" --> API
-    API --> NV
-    CON --> NV
-    NV --> CORE
-    NV --> LT
-    LT --> FILE[("data/*.csv")]
+Điểm đặc trưng của dự án là **toàn bộ danh sách trong hệ thống đều được xây dựng trên một lớp danh sách liên kết đôi dùng chung** (`DoublyLinkedList<T>`), thay vì dùng sẵn `vector` hay `list` của thư viện chuẩn. Nhờ đó nhóm tự cài đặt và hiểu rõ từng thao tác con trỏ.
+
+**Mục tiêu sản phẩm**
+
+- Chạy ổn định, không sập khi người dùng nhập sai.
+- Dữ liệu không bị mất khi tắt chương trình.
+- Thanh toán đúng: không âm kho, không mất đơn, lỗi thì hoàn lại.
+- Giao diện dễ dùng, rõ ràng, thao tác ít bước.
+
+**Phạm vi**
+
+- Đây là hệ thống **mô phỏng** phục vụ học tập.
+- Thanh toán là **giả lập**, không kết nối ngân hàng hay cổng thanh toán thật.
+- Dữ liệu lưu bằng file văn bản (CSV), chưa dùng cơ sở dữ liệu.
+
+---
+
+## 3. Vì sao dùng danh sách liên kết đôi
+
+| Nhu cầu của giỏ hàng | DLL giải quyết thế nào |
+|---|---|
+| Xóa một món ở giữa giỏ | Có `prev` và `next` nên nối lại hai bên mà không phải dịch cả mảng. Khi đã có con trỏ tới node, thao tác xóa là O(1). |
+| Xem giỏ theo hai chiều | Duyệt xuôi bằng `next`, duyệt ngược bằng `prev`. |
+| Di chuyển món lên/xuống | Đổi chỗ node với node kế bên bằng cách đổi con trỏ. |
+| Undo / Redo | `prev` là lùi một bước, `next` là tiến một bước (kèm con trỏ `current`). |
+| Phân trang sản phẩm | Trang trước và trang sau tương ứng `prev` và `next`. |
+| Thêm đầu / cuối giỏ | Có cả `head` và `tail` nên cả hai đều O(1). |
+
+**So sánh nhanh (để trả lời vấn đáp)**
+
+| Thao tác | Mảng | Danh sách đơn | Danh sách liên kết đôi |
+|---|---|---|---|
+| Thêm cuối | O(1) (có thể phải cấp phát lại) | O(1) nếu có `tail` | O(1) |
+| Xóa giữa khi đã có con trỏ node | O(n) (dịch phần tử) | O(n) (phải tìm node đứng trước) | **O(1)** |
+| Duyệt ngược | Dễ | Không thể | **Dễ** |
+| Truy cập theo chỉ số | **O(1)** | O(n) | O(n) |
+| Bộ nhớ | Ít nhất | Vừa | Nhiều hơn (thêm `prev`) |
+
+Hạn chế cần nói thật: DLL truy cập theo chỉ số chậm (O(n)) và tốn thêm bộ nhớ cho con trỏ `prev`. Với giỏ hàng, số món thường ít và thao tác chủ yếu là thêm/xóa/duyệt, nên đây là lựa chọn phù hợp.
+
+---
+
+## 4. Chức năng và điểm khác biệt
+
+### 4.1. Danh sách chức năng
+
+| Nhóm | Chức năng | Phiên bản |
+|---|---|---|
+| Sản phẩm | Xem danh sách sản phẩm | V1 |
+| Sản phẩm | Tìm kiếm theo tên | V2 |
+| Sản phẩm | Lọc theo danh mục | V2 |
+| Sản phẩm | Sắp xếp theo giá (tăng/giảm) | V2 |
+| Sản phẩm | Phân trang (trang trước/sau) | V3 |
+| Giỏ hàng | Thêm sản phẩm (cộng dồn nếu đã có) | V1 |
+| Giỏ hàng | Xóa sản phẩm | V1 |
+| Giỏ hàng | Sửa số lượng | V1 |
+| Giỏ hàng | Xem giỏ và tính tổng tiền | V1 |
+| Giỏ hàng | Di chuyển món lên/xuống | V3 |
+| Giỏ hàng | Undo / Redo | V3 |
+| Thanh toán | Kiểm tra tồn kho, tạo đơn, in hóa đơn | V2 |
+| Thanh toán | Mã giảm giá | V3 |
+| Thanh toán | Nhiều phương thức (COD, chuyển khoản, ví giả lập) | V3 |
+| Thanh toán | Hoàn tác (rollback) khi lỗi | V3 |
+| Đơn hàng | Xem lịch sử đơn hàng | V2 |
+| Tài khoản | Đăng ký / đăng nhập, mỗi người một giỏ | V3 |
+| Dữ liệu | Lưu và đọc file CSV | V2 |
+| Dữ liệu | Sao lưu tự động và khôi phục | V4 |
+| Giao diện | Menu console | V1 |
+| Giao diện | Giao diện web | V4 |
+| Chất lượng | Kiểm tra nhập liệu (Validator) | V2 |
+| Chất lượng | Ghi log lỗi | V3 |
+| Chất lượng | Bộ test tự động | V1 → V4 |
+
+### 4.2. Điểm khác so với các hệ thống giỏ hàng hiện tại
+
+| Hệ thống thông thường | Hệ thống của nhóm |
+|---|---|
+| Thường chỉ có thêm/xóa/sửa | Có **Undo/Redo** nhiều bước nhờ DLL |
+| Sắp xếp thứ tự món trong giỏ thường cố định | Cho **di chuyển món lên/xuống** tự do |
+| Thanh toán lỗi giữa chừng có thể sai kho | Có quy trình **kiểm tra → trừ kho → ghi đơn → rollback nếu lỗi** |
+| Cấu trúc bên trong là hộp đen | Mã nguồn lõi **tự cài đặt**, minh bạch, giải thích được từng con trỏ |
+| Dữ liệu dễ hỏng khi ghi lỗi | **Sao lưu trước mỗi lần ghi**, khôi phục khi file hỏng (V4) |
+
+> Lưu ý trung thực khi trình bày: các sàn thương mại lớn (Shopee, Lazada...) có quy mô, bảo mật và thanh toán thật mà dự án không có. Điểm khác biệt của nhóm nằm ở **cách tổ chức dữ liệu bằng DLL** và **các tính năng minh họa rõ cấu trúc dữ liệu** (Undo/Redo, di chuyển món, phân trang), không phải ở quy mô.
+
+---
+
+## 5. Kiến trúc hệ thống
+
+Hệ thống chia **4 tầng**. Tầng trên chỉ gọi tầng dưới, không gọi ngược lại.
+
+```
+┌─────────────────────────────────────────────┐
+│  TẦNG GIAO DIỆN (UI)                        │
+│  Menu console (V1-V3)  →  Web UI (V4)       │
+└───────────────────┬─────────────────────────┘
+                    │ gọi hàm
+┌───────────────────▼─────────────────────────┐
+│  TẦNG NGHIỆP VỤ (Service)                   │
+│  Cart │ Catalog │ OrderService              │
+│  PaymentService │ AuthService │ UndoManager │
+└───────────────────┬─────────────────────────┘
+                    │ thao tác trên
+┌───────────────────▼─────────────────────────┐
+│  TẦNG CẤU TRÚC DỮ LIỆU (Core) ← TRỌNG TÂM   │
+│  Node<T>  +  DoublyLinkedList<T>            │
+└───────────────────┬─────────────────────────┘
+                    │ đọc/ghi
+┌───────────────────▼─────────────────────────┐
+│  TẦNG LƯU TRỮ (Storage)                     │
+│  File CSV  →  (hướng phát triển: SQL)       │
+└─────────────────────────────────────────────┘
 ```
 
-### 3.2 Nguyên tắc kiến trúc
+**Lợi ích của việc phân tầng**
 
-1. **Phụ thuộc một chiều:** lớp dưới không gọi lớp trên. Lõi và nghiệp vụ **không dùng `cin`/`cout`**; chúng trả về mã kết quả `KetQua`.
-2. **Hai "adapter" dùng chung nghiệp vụ:** Console (`Menu`) và Web (`MayChu`) cùng gọi `GioHang`/`DonHang`, nên đổi giao diện không phải sửa lõi.
-3. **Một nguồn sự thật:** trạng thái giỏ hàng nằm ở server. Frontend chỉ hiển thị; sau mỗi thao tác nó tải lại dữ liệu từ API.
-4. **Một tên – một nghĩa:** cùng một khái niệm dùng cùng một tên ở C++, JSON, JavaScript và CSV (ví dụ `maHang`).
-5. **Đóng băng hợp đồng giao diện:** các file `.h` được chốt ở Giai đoạn 0; muốn đổi chữ ký hàm phải qua quy trình ở [mục 9.5](#95-quy-trình-thay-đổi-header).
+- Nâng từ console (V3) lên web (V4) chỉ đổi tầng UI, không sửa Core.
+- Mỗi thành viên làm một tầng/module, ít đụng code của nhau.
+- Dễ kiểm thử: test Core độc lập với giao diện.
 
 ---
 
-## 4. Cấu trúc thư mục tổng thể dự án
+## 6. Mô hình dữ liệu
 
+### 6.1. Node và danh sách liên kết đôi
+
+```
+Node<T>:   [prev] ←── [data] ──→ [next]
+
+DoublyLinkedList<T>:
+    head   → node đầu
+    tail   → node cuối
+    size   → số phần tử
+
+Thao tác chính:
+    pushFront, pushBack          thêm đầu / cuối
+    insertAt                     thêm vào vị trí bất kỳ
+    removeNode, removeAt         xóa node
+    find                         tìm theo điều kiện
+    traverseForward              duyệt xuôi
+    traverseBackward             duyệt ngược
+    moveUp, moveDown             đổi chỗ với node kế bên
+    clear                        xóa toàn bộ, giải phóng bộ nhớ
+```
+
+`DoublyLinkedList<T>` viết dưới dạng **template** để dùng chung cho mọi loại dữ liệu, nên chỉ cần một file header.
+
+### 6.2. Các lớp dữ liệu
+
+| Lớp | Thuộc tính chính |
+|---|---|
+| `Product` | id, ten, gia, tonKho, danhMuc |
+| `CartItem` | idSanPham, soLuong, ghiChu |
+| `Order` | maDon, tenDangNhap, ngay, DLL<CartItem>, tongTien, trangThai, phuongThuc |
+| `User` | tenDangNhap, matKhauBam, hoTen |
+| `Voucher` | ma, loai, giaTri, donToiThieu, soLanConLai |
+| `CartAction` | loaiThaoTac, idSanPham, soLuongCu, soLuongMoi (dùng cho Undo/Redo) |
+
+### 6.3. Các danh sách trong hệ thống (đều là DLL)
+
+| Danh sách | Kiểu | Dùng để |
+|---|---|---|
+| Danh mục sản phẩm | `DLL<Product>` | Hiển thị, tìm, lọc, sắp xếp, phân trang |
+| Giỏ hàng | `DLL<CartItem>` | Thêm, xóa, sửa, di chuyển món |
+| Lịch sử đơn | `DLL<Order>` | Xem đơn cũ mới → cũ hoặc cũ → mới |
+| Lịch sử thao tác | `DLL<CartAction>` + con trỏ `current` | Undo / Redo |
+
+---
+
+## 7. Luồng chương trình
+
+### 7.1. Luồng chính
+
+```
+[Khởi động]
+    │
+    ▼
+Đọc file dữ liệu → nạp vào DLL ──(lỗi file?)──► báo lỗi + dùng dữ liệu mặc định
+    │
+    ▼
+[Đăng nhập / Khách]  ──────────────────┐
+    │                                   │
+    ▼                                   │
+[MENU CHÍNH] ◄──────────────────────────┘
+    ├─ 1. Xem sản phẩm ──► tìm / lọc / sắp xếp / phân trang
+    │        └─► chọn món → nhập số lượng → THÊM VÀO GIỎ
+    ├─ 2. Xem giỏ hàng ──► sửa SL / xóa / di chuyển / Undo / Redo
+    ├─ 3. Thanh toán
+    ├─ 4. Lịch sử đơn hàng
+    └─ 0. Thoát ──► LƯU file ──► kết thúc
+```
+
+### 7.2. Luồng thêm vào giỏ
+
+```
+Nhập id + số lượng
+   │
+   ├─ id không tồn tại?         → báo lỗi, quay lại
+   ├─ số lượng ≤ 0 hoặc > tồn?  → báo lỗi, quay lại
+   │
+   ▼
+Duyệt DLL giỏ tìm id đó
+   ├─ Đã có   → cộng dồn số lượng (không tạo node mới)
+   └─ Chưa có → pushBack node mới
+   │
+   ▼
+Ghi 1 action vào UndoManager  →  hiển thị giỏ mới
+```
+
+### 7.3. Luồng thanh toán
+
+```
+Giỏ rỗng? ──► chặn, báo "giỏ trống"
+   │
+   ▼
+BƯỚC 1: Kiểm tra lại tồn kho từng món
+   │ thiếu hàng → báo món nào thiếu, cho sửa giỏ
+   ▼
+BƯỚC 2: Áp mã giảm giá (nếu có) → tính tổng tiền
+   ▼
+BƯỚC 3: Chọn phương thức (COD / chuyển khoản / ví giả lập)
+   ▼
+BƯỚC 4: Xác nhận cuối (hiện hóa đơn tạm, hỏi Y/N)
+   ▼
+BƯỚC 5: Trừ tồn kho → tạo Order → ghi file → xóa giỏ
+   │ lỗi ở bất kỳ bước ghi nào → ROLLBACK (hoàn tồn kho)
+   ▼
+In hóa đơn (màn hình + file)
+```
+
+**Nguyên tắc cốt lõi:** kiểm tra trước, trừ kho sau, lỗi thì hoàn lại.
+
+### 7.4. Luồng Undo / Redo
+
+```
+Các thao tác:   [A] ⇄ [B] ⇄ [C] ⇄ [D]
+                              ▲
+                           current
+
+Undo  → current lùi về prev  (hoàn tác thao tác C)
+Redo  → current tiến lên next (làm lại thao tác C)
+Thao tác mới sau khi Undo → xóa các node phía sau current,
+                            rồi thêm node mới vào cuối
+```
+
+---
+
+## 8. Cấu trúc thư mục tổng thể
+
+Đây là cấu trúc đầy đủ của bản cuối (V4). Phần 9 cho biết mỗi phiên bản thêm những file nào.
+
+```
 GioHangOnline/
-├── README.md                 # hướng dẫn build/chạy, phân công nhóm
-├── Makefile                  # hoặc CMakeLists.txt
+├── README.md                    # tài liệu này
+├── Makefile                     # biên dịch và chạy
 │
-├── include/                  # file header (.h)
+├── include/                     # file header (.h)
 │   ├── core/
 │   │   ├── Node.h
 │   │   └── DoublyLinkedList.h   # template, dùng cho TẤT CẢ danh sách
@@ -134,17 +333,21 @@ GioHangOnline/
 │   │   └── AuthService.h
 │   └── util/
 │       ├── FileIO.h
-│       ├── Validator.h       # kiểm tra input
+│       ├── Validator.h
 │       └── Logger.h
 │
-├── src/                      # cài đặt (.cpp) – cấu trúc song song với include/
-│   ├── core/ model/ service/ util/
+├── src/                         # cài đặt (.cpp), song song với include/
+│   ├── core/                    # trống: DLL viết trong header (template)
+│   ├── model/                   # Product, CartItem, Order, User, Voucher
+│   ├── service/                 # Catalog, Cart, UndoManager, OrderService,
+│   │                            # PaymentService, AuthService
+│   ├── util/                    # FileIO, Validator, Logger
 │   ├── ui/
-│   │   ├── ConsoleUI.cpp     # V1–V3
-│   │   └── WebServer.cpp     # V4
+│   │   ├── ConsoleUI.cpp        # V1–V3
+│   │   └── WebServer.cpp        # V4
 │   └── main.cpp
 │
-├── web/                      # chỉ có ở V4
+├── web/                         # chỉ dùng ở V4
 │   ├── index.html
 │   ├── style.css
 │   └── app.js
@@ -154,542 +357,578 @@ GioHangOnline/
 │   ├── users.csv
 │   ├── vouchers.csv
 │   ├── orders.csv
-│   ├── carts/                # mỗi user một file giỏ
-│   └── backup/               # bản sao tự động trước mỗi lần ghi
+│   ├── carts/                   # mỗi người dùng một file giỏ
+│   └── backup/                  # bản sao tự động trước mỗi lần ghi
 │
 ├── tests/
-│   ├── test_dll.cpp          # test DLL: rỗng, 1 node, đầu/giữa/cuối
+│   ├── test_dll.cpp
 │   ├── test_cart.cpp
 │   └── test_payment.cpp
 │
-├── logs/app.log
+├── logs/
+│   └── app.log
+│
 └── docs/
-    ├── thiet-ke.md           # sơ đồ + giải thích
-    ├── phan-cong.md          
+    ├── thiet-ke.md              # sơ đồ + giải thích thiết kế
+    ├── phan-cong.md             # ai làm file nào (phục vụ vấn đáp)
     └── slide-demo/
+```
 
-## 5. Yêu cầu môi trường
+### Vai trò từng thư mục
 
-| Thành phần | Yêu cầu |
-|------------|---------|
-| Trình biên dịch | `g++` ≥ 9 (MinGW-w64/MSYS2 trên Windows, hoặc g++ trên Linux/WSL) hoặc MSVC 2019+, chuẩn **C++17** |
-| Build | CMake ≥ 3.16 (dự phòng: lệnh `g++` trực tiếp) |
-| Git | Git + tài khoản GitHub |
-| Trình duyệt | Chrome hoặc Edge bản mới (dùng DevTools để gỡ lỗi Frontend) |
-| Công cụ gọi API | `curl` hoặc Postman |
-| Kiểm tra bộ nhớ | AddressSanitizer (`-fsanitize=address`) hoặc Valgrind (Linux/WSL) |
-| Soạn thảo | VS Code (C/C++, CMake Tools) hoặc CLion |
-
-**Thư viện bên thứ ba** (chỉ một file header mỗi thư viện, đặt trong `third_party/`):
-
-- [`cpp-httplib`](https://github.com/yhirose/cpp-httplib) — HTTP server.
-- [`nlohmann/json`](https://github.com/nlohmann/json) — đọc/ghi JSON.
-
-> Ghi rõ **số phiên bản** đã dùng vào `third_party/README.md` để mọi người dùng cùng một bản.
-
-**Cả nhóm phải dùng cùng một loại trình biên dịch và cùng chuẩn C++17** để tránh lỗi "máy tôi chạy được".
+| Thư mục | Vai trò |
+|---|---|
+| `include/` | Khai báo lớp và hàm (file `.h`) |
+| `src/` | Cài đặt chi tiết (file `.cpp`) |
+| `web/` | Giao diện web (chỉ V4) |
+| `data/` | Dữ liệu chạy thật của hệ thống |
+| `tests/` | Chương trình kiểm thử |
+| `logs/` | Nhật ký lỗi khi chạy |
+| `docs/` | Tài liệu thiết kế, phân công, slide |
 
 ---
 
-## 6. Build và chạy
+## 9. Bốn phiên bản của dự án
 
-> Các lệnh dưới đây là **mẫu chuẩn của dự án**; hãy chạy thử trên máy mình ngay ở Giai đoạn 0 và sửa README nếu có khác biệt.
+**Nguyên tắc chung:** mỗi phiên bản là một **mốc chạy được độc lập**. Nếu phiên bản sau không kịp thì nhóm vẫn nộp phiên bản trước đó đã hoàn chỉnh.
 
-### 6.1 Clone và build bằng CMake
+### Bảng so sánh tổng quát
+
+| | V1 | V2 | V3 | V4 |
+|---|---|---|---|---|
+| Tên gọi | Nền tảng | Nghiệp vụ | Khác biệt | Hoàn chỉnh |
+| DLL + giỏ hàng cơ bản | ✅ | ✅ | ✅ | ✅ |
+| Lưu file | ❌ | ✅ | ✅ | ✅ + sao lưu |
+| Tìm / lọc / sắp xếp | ❌ | ✅ | ✅ | ✅ |
+| Thanh toán | ❌ | Cơ bản | Đầy đủ + rollback | Đầy đủ |
+| Undo / Redo | ❌ | ❌ | ✅ | ✅ |
+| Tài khoản, voucher | ❌ | ❌ | ✅ | ✅ |
+| Giao diện | Console | Console | Console | **Web** (kèm console dự phòng) |
+| Kiểm thử | Test DLL | + Cart | + Payment | Đủ bộ |
+
+---
+
+### 🔹 V1: Nền tảng
+
+**Mục tiêu:** DLL chạy đúng và giỏ hàng cơ bản dùng được.
+
+**Chức năng**
+
+- Cài đặt `DoublyLinkedList<T>`: `pushBack`, `removeNode`, `find`, duyệt hai chiều.
+- Giỏ hàng: thêm, xóa, sửa số lượng, xem, tính tổng tiền.
+- Danh mục sản phẩm khởi tạo cứng trong code (khoảng 10–15 sản phẩm).
+- Menu console đơn giản. **Chưa lưu file.**
+
+**File của V1**
+
+```
+GioHangOnline/
+├── README.md
+├── Makefile
+├── include/
+│   ├── core/
+│   │   ├── Node.h
+│   │   └── DoublyLinkedList.h
+│   ├── model/
+│   │   ├── Product.h
+│   │   └── CartItem.h
+│   └── service/
+│       └── Cart.h
+├── src/
+│   ├── model/                (Product.cpp, CartItem.cpp)
+│   ├── service/              (Cart.cpp)
+│   ├── ui/ConsoleUI.cpp
+│   └── main.cpp
+└── tests/
+    └── test_dll.cpp
+```
+
+**Quá trình thực hiện**
+
+| Bước | Công việc | Người phụ trách |
+|---|---|---|
+| 1 | Viết `Node.h` và `DoublyLinkedList.h` (thêm/xóa/duyệt) | Nhóm trưởng |
+| 2 | Viết `test_dll.cpp`: danh sách rỗng, 1 node, thêm/xóa đầu, giữa, cuối | Nhóm trưởng |
+| 3 | Viết `Product`, `CartItem` | TV 3, TV 2 |
+| 4 | Viết `Cart` dùng DLL | TV 2 |
+| 5 | Viết menu console và `main.cpp` | TV 5 |
+| 6 | Tích hợp, chạy thử, sửa lỗi | Cả nhóm |
+
+**Tiêu chí hoàn thành V1**
+
+- [ ] Test DLL qua hết các trường hợp biên.
+- [ ] Demo thêm/xóa/sửa giỏ liên tục 5 phút không sập.
+- [ ] Mỗi thành viên giải thích được phần của mình.
+
+---
+
+### 🔹 V2: Hoàn thiện nghiệp vụ
+
+**Mục tiêu:** hệ thống dùng được thật, dữ liệu không mất, nhập sai không sập.
+
+**Chức năng thêm so với V1**
+
+- Lưu và đọc dữ liệu bằng file CSV.
+- Tìm kiếm theo tên, lọc theo danh mục.
+- Sắp xếp theo giá (merge sort trên DLL).
+- Thanh toán cơ bản: kiểm tra tồn kho, tạo đơn, in hóa đơn.
+- Lịch sử đơn hàng.
+- Validator: chặn nhập chữ thay số, số âm, id không tồn tại.
+
+**File thêm ở V2**
+
+```
+include/
+├── model/Order.h
+├── service/
+│   ├── Catalog.h
+│   └── OrderService.h
+└── util/
+    ├── FileIO.h
+    └── Validator.h
+src/
+├── model/Order.cpp
+├── service/(Catalog.cpp, OrderService.cpp)
+└── util/(FileIO.cpp, Validator.cpp)
+data/
+├── products.csv
+└── orders.csv
+tests/
+└── test_cart.cpp
+```
+
+**Quá trình thực hiện**
+
+| Bước | Công việc | Người phụ trách |
+|---|---|---|
+| 1 | Viết `FileIO` đọc/ghi CSV, nạp vào DLL | TV 5 |
+| 2 | Chuyển danh mục từ code cứng sang `products.csv` | TV 3 |
+| 3 | Viết tìm / lọc / sắp xếp | TV 3 |
+| 4 | Viết `Validator` và gắn vào mọi chỗ nhập | TV 5 |
+| 5 | Viết `Order`, `OrderService` (kiểm kho, tạo đơn, hóa đơn) | TV 4 |
+| 6 | Viết lịch sử đơn hàng | TV 4 |
+| 7 | Viết `test_cart.cpp` | TV 2 |
+| 8 | Tích hợp, kiểm thử nhập bậy | Cả nhóm |
+
+**Tiêu chí hoàn thành V2**
+
+- [ ] Tắt và mở lại chương trình vẫn còn dữ liệu.
+- [ ] Nhập bậy (chữ, số âm, id lạ) không làm chương trình sập.
+- [ ] Thanh toán không bao giờ làm tồn kho âm.
+
+---
+
+### 🔹 V3: Khác biệt
+
+**Mục tiêu:** có những tính năng làm nên điểm khác biệt, chuẩn bị cho phần giảng viên hỏi "khác gì hệ thống hiện tại".
+
+**Chức năng thêm so với V2**
+
+- **Undo / Redo** giỏ hàng (DLL + con trỏ `current`).
+- **Di chuyển món** lên/xuống trong giỏ.
+- **Phân trang** sản phẩm (trang trước/sau).
+- **Tài khoản:** đăng ký, đăng nhập, mỗi người một giỏ.
+- **Mã giảm giá** và nhiều phương thức thanh toán (giả lập).
+- **Rollback** khi thanh toán lỗi, ghi log lỗi ra file.
+
+**File thêm ở V3**
+
+```
+include/
+├── model/
+│   ├── User.h
+│   └── Voucher.h
+├── service/
+│   ├── UndoManager.h
+│   ├── PaymentService.h
+│   └── AuthService.h
+└── util/Logger.h
+src/
+├── model/(User.cpp, Voucher.cpp)
+├── service/(UndoManager.cpp, PaymentService.cpp, AuthService.cpp)
+└── util/Logger.cpp
+data/
+├── users.csv
+├── vouchers.csv
+└── carts/                  # mỗi người dùng một file giỏ
+logs/
+└── app.log
+tests/
+└── test_payment.cpp
+```
+
+**Quá trình thực hiện**
+
+| Bước | Công việc | Người phụ trách |
+|---|---|---|
+| 1 | Viết `UndoManager` (DLL `CartAction` + `current`) | TV 2 |
+| 2 | Thêm `moveUp`/`moveDown` vào DLL và giỏ hàng | Nhóm trưởng, TV 2 |
+| 3 | Viết phân trang cho danh mục | TV 3 |
+| 4 | Viết `User`, `AuthService`, lưu giỏ theo từng người | TV 5 |
+| 5 | Viết `Voucher`, `PaymentService` (nhiều phương thức) | TV 4 |
+| 6 | Thêm rollback vào thanh toán | TV 4 |
+| 7 | Viết `Logger` và gắn vào các điểm dễ lỗi | TV 5 |
+| 8 | Viết `test_payment.cpp` | TV 4 |
+| 9 | Tích hợp, kiểm thử, sửa lỗi | Cả nhóm |
+
+**Tiêu chí hoàn thành V3**
+
+- [ ] Undo/Redo đúng qua nhiều bước, kể cả khi thao tác mới sau Undo.
+- [ ] Giả lập lỗi thanh toán vẫn hoàn tồn kho đúng.
+- [ ] Hai tài khoản khác nhau có giỏ riêng, không lẫn.
+
+---
+
+### 🔹 V4: Bản hoàn chỉnh (final)
+
+**Mục tiêu:** chất lượng cao, giao diện hiện đại, sẵn sàng báo cáo.
+
+**Chức năng thêm so với V3**
+
+- **Giao diện web:** C++ chạy server nhỏ (thư viện `cpp-httplib`, một file header), giao diện HTML/CSS/JS gọi API.
+- Giỏ hàng cập nhật ngay trên trang, hiển thị rõ ràng, tương thích màn hình điện thoại.
+- **Sao lưu tự động** trước mỗi lần ghi, khôi phục khi file hỏng.
+- Bộ test đầy đủ cho DLL, giỏ hàng, thanh toán.
+- Tài liệu, slide và kịch bản demo hoàn chỉnh.
+- Giữ **chế độ console dự phòng** nếu web gặp sự cố ngày báo cáo.
+
+**File thêm ở V4**
+
+```
+src/ui/WebServer.cpp
+web/
+├── index.html
+├── style.css
+└── app.js
+data/backup/                # bản sao tự động
+docs/
+├── thiet-ke.md
+├── phan-cong.md
+└── slide-demo/
+```
+
+**Quá trình thực hiện**
+
+| Bước | Công việc | Người phụ trách |
+|---|---|---|
+| 1 | Thiết kế các API (xem sản phẩm, giỏ, thanh toán...) | Nhóm trưởng |
+| 2 | Viết `WebServer.cpp` nối API với Service | TV 5, Nhóm trưởng |
+| 3 | Viết giao diện web (`index.html`, `style.css`, `app.js`) | TV 5, TV 3 |
+| 4 | Thêm sao lưu và khôi phục vào `FileIO` | TV 5 |
+| 5 | Bổ sung test, chạy toàn bộ bộ test | Cả nhóm |
+| 6 | Viết `thiet-ke.md`, `phan-cong.md`, làm slide | Cả nhóm |
+| 7 | Tập demo, quay video demo dự phòng | Cả nhóm |
+
+**Tiêu chí hoàn thành V4**
+
+- [ ] Demo trên trình duyệt chạy trơn tru, không lỗi.
+- [ ] Chế độ console dự phòng vẫn chạy được.
+- [ ] Toàn bộ test qua.
+- [ ] Có video demo dự phòng.
+- [ ] Mỗi thành viên trả lời được câu hỏi về phần của mình.
+
+> **Cảnh báo rủi ro V4:** phần web là phần rủi ro nhất. Vì vậy nó nằm ở V4 và **không làm thay đổi Core**. Nếu không kịp, nhóm nộp V3 vẫn đầy đủ điểm khác biệt.
+
+---
+
+## 10. Quy trình thực hiện
+
+### 10.1. Quy trình tổng thể
+
+```
+Họp nhóm chốt ngôn ngữ + phân công
+        │
+        ▼
+Viết Core (DLL) + test  ──►  V1  ──►  Tích hợp, chạy thử
+        │
+        ▼
+Thêm nghiệp vụ, lưu file  ──►  V2  ──►  Tích hợp, kiểm thử nhập bậy
+        │
+        ▼
+Thêm tính năng khác biệt  ──►  V3  ──►  Tích hợp, kiểm thử
+        │
+        ▼
+Thêm web, sao lưu, tài liệu  ──►  V4  ──►  Demo thử, hoàn thiện
+        │
+        ▼
+Báo cáo và vấn đáp
+```
+
+### 10.2. Quy tắc làm việc nhóm
+
+1. **Mỗi người sở hữu theo module**, tự viết và tự giải thích phần của mình.
+2. **Core làm trước và test kỹ**, vì cả nhóm phụ thuộc vào đó.
+3. **Tích hợp cuối mỗi phiên bản**, không dồn lỗi tích hợp về cuối kỳ.
+4. **Đọc chéo code** (code review) khoảng 15 phút cho mỗi module, để ít nhất hai người hiểu mỗi phần.
+5. **Không nộp code không hiểu.** Vấn đáp sẽ lộ ngay phần nào chép mà không hiểu.
+
+### 10.3. Quy trình Git (khuyến nghị)
+
+```
+main            ← bản ổn định, chỉ ghép khi đã test
+ ├─ dev         ← nhánh tích hợp chung
+ │   ├─ tv1-core
+ │   ├─ tv2-cart
+ │   ├─ tv3-catalog
+ │   ├─ tv4-order
+ │   └─ tv5-storage-ui
+```
+
+- Mỗi người làm trên nhánh của mình.
+- Ghép vào `dev` khi xong một phần và đã chạy test.
+- Ghép `dev` vào `main` khi hoàn thành mỗi phiên bản, rồi gắn tag `v1`, `v2`, `v3`, `v4`.
+
+### 10.4. Quy ước đặt tên
+
+- Tên lớp: `PascalCase` (ví dụ `CartItem`).
+- Tên hàm và biến: `camelCase` (ví dụ `themVaoGio`, `tongTien`).
+- Một lớp một cặp file `.h` và `.cpp` trùng tên.
+- Có comment ngắn giải thích ở các đoạn xử lý con trỏ.
+
+---
+
+## 11. Cài đặt, biên dịch và chạy
+
+### Yêu cầu
+
+- Trình biên dịch hỗ trợ C++11 trở lên (g++, clang++ hoặc MSVC).
+- `make` (hoặc dùng Code::Blocks / Visual Studio / CMake nếu nhóm quen hơn).
+
+### Các lệnh (khi đã viết `Makefile`)
 
 ```bash
-git clone <URL-repo>
-cd GioHangOnline
-cmake -S . -B build -DCMAKE_BUILD_TYPE=Release
-cmake --build build
+# Biên dịch
+make
+
+# Chạy chương trình (console)
+make run
+
+# Chạy bộ test
+make test
+
+# Dọn file biên dịch
+make clean
 ```
 
-Kết quả:
+> Nội dung `Makefile` sẽ được viết khi làm V1. Các lệnh trên là mục tiêu cần hỗ trợ.
 
-| File chạy | Chức năng |
-|-----------|-----------|
-| `gio_hang` | Ứng dụng console |
-| `gio_hang_web` | Web server (API + phục vụ thư mục `web/`) |
-| `chay_test` | Chạy toàn bộ test tự động |
-| `do_hieu_nang` | Benchmark |
-
-### 6.2 Chạy console
+### Chạy bản web (V4)
 
 ```bash
-./build/gio_hang
+make web
+# Mở trình duyệt tại địa chỉ hiển thị trên màn hình (ví dụ http://localhost:8080)
 ```
 
-### 6.3 Chạy web
+### Lưu ý khi nộp / demo
 
-```bash
-./build/gio_hang_web --port 8080 --web web --data data
+- Chép cả thư mục `data/` kèm chương trình để có dữ liệu mẫu.
+- Kiểm tra chương trình chạy được trên **máy dùng để demo**, không chỉ trên máy cá nhân.
+- Chuẩn bị sẵn video demo phòng khi máy hoặc mạng có sự cố.
+
+---
+
+## 12. Định dạng dữ liệu
+
+Dữ liệu lưu dạng CSV, mỗi dòng một bản ghi, ngăn cách bằng dấu phẩy. Dòng đầu là tiêu đề.
+
+**`data/products.csv`**
+```
+id,ten,gia,tonKho,danhMuc
 ```
 
-Mở trình duyệt: <http://127.0.0.1:8080>
+**`data/users.csv`**
+```
+tenDangNhap,matKhauBam,hoTen
+```
+> Không lưu mật khẩu dạng chữ thường. Lưu **giá trị đã băm**.
 
-Tham số:
-
-| Tham số | Mặc định | Ý nghĩa |
-|---------|----------|---------|
-| `--port` | `8080` | Cổng lắng nghe |
-| `--web` | `web` | Thư mục chứa giao diện |
-| `--data` | `data` | Thư mục chứa file CSV |
-
-Server mặc định chỉ lắng nghe `127.0.0.1` (không mở ra mạng ngoài).
-
-### 6.4 Chạy test và kiểm tra bộ nhớ
-
-```bash
-./build/chay_test                # kỳ vọng: "Dat X / X test"
+**`data/vouchers.csv`**
+```
+maVoucher,loai,giaTri,donToiThieu,soLanConLai
 ```
 
-Kiểm tra rò rỉ bộ nhớ (Linux/WSL):
+**`data/orders.csv`**
+```
+maDon,tenDangNhap,ngay,tongTien,trangThai,phuongThuc,danhSachMon
+```
+`danhSachMon` có dạng `id:soLuong;id:soLuong`.
 
-```bash
-cmake -S . -B build_asan -DCMAKE_BUILD_TYPE=Debug \
-      -DCMAKE_CXX_FLAGS="-fsanitize=address -g"
-cmake --build build_asan
-./build_asan/chay_test
+**`data/carts/<tenDangNhap>.csv`**
+```
+idSanPham,soLuong,ghiChu
 ```
 
-### 6.5 Phương án dự phòng (không cần CMake)
+**Quy tắc ghi file an toàn**
 
-```bash
-g++ -std=c++17 -Wall -Wextra -Iinclude -Ithird_party src/*.cpp -o gio_hang   # chỉnh danh sách file cho đúng
+1. Sao chép file cũ vào `data/backup/` trước khi ghi.
+2. Ghi ra file tạm, ghi xong mới thay file thật.
+3. Khi đọc, nếu file hỏng thì thông báo rõ và khôi phục từ bản sao lưu gần nhất.
+
+---
+
+## 13. Kiểm thử
+
+### 13.1. Các lớp kiểm thử
+
+| File test | Kiểm tra | Từ phiên bản |
+|---|---|---|
+| `test_dll.cpp` | DLL: rỗng, 1 node, thêm/xóa đầu-giữa-cuối, duyệt xuôi/ngược, `moveUp`/`moveDown`, `clear` | V1 |
+| `test_cart.cpp` | Thêm cộng dồn, xóa, sửa số lượng, tổng tiền, Undo/Redo | V2 (mở rộng V3) |
+| `test_payment.cpp` | Thiếu kho, giỏ rỗng, voucher, rollback khi lỗi | V3 |
+
+### 13.2. Các trường hợp biên của DLL cần test
+
+- [ ] Danh sách rỗng: duyệt, xóa, tìm.
+- [ ] Danh sách có đúng 1 phần tử rồi xóa nó (`head` và `tail` phải về rỗng).
+- [ ] Xóa node đầu, node cuối, node giữa.
+- [ ] Thêm vào vị trí đầu, cuối, giữa, vị trí ngoài phạm vi.
+- [ ] `moveUp` ở node đầu, `moveDown` ở node cuối (không được hỏng danh sách).
+- [ ] Duyệt xuôi và duyệt ngược cho cùng kết quả (đảo thứ tự).
+- [ ] `clear` rồi dùng lại danh sách.
+
+### 13.3. Kiểm thử nhập liệu
+
+- [ ] Nhập chữ ở chỗ cần số.
+- [ ] Nhập số âm, số 0, số rất lớn.
+- [ ] Nhập id không tồn tại.
+- [ ] Nhập chuỗi rỗng, chuỗi rất dài.
+- [ ] Nhấn Enter liên tục.
+
+### 13.4. Kiểm thử bộ nhớ
+
+- Kiểm tra rò rỉ bộ nhớ (ví dụ dùng `valgrind` trên Linux hoặc công cụ tương đương), nhất là sau khi xóa node và `clear`.
+
+---
+
+## 14. Quản lý rủi ro
+
+### 14.1. Các phương án triển khai đã cân nhắc
+
+| Phương án | Mô tả | Khả thi (ước lượng) | Rủi ro chính |
+|---|---|---|---|
+| **A: Đi từng bậc V1 → V4 (chọn)** | Mỗi V là một mốc nộp được | ~85–90% | V4 web có thể không kịp, khi đó nộp V3 |
+| B: Chỉ console, dồn sức cho V3 | Bỏ web | ~90–95% | Giao diện ít ấn tượng |
+| C: Làm thẳng bản web | Bỏ qua V1–V2 | ~50–60% | Kẹt tích hợp, DLL chưa vững |
+| D: Chia 5 mảng riêng, ghép cuối | Ghép ở tuần cuối | ~55–65% | Lỗi tích hợp dồn vào phút chót |
+
+> Tỉ lệ là **ước lượng** dựa trên độ phức tạp và trình độ nhóm, không phải số đo chính xác.
+
+**Lý do chọn phương án A (đạt ngưỡng ≥ 80%)**
+
+1. Mỗi mốc đều nộp được, luôn có phương án lùi.
+2. Core làm trước và test kỹ, các tầng trên có nền chắc.
+3. Tích hợp liên tục, không dồn về cuối.
+
+### 14.2. Bảng rủi ro và cách xử lý
+
+| Rủi ro | Mức độ | Cách xử lý |
+|---|---|---|
+| Lỗi con trỏ / rò rỉ bộ nhớ trong DLL | Cao | Viết `test_dll.cpp` trước, test mọi trường hợp biên |
+| Thành viên không kịp hoặc không hiểu bài | Cao | Chia module nhỏ, đọc chéo code, hỏi nhau trong nhóm |
+| Nhập sai làm sập chương trình | Cao | Validator cho **mọi** chỗ nhập |
+| Lỗi tích hợp dồn cuối kỳ | Trung bình | Tích hợp cuối mỗi phiên bản |
+| Mất hoặc hỏng dữ liệu | Trung bình | Sao lưu trước khi ghi, ghi qua file tạm |
+| Web hỏng ngày demo | Trung bình | Giữ console dự phòng, quay video demo |
+| Xung đột code khi làm chung | Trung bình | Dùng Git, mỗi người một nhánh |
+| Thanh toán sai kho | Cao | Kiểm tra → trừ → ghi → rollback |
+| Không đủ thời gian | Trung bình | Cắt tính năng theo thứ tự: web (V4) trước, rồi voucher, rồi phân trang |
+
+---
+
+## 15. Phân công thành viên
+
+| TV | Sở hữu (file) | Câu hỏi vấn đáp có thể gặp |
+|---|---|---|
+| **1 (Nhóm trưởng)** | `Node.h`, `DoublyLinkedList.h`, `test_dll.cpp`, `main.cpp`, tích hợp | Vì sao dùng DLL? Độ phức tạp từng thao tác? Xử lý con trỏ khi xóa node ra sao? |
+| **2** | `Cart`, `CartItem`, `UndoManager`, `test_cart.cpp` | Thêm món đã có thì xử lý thế nào? Undo/Redo hoạt động ra sao? |
+| **3** | `Product`, `Catalog`, tìm/lọc/sắp xếp, phân trang | Sắp xếp trên DLL làm thế nào? Phân trang dùng `prev`/`next` ra sao? |
+| **4** | `Order`, `OrderService`, `PaymentService`, `Voucher`, `test_payment.cpp` | Vì sao kiểm tra kho trước khi trừ? Rollback là gì, làm thế nào? |
+| **5** | `FileIO`, `Validator`, `Logger`, `User`, `AuthService`, giao diện | Dữ liệu lưu thế nào? Nhập sai xử lý ra sao? Mật khẩu lưu thế nào? |
+
+Chi tiết phân công thực tế ghi tại `docs/phan-cong.md` (mỗi người ghi rõ file mình viết và hàm quan trọng nhất).
+
+**Mẫu ghi trong `docs/phan-cong.md`**
+
 ```
-
-### 6.6 Đo hiệu năng
-
-```bash
-./build/do_hieu_nang        # luôn chạy bản Release (-O2)
+Thành viên: ...
+File phụ trách: ...
+Hàm quan trọng nhất: ...
+Giải thích ngắn (3–5 câu) hàm đó hoạt động thế nào: ...
+Khó khăn gặp phải và cách giải quyết: ...
 ```
 
 ---
 
-## 7. Tài liệu API
+## 16. Chuẩn bị báo cáo và vấn đáp
 
-Địa chỉ gốc: `http://127.0.0.1:8080/api` · Định dạng: JSON, mã hóa UTF-8.
+### 16.1. Bố cục buổi báo cáo (gợi ý)
 
-### 7.1 Khuôn phản hồi chung
+| Phần | Nội dung | Gợi ý thời lượng |
+|---|---|---|
+| 1 | Giới thiệu sản phẩm và mục tiêu | 1–2 phút |
+| 2 | Demo luồng chính: xem sản phẩm → thêm giỏ → sửa → thanh toán | 3–5 phút |
+| 3 | Demo điểm khác biệt: Undo/Redo, di chuyển món, rollback | 2–3 phút |
+| 4 | Giải thích cấu trúc DLL và vì sao chọn | 2 phút |
+| 5 | Mỗi thành viên nói phần mình | 1–2 phút/người |
+| 6 | Hướng phát triển | 1 phút |
 
-Mọi phản hồi (kể cả lỗi) đều có dạng:
+### 16.2. Checklist trước ngày báo cáo
 
-```json
-{
-  "thanhCong": true,
-  "maKetQua": "THANH_CONG",
-  "thongBao": "Đã thêm mặt hàng vào giỏ.",
-  "duLieu": {}
-}
-```
+- [ ] Chương trình chạy được trên máy demo.
+- [ ] Dữ liệu mẫu trong `data/` đã đầy đủ.
+- [ ] Có kịch bản demo từng bước, đã tập ít nhất 2 lần.
+- [ ] Có video demo dự phòng.
+- [ ] Chế độ console dự phòng chạy được.
+- [ ] Mỗi người đã đọc lại code phần mình và phần của một người khác.
+- [ ] Slide đã xong, thống nhất người trình bày từng phần.
 
-`maKetQua` chính là tên enum `KetQua` ở backend; frontend dựa vào đó để xử lý, không dựa vào nội dung `thongBao`.
+### 16.3. Câu hỏi thường gặp và hướng trả lời
 
-### 7.2 Danh sách endpoint
-
-| Phương thức | Đường dẫn | Mô tả | Mã HTTP thành công |
-|-------------|-----------|-------|:------------------:|
-| GET | `/api/suc-khoe` | Kiểm tra server sống | 200 |
-| GET | `/api/gio` | Lấy giỏ hàng + tổng | 200 |
-| POST | `/api/gio` | Thêm mặt hàng (trùng mã thì cộng dồn) | 201 / 200 |
-| PUT | `/api/gio/{ma}` | Sửa tên / giá / số lượng | 200 |
-| DELETE | `/api/gio/{ma}` | Xóa một mặt hàng | 200 |
-| DELETE | `/api/gio` | Xóa toàn bộ giỏ | 200 |
-| GET | `/api/cau-truc` | Chế độ Xem cấu trúc (node + con trỏ) | 200 |
-| GET | `/api/kho` | Danh sách kho (`?tuKhoa=` để tìm) | 200 |
-| POST | `/api/don` | Tạo đơn từ giỏ | 201 |
-| GET | `/api/don` | Lịch sử đơn | 200 |
-| GET | `/api/don/{maDon}` | Chi tiết một đơn | 200 |
-
-### 7.3 Ánh xạ `KetQua` → mã HTTP
-
-| `maKetQua` | HTTP | Khi nào |
-|------------|:----:|---------|
-| `THANH_CONG` | 200/201 | Thành công |
-| `THANH_CONG_CONG_DON` | 200 | Thêm trùng mã, số lượng được cộng dồn |
-| `MA_KHONG_HOP_LE` | 400 | Mã rỗng, có khoảng trắng, quá dài |
-| `TEN_KHONG_HOP_LE` | 400 | Tên rỗng hoặc quá dài |
-| `GIA_KHONG_HOP_LE` | 400 | Giá ≤ 0 hoặc vượt giới hạn |
-| `SO_LUONG_KHONG_HOP_LE` | 400 | Số lượng < 1 hoặc vượt giới hạn |
-| `YEU_CAU_KHONG_HOP_LE` | 400 | JSON sai cú pháp / thiếu trường |
-| `KHONG_TIM_THAY` | 404 | Mã mặt hàng hoặc mã đơn không tồn tại |
-| `GIO_RONG` | 409 | Tạo đơn khi giỏ rỗng |
-| `VUOT_TON_KHO` | 409 | Số lượng vượt tồn kho |
-| `LOI_FILE` | 500 | Không đọc/ghi được file |
-
-### 7.4 Ví dụ
-
-**Thêm mặt hàng**
-
-```bash
-curl -X POST http://127.0.0.1:8080/api/gio \
-     -H "Content-Type: application/json" \
-     -d '{"maHang":"SP001","tenHang":"Chuot khong day","donGia":250000,"soLuong":2}'
-```
-
-```json
-{
-  "thanhCong": true,
-  "maKetQua": "THANH_CONG",
-  "thongBao": "Đã thêm mặt hàng vào giỏ.",
-  "duLieu": {
-    "matHang": { "maHang": "SP001", "tenHang": "Chuot khong day", "donGia": 250000, "soLuong": 2, "thanhTien": 500000 },
-    "daCongDon": false
-  }
-}
-```
-
-**Lấy giỏ hàng**
-
-```json
-{
-  "thanhCong": true,
-  "maKetQua": "THANH_CONG",
-  "thongBao": "",
-  "duLieu": {
-    "danhSachMatHang": [
-      { "stt": 1, "maHang": "SP001", "tenHang": "Chuot khong day", "donGia": 250000, "soLuong": 2, "thanhTien": 500000 }
-    ],
-    "soMatHang": 1,
-    "tongSoLuong": 2,
-    "tongTien": 500000
-  }
-}
-```
-
-**Lỗi dữ liệu**
-
-```json
-{
-  "thanhCong": false,
-  "maKetQua": "SO_LUONG_KHONG_HOP_LE",
-  "thongBao": "Số lượng phải từ 1 trở lên.",
-  "duLieu": null
-}
-```
-
-**Xem cấu trúc**
-
-```json
-{
-  "duLieu": {
-    "dau": "SP001", "cuoi": "SP003", "soNut": 3,
-    "cacNut": [
-      { "viTri": 0, "maHang": "SP001", "truoc": null,    "sau": "SP002" },
-      { "viTri": 1, "maHang": "SP002", "truoc": "SP001", "sau": "SP003" },
-      { "viTri": 2, "maHang": "SP003", "truoc": "SP002", "sau": null }
-    ]
-  }
-}
-```
-
-### 7.5 Quy tắc phía server
-
-- **Server luôn kiểm tra lại dữ liệu**, không tin client.
-- Mọi handler khóa `std::mutex` khi đọc/ghi giỏ (server xử lý nhiều luồng).
-- Giới hạn kích thước body request; JSON sai cú pháp trả `400`, không làm sập server.
-- Ghi file CSV theo kiểu **ghi file tạm rồi đổi tên** để không hỏng dữ liệu khi lỗi giữa chừng.
-- Ghi nhật ký mỗi request vào `logs/server.log` (thời điểm, phương thức, đường dẫn, mã HTTP).
-
-> Hợp đồng chi tiết nằm ở `docs/quy_uoc_api.md`. Mọi thay đổi API phải sửa file này trong cùng Pull Request.
+| Câu hỏi | Ý chính cần nói |
+|---|---|
+| Vì sao dùng DLL mà không dùng mảng? | Xóa giữa O(1) khi có con trỏ, duyệt hai chiều, Undo/Redo tự nhiên. Nói thêm hạn chế: truy cập theo chỉ số O(n), tốn bộ nhớ thêm. |
+| Độ phức tạp thêm vào cuối? | O(1) vì có `tail`. |
+| Tìm một sản phẩm trong giỏ? | O(n), phải duyệt từ `head`. |
+| Khi xóa node cuối, cần cập nhật gì? | `tail` trỏ về node trước, `next` của node mới cuối đặt về `nullptr`, giảm `size`. |
+| Xóa phần tử duy nhất thì sao? | `head` và `tail` đều về `nullptr`, `size` về 0. |
+| Undo/Redo làm thế nào? | DLL các thao tác + con trỏ `current`; thao tác mới sau Undo sẽ cắt phần phía sau. |
+| Thanh toán lỗi giữa chừng thì sao? | Kiểm tra trước, trừ kho sau, lỗi thì rollback hoàn kho. |
+| Dữ liệu lưu thế nào, mất thì sao? | CSV, sao lưu trước khi ghi, khôi phục từ bản sao. |
+| Khác hệ thống hiện tại ở đâu? | Undo/Redo, di chuyển món, rollback minh bạch, lõi tự cài đặt. Nói rõ quy mô không so được với sàn lớn. |
+| Hướng phát triển? | Xem phần 17. |
 
 ---
 
-## 8. Frontend
+## 17. Hướng phát triển
 
-### 8.1 Công nghệ
-
-**HTML5 + CSS3 + JavaScript (ES6) thuần**, không framework, không bước build. Server C++ phục vụ trực tiếp thư mục `web/`, nên không cần Node.js và không gặp vấn đề CORS (cùng nguồn gốc).
-
-React/Vite hoặc Qt dành cho giai đoạn dài hạn (v4.0), không làm trong học phần này.
-
-### 8.2 Màn hình
-
-| Màn hình | Nội dung |
-|----------|----------|
-| Kho sản phẩm | Lưới thẻ sản phẩm, ô chọn số lượng, nút **Thêm vào giỏ**, ô tìm kiếm |
-| Giỏ hàng | Bảng STT/mã/tên/đơn giá/số lượng (+/−)/thành tiền/xóa; tổng số lượng; tổng tiền; nút **Xóa tất cả**, **Tạo đơn** |
-| Thêm thủ công | Form nhập mã, tên, giá, số lượng (đúng yêu cầu F1) |
-| Xem cấu trúc | Sơ đồ `dau ⇄ node ⇄ node ⇄ cuoi` vẽ từ `/api/cau-truc` — dùng khi vấn đáp |
-| Đơn hàng | Lịch sử đơn, xem chi tiết |
-| Thông báo | Toast thành công/lỗi; trạng thái rỗng, đang tải, mất kết nối |
-
-### 8.3 Quy tắc bắt buộc
-
-1. **Server là nguồn sự thật:** sau mỗi thao tác thay đổi, gọi lại `layGioHang()` rồi vẽ lại. Không tự cộng tổng tiền ở client.
-2. **Kiểm tra ở client chỉ để trải nghiệm tốt hơn**; kiểm tra thật nằm ở server.
-3. **Chống XSS:** hiển thị tên hàng bằng `textContent`, không gán `innerHTML` với dữ liệu người dùng.
-4. Xử lý theo `maKetQua`, không so sánh chuỗi `thongBao`.
-5. Mọi lời gọi API đi qua `apiKhach.js`; các file khác không tự `fetch`.
-6. Tiền hiển thị dạng `1.250.000 đ` (dùng `Intl.NumberFormat('vi-VN')`).
-
-### 8.4 Quy trình làm Frontend
-
-1. Vẽ wireframe (giấy, draw.io hoặc Figma) và chốt `docs/quy_uoc_api.md`.
-2. Dựng giao diện bằng dữ liệu giả trong `web/mock/` (không cần chờ backend).
-3. Thay mock bằng API thật khi endpoint tương ứng đã qua test.
-4. Kiểm thử bằng checklist (mục 10.4) và tab **Network** của DevTools.
+| Hướng | Nội dung |
+|---|---|
+| Cơ sở dữ liệu | Thay CSV bằng SQL (ví dụ MySQL), giữ DLL làm bộ nhớ đệm |
+| Thanh toán thật | Kết nối cổng thanh toán (VNPay, MoMo...) thay cho giả lập |
+| Gợi ý sản phẩm | Dựa trên lịch sử mua hàng (hướng dữ liệu / AI) |
+| Đồng bộ | Giỏ hàng đồng bộ nhiều thiết bị theo tài khoản |
+| Quản trị | Thêm/sửa/xóa sản phẩm, thống kê doanh thu |
+| Bảo mật | Băm mật khẩu mạnh hơn, phân quyền người dùng |
+| Ứng dụng di động | Tách lõi thành API để làm app mobile |
+| Hiệu năng | Thêm bảng băm để tìm sản phẩm nhanh hơn khi dữ liệu lớn |
 
 ---
 
-## 9. Quy ước code
+## 18. Theo dõi tiến độ
 
-> Mục tiêu: mọi thành viên khai báo **trùng khớp** để không lỗi biên dịch/liên kết và dễ đọc code của nhau.
+| Phiên bản | Trạng thái | Ngày bắt đầu | Ngày xong | Ghi chú |
+|---|---|---|---|---|
+| V1: Nền tảng | ⬜ Chưa bắt đầu | | | |
+| V2: Nghiệp vụ | ⬜ Chưa bắt đầu | | | |
+| V3: Khác biệt | ⬜ Chưa bắt đầu | | | |
+| V4: Hoàn chỉnh | ⬜ Chưa bắt đầu | | | |
 
-### 9.1 Quy tắc đặt tên
-
-| Đối tượng | Quy tắc | Ví dụ |
-|-----------|---------|-------|
-| Ngôn ngữ đặt tên | Tiếng Việt **không dấu** | `maHang`, `themCuoi` |
-| File / lớp / struct | `PascalCase`, tên file trùng tên lớp | `GioHang.h`, `class GioHang` |
-| Hàm, biến, tham số, thành viên | `camelCase` | `tongTien`, `soLuongMoi` |
-| Hằng, enum, macro | `IN_HOA_GACH_DUOI` | `TOI_DA_KY_TU_MA`, `THANH_CONG` |
-| Biến logic | Tiền tố `da` / `co` / `la` | `daTim`, `coTrung`, `laMaHopLe()` |
-| Con trỏ duyệt | Danh từ chỉ vai trò | `hienTai`, `nutKeTiep` |
-| Tệp, thư mục dữ liệu / script | `snake_case` không dấu | `do_hieu_nang.cpp`, `san_pham_mau.csv` |
-| Class CSS | `kebab-case` không dấu | `bang-gio-hang`, `nut-xoa` |
-| Comment | Không dấu, giải thích "vì sao" | `// xoa lien ket truoc khi delete` |
-
-### 9.2 Động từ chuẩn trong tên hàm
-
-| Động từ | Ý nghĩa | Ví dụ |
-|---------|---------|-------|
-| `them` | Thêm | `themCuoi`, `themMatHang` |
-| `sua` | Sửa | `suaSoLuong` |
-| `xoa` | Xóa | `xoaNut`, `xoaTatCa` |
-| `tim` | Tìm | `timTheoMa`, `timMatHang` |
-| `lay` | Đọc (getter) | `layDau`, `layDanhSach` |
-| `dat` | Gán (setter) | `datSoLuong` |
-| `tinh` | Tính (có tham số) | `tinhGiamGia`, `tinhPhiShip` |
-| `kiemTra` / `la` | Kiểm tra logic | `laMaHopLe` |
-| `luu` / `nap` | Ghi / đọc file | `luuGioHang`, `napGioHang` |
-| `doc` | Nhập từ bàn phím | `docSoNguyen` |
-| `chuyen` | Chuyển đổi | `chuyenSangJson` |
-| `sinh` | Sinh mới | `sinhMaDon` |
-
-### 9.3 Từ điển thuật ngữ (một tên – một nghĩa)
-
-| Khái niệm | C++ | JSON / JS | CSV (tiêu đề cột) |
-|-----------|-----|-----------|-------------------|
-| Mã mặt hàng | `maHang` (tham số: `ma`) | `maHang` | `maHang` |
-| Tên mặt hàng | `tenHang` | `tenHang` | `tenHang` |
-| Đơn giá (VND) | `donGia` (`long long`) | `donGia` | `donGia` |
-| Số lượng | `soLuong` (`int`) | `soLuong` | `soLuong` |
-| Thành tiền | `thanhTien()` | `thanhTien` | — |
-| Tổng tiền giỏ | `tongTien()` | `tongTien` | — |
-| Tổng số lượng | `tongSoLuong()` | `tongSoLuong` | — |
-| Số mặt hàng | `soMatHang()` | `soMatHang` | — |
-| Mã đơn | `maDon` | `maDon` | `maDon` |
-| Thời điểm tạo đơn | `thoiGian` | `thoiGian` | `thoiGian` |
-| Giảm giá / phí ship | `giamGia`, `phiShip` | `giamGia`, `phiShip` | `giamGia`, `phiShip` |
-| Tổng thanh toán | `tongThanhToan` | `tongThanhToan` | — |
-| Đầu / cuối danh sách | `dau`, `cuoi` | `dau`, `cuoi` | — |
-| Số node | `soNut` | `soNut` | — |
-| Con trỏ trước / sau | `truoc`, `sau` | `truoc`, `sau` | — |
-
-### 9.4 Kiểu dữ liệu và chữ ký hàm
-
-- **Tiền:** `long long`, đơn vị VND. Không dùng `double`.
-- **Số lượng, đếm, kích thước:** `int`. **Không dùng `size_t`** (tránh cảnh báo so sánh signed/unsigned); nếu lấy từ `size()` thì `static_cast<int>`.
-- **Tham số vào:** struct hoặc chuỗi truyền bằng `const T&`.
-- **Hàm không đổi trạng thái:** khai báo `const`.
-- **Hàm nghiệp vụ trả `KetQua`**, không in ra màn hình.
-- **Hàm tra cứu có thể không có kết quả:** trả `const T*`, `nullptr` nghĩa là không tìm thấy.
-- **Không giữ con trỏ trả về từ `timMatHang()` qua một thao tác thêm/sửa/xóa** (node có thể đã bị `delete`).
-- File `.h` dùng `#pragma once`; **cấm `using namespace std;` trong `.h`**; file `.cpp` luôn `#include` header của chính nó đầu tiên.
-- Hằng số khai báo trong `.h` dùng `constexpr`/`inline constexpr`; **không định nghĩa biến toàn cục hoặc hàm thường trong `.h`**.
-
-### 9.5 Quy trình thay đổi header
-
-Các file `.h` trong `include/` là hợp đồng chung. Muốn đổi chữ ký hàm, thêm/bớt giá trị `KetQua`, hoặc đổi tên trường:
-
-1. Mở Issue gắn nhãn `doi-chu-ky-ham`, nêu lý do và người bị ảnh hưởng.
-2. Trưởng nhóm duyệt; thông báo cả nhóm.
-3. Tạo Pull Request **riêng** chỉ sửa `.h` (kèm bản stub `.cpp` để vẫn build được).
-4. Cả nhóm `git pull` và build lại trước khi tiếp tục.
-
-### 9.6 Lỗi biên dịch thường gặp và cách phòng
-
-| Triệu chứng | Nguyên nhân thường gặp | Cách phòng |
-|-------------|------------------------|------------|
-| `undefined reference to ...` | Chữ ký ở `.cpp` khác `.h` (thiếu `const`, khác kiểu); quên đưa file mới vào build | `.cpp` include `.h` của nó đầu tiên; dùng `GLOB ... CONFIGURE_DEPENDS` |
-| `redefinition of ...` | Thiếu `#pragma once` | Mọi `.h` đều có `#pragma once` |
-| `multiple definition of ...` | Hàm/biến thường định nghĩa trong `.h` | `.h` chỉ khai báo; hằng dùng `constexpr` |
-| `use of deleted function` | Sao chép `DanhSachLienKetDoi`/`GioHang` (đã cấm) | Truyền bằng tham chiếu; sao chép sâu dùng `saoChepTu` |
-| `invalid use of incomplete type` | Include vòng giữa các header | Giữ phụ thuộc một chiều; dùng khai báo trước |
-| `-Wsign-compare` | So sánh `int` với `size_t` | Dùng `int` và `static_cast<int>` |
-| Ký tự lạ trên console/web | File không lưu UTF-8 | Lưu UTF-8 (không BOM); MSVC thêm `/utf-8` |
-| `min`/`max` báo lỗi trên Windows | Macro của `windows.h` | `#define NOMINMAX` trước khi include |
-| Lỗi liên kết `winsock` trên MinGW | Thiếu thư viện mạng | Link `ws2_32` (đã có trong CMake mẫu) |
-| Build rất chậm | `httplib.h`/`json.hpp` rất lớn | Chỉ include chúng trong `src/api/*.cpp` và `main_web.cpp` |
-
-Mọi PR phải build **sạch cảnh báo** với `-Wall -Wextra`.
+Ký hiệu: ⬜ chưa bắt đầu · 🟨 đang làm · ✅ hoàn thành · ❌ bỏ (ghi lý do)
 
 ---
 
-## 10. Kiểm thử và chất lượng
+## 📌 Ghi chú cuối
 
-### 10.1 Các loại test
-
-| Nhóm | Test case | Mục đích |
-|------|-----------|----------|
-| Thêm / hợp lệ | TC01–TC05 | Giỏ rỗng, thứ tự xuôi/ngược, trùng mã, dữ liệu sai |
-| Xem / tổng tiền | TC06–TC08 | Giỏ rỗng, tổng tay, vượt 2,1 tỷ (kiểm tra tràn số) |
-| Sửa | TC09–TC10 | Mã tồn tại/không tồn tại, giá trị sai |
-| Xóa | TC11–TC16 | Đầu, cuối, giữa, duy nhất, mã không tồn tại, xóa hết rồi thêm lại |
-| Đơn hàng | TC17–TC19 | Giỏ rỗng, tạo bình thường (deep copy), hai đơn liên tiếp |
-| File | TC20–TC21 | Lưu rồi nạp lại, file lỗi/thiếu |
-| Bộ nhớ / quy mô | TC22–TC23 | 1.000 lần thêm/xóa với ASan; n = 1.000 / 10.000 / 100.000 |
-
-### 10.2 Test API (bổ sung)
-
-| Kiểm tra | Kỳ vọng |
-|----------|---------|
-| `POST /api/gio` với JSON sai cú pháp | 400, server không sập |
-| `PUT /api/gio/{ma}` mã không tồn tại | 404, `KHONG_TIM_THAY` |
-| `POST /api/don` khi giỏ rỗng | 409, `GIO_RONG`, không sinh mã đơn |
-| Gửi đồng thời nhiều request thêm/xóa | Không treo, không hỏng danh sách (mutex) |
-| Tắt rồi mở lại server | Giỏ và đơn được nạp lại đúng |
-
-### 10.3 Chạy test
-
-```bash
-./build/chay_test      # in "Dat X / Y test" và vị trí các test lỗi
-```
-
-### 10.4 Checklist kiểm thử giao diện
-
-- [ ] Thêm, sửa, xóa mặt hàng cập nhật bảng và tổng tiền đúng.
-- [ ] Nhập số âm, chữ, để trống: có thông báo lỗi rõ, không làm hỏng giao diện.
-- [ ] Tên hàng chứa ký tự `<`, `>`, `"` hiển thị đúng và không chạy script.
-- [ ] Tắt server rồi thao tác: giao diện báo mất kết nối, không treo.
-- [ ] Xem cấu trúc khớp với thứ tự trong giỏ sau mỗi lần xóa đầu/giữa/cuối.
-- [ ] Hiển thị tốt trên màn hình hẹp (điện thoại) và rộng.
-- [ ] Tab **Console** của DevTools không có lỗi đỏ.
-
----
-
-## 11. Độ phức tạp thuật toán
-
-| Thao tác | Độ phức tạp | Ghi chú |
-|----------|:-----------:|---------|
-| Thêm cuối (có `cuoi`, chưa kiểm tra trùng) | O(1) | Chỉ sửa `cuoi` và 2 con trỏ |
-| Thêm có kiểm tra trùng mã | O(n) | Phải duyệt tìm mã |
-| Tìm / sửa theo mã | O(n) | Duyệt tuần tự |
-| Xóa node đã có con trỏ | O(1) | Nhờ con trỏ `truoc` |
-| Xóa theo mã | O(n) | Tốn thêm bước tìm |
-| Xem giỏ / tính tổng / tạo đơn | O(n) | Tạo đơn còn sao chép n node |
-| Xóa tất cả | O(n) | `delete` từng node |
-
-**Vì sao danh sách liên kết đôi?** Vì đề yêu cầu và vì nó cho phép xóa/chèn giữa mà không dịch phần tử, đồng thời có thể duyệt ngược. Với giỏ chỉ vài chục mặt hàng, mảng thường nhanh hơn nhờ dữ liệu nằm liền nhau trong bộ nhớ (cache) — nhóm sẽ trình bày điều này một cách trung thực khi vấn đáp và minh họa bằng benchmark.
-
----
-
-## 12. Quy trình làm việc nhóm
-
-### 12.1 Git
-
-- Nhánh `main` luôn build được; **không commit thẳng lên `main`**.
-- Mỗi người làm trên nhánh riêng: `tv1/loi-dslk`, `tv4/frontend-gio-hang`, ...
-- Commit nhỏ, thông điệp rõ: `[GioHang] them kiem tra trung ma`.
-- Mọi thay đổi vào `main` qua Pull Request và có ít nhất **một người review**.
-- Lịch sử commit là bằng chứng đóng góp cá nhân.
-
-### 12.2 Review chéo
-
-| Cặp review | Ghi chú |
-|------------|---------|
-| TV1 ↔ TV2 | Lõi ↔ nghiệp vụ giỏ |
-| TV3 ↔ TV4 | Đơn hàng/API ↔ Frontend |
-| TV5 | Review tất cả; được mọi người review phần báo cáo |
-
-### 12.3 Nhịp làm việc
-
-- Họp 2 lần/tuần (20–30 phút), cập nhật bảng task công khai.
-- Mỗi tuần mỗi người hỏi một người khác 3 câu về code của họ (từ danh sách câu hỏi vấn đáp).
-- **Feature freeze** trước ngày demo 3–4 ngày.
-
----
-
-## 13. Lộ trình
-
-| GĐ | Mục tiêu | Kết quả | Xong khi |
-|----|----------|---------|----------|
-| 0 | Chuẩn bị | Repo, header đóng băng, `quy_uoc_api.md`, dữ liệu mẫu, bảng test, wireframe | Cả 5 máy build thành công |
-| 1 | MVP lõi | DSLK đôi + `GioHang` (thêm/xem/xóa) + menu console tối thiểu; Frontend dựng bằng mock | TC01–TC03, TC06, TC11–TC14 đạt |
-| 2 | Đủ yêu cầu đề | Sửa, tạo đơn, kiểm tra đầu vào, test tự động; khung server + `GET /api/gio` | TC01–TC19 đạt, không rò rỉ bộ nhớ |
-| 3 | App demo | Lưu/đọc file, kho, xem ngược/xem cấu trúc; **nối Frontend với API thật** | TC20–TC21 đạt; chạy mượt trên máy demo |
-| 4 | Nâng cao | Voucher + phí ship, sắp xếp, Undo/Redo (chọn 2–3) | Mỗi tính năng có test |
-| 5 | Tối ưu | Chỉ mục băm, benchmark, biểu đồ trước–sau | Có số liệu trong báo cáo |
-| 6 | Đóng gói | Slide, báo cáo, tập demo/vấn đáp, kiểm tra bộ nhớ lần cuối | Checklist mục 14 đủ |
-| 7 | Dài hạn | Nhiều người dùng, SQLite/MySQL, Docker | Tùy mục tiêu nhóm |
-
-**Cổng chuyển giai đoạn (gate):** chỉ tích hợp web ở GĐ3 khi GĐ2 đã đạt. Nếu GĐ2 trễ, nhóm dừng web và giữ console làm bản demo.
-
----
-
-## 14. Tiêu chí hoàn thành (Definition of Done)
-
-Một tính năng được coi là **xong** khi đủ tất cả:
-
-- [ ] Code build sạch với `-Wall -Wextra`, không cảnh báo.
-- [ ] Có test tự động; toàn bộ test hiện có vẫn đạt.
-- [ ] Chạy ASan/Valgrind không báo lỗi bộ nhớ.
-- [ ] Có Pull Request đã được ít nhất một người review.
-- [ ] Nếu đổi API: đã cập nhật `docs/quy_uoc_api.md` và Frontend.
-- [ ] Người viết **tự gõ lại hàm cốt lõi không nhìn code** và giải thích được.
-- [ ] Đã ghi vào `docs/nhat_ky_AI.md` nếu có dùng AI.
-
-**Checklist trước khi nộp:**
-
-- [ ] Clone repo mới về máy khác vẫn build và chạy được.
-- [ ] Kịch bản demo đã tập ít nhất 2 lần trên máy sẽ trình bày; có video và bản build dự phòng.
-- [ ] Báo cáo có: lý do chọn CTDL, sơ đồ, bảng độ phức tạp, bảng test + kết quả, số liệu hiệu năng, bảng phân công, nhật ký AI.
-- [ ] Đã đối chiếu các quyết định thiết kế với đề gốc và giảng viên.
-
----
-
-## 15. Thành viên và phân công
-
-> Thay `TV1…TV5` bằng tên thật. Khối lượng là ước lượng để cân bằng, điều chỉnh sau buổi họp đầu.
-
-| TV | Vai trò | Phụ trách chính | Ước lượng |
-|----|---------|-----------------|:---------:|
-| TV1 | Trưởng nhóm, Lõi CTDL, Backend lead | `MatHang`, `DanhSachLienKetDoi`, CMake, khung server (`MayChu`, mutex, log, `ChuyenDoiJson`) | ~28 giờ |
-| TV2 | Nghiệp vụ giỏ hàng | `GioHang`, `NganXep`, `QuyDinh`, `LuuTru`, route `/api/gio` | ~28 giờ |
-| TV3 | Đơn hàng, khuyến mại, kho | `DonHang`, `KhuyenMai`, `KhoHang`, route `/api/don`, `/api/kho` | ~26 giờ |
-| TV4 | Frontend và console | Toàn bộ `web/`, `Menu`, `TienIch`, dữ liệu mẫu | ~30 giờ |
-| TV5 | Kiểm thử, hiệu năng, báo cáo | `tests/`, `benchmark/`, `docs/`, test API, slide, demo | ~25 giờ |
-
----
-
-## 16. Minh bạch việc dùng AI
-
-Nhóm dùng AI như công cụ **hỗ trợ học và rà soát**, không thay thế việc tự hiểu và tự viết code.
-
-- Mỗi lần dùng AI đều ghi vào `docs/nhat_ky_AI.md`: **dùng để làm gì**, **kiểm tra kết quả bằng cách nào**, **phần nào tự viết lại**.
-- Kết quả từ AI luôn được biên dịch, chạy test và đối chiếu với tài liệu trước khi đưa vào `main`.
-- Mỗi thành viên phải giải thích lại được phần của mình **không cần nhìn code** khi vấn đáp.
-
----
-
-## 17. Xử lý sự cố thường gặp
-
-| Vấn đề | Cách xử lý |
-|--------|------------|
-| Mở trang web thấy `Cannot GET /` | Kiểm tra `--web` trỏ đúng thư mục có `index.html` |
-| Cổng 8080 đang bị chiếm | Chạy lại với `--port 8081` |
-| Tiếng Việt hiện ký tự lạ trên console Windows | Bật UTF-8: `chcp 65001`; lưu file nguồn UTF-8 |
-| Tiếng Việt lệch cột trong bảng console | `setw` không đếm đúng ký tự có dấu; dùng hàm đếm UTF-8 hoặc hiển thị không dấu |
-| Sửa code xong Frontend vẫn như cũ | Tải lại cứng (`Ctrl+F5`) để bỏ cache |
-| Chương trình sập khi nhập chữ vào ô số | Đọc cả dòng bằng `getline` rồi kiểm tra; xử lý `cin.fail()` + `cin.clear()` + `cin.ignore()` |
-| ASan không chạy trên MinGW | Dùng WSL hoặc Valgrind |
-| Đã sửa `.h` nhưng lỗi `undefined reference` | Xóa thư mục `build/` rồi cấu hình lại |
-
----
-
-## 18. Giấy phép và ghi nhận
-
-- Dự án phục vụ mục đích **học tập** trong học phần Cấu trúc dữ liệu và giải thuật.
-- Thư viện bên thứ ba (`cpp-httplib`, `nlohmann/json`) tuân theo giấy phép riêng của từng thư viện; giữ nguyên thông tin bản quyền trong `third_party/`.
-- Tài liệu này dựa trên bản *"Báo cáo phân tích và kế hoạch triển khai — Đề 2"*. **Các điểm "cần quy ước" phải được đối chiếu với đề gốc và giảng viên trước khi chốt.**
+- Cập nhật README này khi hoàn thành mỗi phiên bản (tích các ô tiêu chí, cập nhật bảng tiến độ).
+- Bất cứ thay đổi nào về cấu trúc file cần cập nhật ở **phần 8** và **phần 9**.
+- Các mục ghi "_(điền)_" cần nhóm bổ sung thông tin thật trước khi nộp.

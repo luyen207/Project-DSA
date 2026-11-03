@@ -918,10 +918,10 @@ Khó khăn gặp phải và cách giải quyết: ...
 
 | Phiên bản | Trạng thái | Ngày bắt đầu | Ngày xong | Ghi chú |
 |---|---|---|---|---|
-| V1: Nền tảng | ⬜ Chưa bắt đầu | | | |
-| V2: Nghiệp vụ | ⬜ Chưa bắt đầu | | | |
-| V3: Khác biệt | ⬜ Chưa bắt đầu | | | |
-| V4: Hoàn chỉnh | ⬜ Chưa bắt đầu | | | |
+| V1: Nền tảng | 🟨 Chưa bắt đầu | | | |
+| V2: Nghiệp vụ | 🟨 Chưa bắt đầu | | | |
+| V3: Khác biệt | 🟨 Chưa bắt đầu | | | |
+| V4: Hoàn chỉnh | 🟨 Chưa bắt đầu | | | |
 
 Ký hiệu: ⬜ chưa bắt đầu · 🟨 đang làm · ✅ hoàn thành · ❌ bỏ (ghi lý do)
 

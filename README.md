@@ -128,8 +128,8 @@ flowchart TB
 
 
 **Lưu ý:** Frontend JavaScript không gọi trực tiếp các hàm C++ thông thường. Nếu triển khai kết nối thực tế, hệ thống cần lớp trung gian/API hoặc một phương án giao tiếp tương đương. Sơ đồ trên thể hiện kiến trúc mục tiêu, không khẳng định API đã được triển khai.
-
-
+##7. Cấu trúc thư mục dự án
+```text
 OnlineShoppingCart/
 │
 ├── README.md
@@ -230,8 +230,7 @@ OnlineShoppingCart/
     └── 05_Final_Report/
         ├── Final_Report.docx
         └── Presentation.pptx
-
-*Đây là cấu trúc thư mục mục tiêu. Các file sẽ được tạo trong quá trình phát triển, không có nghĩa tất cả đã tồn tại.*
+```
 
 ## 8. Phân công nhiệm vụ
 

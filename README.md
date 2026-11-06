@@ -129,15 +129,108 @@ flowchart TB
 
 **Lưu ý:** Frontend JavaScript không gọi trực tiếp các hàm C++ thông thường. Nếu triển khai kết nối thực tế, hệ thống cần lớp trung gian/API hoặc một phương án giao tiếp tương đương. Sơ đồ trên thể hiện kiến trúc mục tiêu, không khẳng định API đã được triển khai.
 
-### 7. Cấu trúc thư mục dự án
 
-```text
 OnlineShoppingCart/
 │
 ├── README.md
-...
+│
+├── Backend/
+│   │
+│   ├── Common/
+│   │   ├── Node.h
+│   │   ├── Node.cpp
+│   │   ├── DoublyLinkedList.h
+│   │   ├── DoublyLinkedList.cpp
+│   │   └── README.md
+│   │
+│   ├── Member_03_ProductManager/
+│   │   ├── ProductManager.h
+│   │   ├── ProductManager.cpp
+│   │   ├── ProductValidation.h
+│   │   ├── ProductValidation.cpp
+│   │   └── README.md
+│   │
+│   ├── Member_04_ProductSearch/
+│   │   ├── ProductDisplay.h
+│   │   ├── ProductDisplay.cpp
+│   │   ├── ProductSearch.h
+│   │   ├── ProductSearch.cpp
+│   │   └── README.md
+│   │
+│   ├── Member_05_CartProcessing/
+│   │   ├── CartCalculator.h
+│   │   ├── CartCalculator.cpp
+│   │   ├── ProductSort.h
+│   │   ├── ProductSort.cpp
+│   │   ├── TestCases.md
+│   │   └── TestReport.md
+│   │
+│   ├── Integration/
+│   │   ├── main.cpp
+│   │   ├── CartController.h
+│   │   ├── CartController.cpp
+│   │   └── CMakeLists.txt
+│   │
+│   └── tests/
+│       ├── test_doubly_linked_list.cpp
+│       ├── test_product_manager.cpp
+│       ├── test_product_search.cpp
+│       └── test_cart_calculator.cpp
+│
+├── Frontend/
+│   ├── index.html
+│   │
+│   ├── pages/
+│   │   ├── dashboard.html
+│   │   └── cart.html
+│   │
+│   ├── css/
+│   │   ├── main.css
+│   │   ├── layout.css
+│   │   ├── components.css
+│   │   └── responsive.css
+│   │
+│   ├── js/
+│   │   ├── app.js
+│   │   ├── cart.js
+│   │   ├── product.js
+│   │   ├── search.js
+│   │   ├── calculator.js
+│   │   ├── api.js
+│   │   └── validation.js
+│   │
+│   ├── components/
+│   │   ├── header.html
+│   │   ├── sidebar.html
+│   │   ├── product-table.html
+│   │   ├── product-form.html
+│   │   └── cart-summary.html
+│   │
+│   └── assets/
+│       ├── images/
+│       ├── icons/
+│       └── fonts/
+│
 └── Documents/
-```
+    ├── 01_Project_Proposal/
+    │   └── Project_Description.docx
+    │
+    ├── 02_Analysis_Design/
+    │   ├── Functional_Requirements.docx
+    │   ├── Data_Structure_Design.docx
+    │   └── System_Architecture.png
+    │
+    ├── 03_Task_Assignment/
+    │   └── Team_Task_Assignment.xlsx
+    │
+    ├── 04_Testing/
+    │   ├── Test_Cases.xlsx
+    │   └── Test_Report.docx
+    │
+    └── 05_Final_Report/
+        ├── Final_Report.docx
+        └── Presentation.pptx
+
 *Đây là cấu trúc thư mục mục tiêu. Các file sẽ được tạo trong quá trình phát triển, không có nghĩa tất cả đã tồn tại.*
 
 ## 8. Phân công nhiệm vụ

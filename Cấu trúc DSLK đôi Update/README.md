@@ -86,50 +86,25 @@ giaiPhongDanhSach(ds);                       // luon goi khi dung xong
 
 Yêu cầu: trình biên dịch `g++` hỗ trợ C++11 trở lên.
 
+**Lệnh build:**
 
-Lệnh build chương trình: g++ Test_Doubly_Linked_List.cpp Node.cpp DoublyLinkedList.cpp -o test
-Chạy bằng PowerShell: .\test.exe
-Kết quả:
-[PASS] Rong: laRong
-[PASS] Rong: lien ket hop le
-[PASS] Rong: tim id tra ve nullptr
-[PASS] Rong: xoaNode(nullptr) that bai
-[PASS] Rong: xoaTheoID that bai
-[PASS] Them node khong hop le (nullptr)
-[PASS] Them node dau tien
-[PASS] 1 node: head == tail
-[PASS] 1 node: lien ket hop le
-[PASS] Them nhieu node: soNode = 4
-[PASS] themDau: head la id 4
-[PASS] themCuoi: tail la id 3
-[PASS] Nhieu node: lien ket hop le
-[PASS] Duyet nguoc dem du 4 node
-[PASS] Tim id ton tai
-[PASS] Tim id khong ton tai
-[PASS] chenSau node giua
-[PASS] chenSau: node 5 nam sau node 2
-[PASS] chenSau: lien ket hop le
-[PASS] chenSau tail = themCuoi
-[PASS] chenSau tail: tail doi thanh id 6
-[PASS] hoanDoiDuLieu: dau/cuoi doi cho
-[PASS] hoanDoiDuLieu: lien ket van hop le
-[PASS] Xoa node dau
-[PASS] Sau xoa dau: head la id 1
-[PASS] Sau xoa dau: lien ket hop le
-[PASS] Xoa node cuoi
-[PASS] Sau xoa cuoi: tail la id 3
-[PASS] Sau xoa cuoi: lien ket hop le
-[PASS] Xoa node giua
-[PASS] Sau xoa giua: 1 noi voi 5
-[PASS] Sau xoa giua: lien ket hop le
-[PASS] Xoa id khong ton tai
-[PASS] Xoa node duy nhat
-[PASS] Sau xoa het: danh sach rong hop le
-[PASS] Sau xoa het: lien ket hop le
-[PASS] Giai phong: ve rong
+```
+g++ Test_Doubly_Linked_List.cpp Node.cpp DoublyLinkedList.cpp -o test
+```
 
+**Chạy chương trình:**
+
+```
+.\test.exe
+```
+
+(Linux / macOS: `./test`)
+
+**Kết quả đúng:** tất cả dòng đều `[PASS]`, dòng cuối là:
+
+```
 KET QUA: 37/37 test dat
-
+```
 
 ## 5. Quy ước code
 

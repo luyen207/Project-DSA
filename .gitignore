@@ -38,6 +38,10 @@
 *.out
 *.app
 
+# Allow test executables
+!test_cart.exe
+!**/test_*.exe
+
 # Build directories
 build/
 Build/

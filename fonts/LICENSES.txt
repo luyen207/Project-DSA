@@ -1,0 +1,12 @@
+Phông chữ nhúng trong ShopPro (đã cắt tập ký tự Latin + tiếng Việt, định dạng WOFF)
+
+Inter (Regular, Medium, SemiBold, Bold) và Inter Display (ExtraBold)
+  Copyright (c) 2016 The Inter Project Authors (https://github.com/rsms/inter)
+  Giấy phép: SIL Open Font License 1.1 (https://openfontlicense.org)
+
+Lora (Variable)
+  Copyright (c) 2011 The Lora Project Authors (https://github.com/cyrealtype/Lora-Cyrillic)
+  Giấy phép: SIL Open Font License 1.1 (https://openfontlicense.org)
+
+Theo OFL 1.1, các phông chữ được phép sử dụng, nhúng và phân phối kèm phần mềm
+miễn là giữ nguyên thông báo bản quyền này và không bán riêng phông chữ.

@@ -1,0 +1,3337 @@
+{
+  "meta": {
+    "referenceTime": "2026-11-14T09:00:00.000Z",
+    "note": "Du lieu mau - tai tao bang Backend/data/tools/generate_seed.py"
+  },
+  "categories": [
+    {
+      "id": 1,
+      "name": "Điện tử & Phụ kiện",
+      "description": "Tai nghe, loa, đồng hồ thông minh và phụ kiện công nghệ"
+    },
+    {
+      "id": 2,
+      "name": "Thời trang",
+      "description": "Quần áo, giày dép và phụ kiện hằng ngày"
+    },
+    {
+      "id": 3,
+      "name": "Nhà cửa & Đời sống",
+      "description": "Đồ dùng tiện ích cho căn bếp và không gian sống"
+    },
+    {
+      "id": 4,
+      "name": "Sách & Văn phòng phẩm",
+      "description": "Sách chuyên ngành, sổ tay và dụng cụ học tập"
+    },
+    {
+      "id": 5,
+      "name": "Thể thao & Dã ngoại",
+      "description": "Dụng cụ tập luyện, cắm trại và vận động ngoài trời"
+    },
+    {
+      "id": 6,
+      "name": "Làm đẹp & Chăm sóc",
+      "description": "Chăm sóc da, tóc và cơ thể mỗi ngày"
+    },
+    {
+      "id": 7,
+      "name": "Mẹ & Bé",
+      "description": "Sản phẩm an toàn cho mẹ và em bé"
+    },
+    {
+      "id": 8,
+      "name": "Thực phẩm & Đồ uống",
+      "description": "Cà phê, trà, đồ ăn vặt và thực phẩm khô"
+    }
+  ],
+  "products": [
+    {
+      "id": 101,
+      "name": "Tai nghe Bluetooth chống ồn SoundWave NC700",
+      "categoryId": 1,
+      "price": 1890000,
+      "stock": 34,
+      "description": "Chống ồn chủ động 40 dB, Bluetooth 5.3, pin 45 giờ, sạc nhanh 10 phút nghe 5 giờ. Đệm tai memory foam êm ái.",
+      "image": "/img/products/101.svg",
+      "visible": true,
+      "featured": true,
+      "bestSelling": true,
+      "createdAt": "2026-10-17T02:00:00.000Z",
+      "updatedAt": "2026-10-17T02:00:00.000Z"
+    },
+    {
+      "id": 102,
+      "name": "Loa Bluetooth di động BassBox Mini 20W",
+      "categoryId": 1,
+      "price": 790000,
+      "stock": 58,
+      "description": "Âm bass dày, chống nước IPX7, pin 12 giờ, ghép đôi hai loa tạo âm thanh nổi.",
+      "image": "/img/products/102.svg",
+      "visible": true,
+      "featured": false,
+      "bestSelling": false,
+      "createdAt": "2026-08-15T15:00:00.000Z",
+      "updatedAt": "2026-08-15T15:00:00.000Z"
+    },
+    {
+      "id": 103,
+      "name": "Đồng hồ thông minh FitBand S5",
+      "categoryId": 1,
+      "price": 1290000,
+      "stock": 41,
+      "description": "Màn AMOLED 1.43 inch, đo nhịp tim và SpO2, 100 chế độ thể thao, pin 14 ngày.",
+      "image": "/img/products/103.svg",
+      "visible": true,
+      "featured": true,
+      "bestSelling": false,
+      "createdAt": "2026-08-24T17:00:00.000Z",
+      "updatedAt": "2026-08-24T17:00:00.000Z"
+    },
+    {
+      "id": 104,
+      "name": "Bàn phím cơ không dây KeyCraft K84",
+      "categoryId": 1,
+      "price": 1150000,
+      "stock": 27,
+      "description": "Layout 84 phím, switch red, kết nối 3 chế độ, đèn nền trắng, pin 4000 mAh.",
+      "image": "/img/products/104.svg",
+      "visible": true,
+      "featured": false,
+      "bestSelling": false,
+      "createdAt": "2026-07-20T05:00:00.000Z",
+      "updatedAt": "2026-07-20T05:00:00.000Z"
+    },
+    {
+      "id": 105,
+      "name": "Chuột không dây ErgoGlide M3",
+      "categoryId": 1,
+      "price": 349000,
+      "stock": 96,
+      "description": "Thiết kế công thái học, cảm biến 4000 DPI, kết nối 2.4G và Bluetooth, pin 6 tháng.",
+      "image": "/img/products/105.svg",
+      "visible": true,
+      "featured": false,
+      "bestSelling": true,
+      "createdAt": "2026-08-23T09:00:00.000Z",
+      "updatedAt": "2026-08-23T09:00:00.000Z"
+    },
+    {
+      "id": 106,
+      "name": "Sạc dự phòng PowerCell 20.000mAh 65W",
+      "categoryId": 1,
+      "price": 899000,
+      "stock": 7,
+      "description": "Sạc nhanh PD 65W cho cả laptop, hai cổng USB-C và một cổng USB-A, màn hình hiển thị % pin.",
+      "image": "/img/products/106.svg",
+      "visible": true,
+      "featured": false,
+      "bestSelling": false,
+      "createdAt": "2026-08-30T02:00:00.000Z",
+      "updatedAt": "2026-08-30T02:00:00.000Z"
+    },
+    {
+      "id": 107,
+      "name": "Củ sạc nhanh GaN 65W 3 cổng",
+      "categoryId": 1,
+      "price": 459000,
+      "stock": 73,
+      "description": "Công nghệ GaN nhỏ gọn, 2 cổng USB-C và 1 cổng USB-A, tự phân bổ công suất.",
+      "image": "/img/products/107.svg",
+      "visible": true,
+      "featured": false,
+      "bestSelling": false,
+      "createdAt": "2026-08-31T05:00:00.000Z",
+      "updatedAt": "2026-08-31T05:00:00.000Z"
+    },
+    {
+      "id": 108,
+      "name": "Ốp lưng chống sốc ClearGuard trong suốt",
+      "categoryId": 1,
+      "price": 129000,
+      "stock": 220,
+      "description": "Viền chống sốc 4 góc, không ố vàng, cho phép sạc không dây.",
+      "image": "/img/products/108.svg",
+      "visible": true,
+      "featured": false,
+      "bestSelling": false,
+      "createdAt": "2026-10-21T20:00:00.000Z",
+      "updatedAt": "2026-10-21T20:00:00.000Z"
+    },
+    {
+      "id": 109,
+      "name": "Áo thun cotton nam Basic Fit",
+      "categoryId": 2,
+      "price": 199000,
+      "stock": 180,
+      "description": "100% cotton 220gsm dày dặn, thấm hút tốt, form regular dễ phối đồ.",
+      "image": "/img/products/109.svg",
+      "visible": true,
+      "featured": false,
+      "bestSelling": true,
+      "createdAt": "2026-08-07T13:00:00.000Z",
+      "updatedAt": "2026-08-07T13:00:00.000Z"
+    },
+    {
+      "id": 110,
+      "name": "Áo sơ mi nữ linen tay lỡ",
+      "categoryId": 2,
+      "price": 349000,
+      "stock": 64,
+      "description": "Vải linen thoáng mát, tay lỡ thoải mái, phù hợp đi làm và dạo phố.",
+      "image": "/img/products/110.svg",
+      "visible": true,
+      "featured": true,
+      "bestSelling": false,
+      "createdAt": "2026-07-18T16:00:00.000Z",
+      "updatedAt": "2026-07-18T16:00:00.000Z"
+    },
+    {
+      "id": 111,
+      "name": "Quần jean nam slim-fit co giãn",
+      "categoryId": 2,
+      "price": 499000,
+      "stock": 52,
+      "description": "Vải denim co giãn 2 chiều, form slim, màu xanh đậm bền màu sau nhiều lần giặt.",
+      "image": "/img/products/111.svg",
+      "visible": true,
+      "featured": false,
+      "bestSelling": false,
+      "createdAt": "2026-09-06T21:00:00.000Z",
+      "updatedAt": "2026-09-06T21:00:00.000Z"
+    },
+    {
+      "id": 112,
+      "name": "Giày sneaker nữ trắng Urban Step",
+      "categoryId": 2,
+      "price": 690000,
+      "stock": 38,
+      "description": "Da tổng hợp dễ lau chùi, đế cao su êm, dễ phối với mọi trang phục.",
+      "image": "/img/products/112.svg",
+      "visible": true,
+      "featured": true,
+      "bestSelling": false,
+      "createdAt": "2026-07-28T01:00:00.000Z",
+      "updatedAt": "2026-07-28T01:00:00.000Z"
+    },
+    {
+      "id": 113,
+      "name": "Giày chạy bộ nam AirRun 2",
+      "categoryId": 2,
+      "price": 1150000,
+      "stock": 29,
+      "description": "Đế đệm khí nhẹ 240g, lưới thoáng khí, độ nảy cao cho chạy đường dài.",
+      "image": "/img/products/113.svg",
+      "visible": true,
+      "featured": false,
+      "bestSelling": true,
+      "createdAt": "2026-09-27T02:00:00.000Z",
+      "updatedAt": "2026-09-27T02:00:00.000Z"
+    },
+    {
+      "id": 114,
+      "name": "Balo laptop chống nước 15.6 inch",
+      "categoryId": 2,
+      "price": 559000,
+      "stock": 45,
+      "description": "Ngăn chống sốc laptop, cổng sạc USB ngoài, khóa chống trộm, vải chống thấm.",
+      "image": "/img/products/114.svg",
+      "visible": true,
+      "featured": false,
+      "bestSelling": true,
+      "createdAt": "2026-08-28T05:00:00.000Z",
+      "updatedAt": "2026-08-28T05:00:00.000Z"
+    },
+    {
+      "id": 115,
+      "name": "Túi tote vải canvas dày",
+      "categoryId": 2,
+      "price": 159000,
+      "stock": 120,
+      "description": "Vải canvas 12oz bền chắc, có ngăn khóa kéo bên trong, in logo thân thiện môi trường.",
+      "image": "/img/products/115.svg",
+      "visible": true,
+      "featured": false,
+      "bestSelling": false,
+      "createdAt": "2026-08-02T17:00:00.000Z",
+      "updatedAt": "2026-08-02T17:00:00.000Z"
+    },
+    {
+      "id": 116,
+      "name": "Mũ lưỡi trai thêu chữ unisex",
+      "categoryId": 2,
+      "price": 119000,
+      "stock": 0,
+      "description": "Cotton mềm, khóa điều chỉnh phía sau, thêu chữ nổi sắc nét.",
+      "image": "/img/products/116.svg",
+      "visible": true,
+      "featured": false,
+      "bestSelling": false,
+      "createdAt": "2026-08-14T03:00:00.000Z",
+      "updatedAt": "2026-08-14T03:00:00.000Z"
+    },
+    {
+      "id": 117,
+      "name": "Bình giữ nhiệt inox 600ml",
+      "categoryId": 3,
+      "price": 359000,
+      "stock": 88,
+      "description": "Inox 304 giữ nóng 12 giờ, giữ lạnh 24 giờ, nắp kín không rò rỉ.",
+      "image": "/img/products/117.svg",
+      "visible": true,
+      "featured": true,
+      "bestSelling": true,
+      "createdAt": "2026-09-08T03:00:00.000Z",
+      "updatedAt": "2026-09-08T03:00:00.000Z"
+    },
+    {
+      "id": 118,
+      "name": "Ly sứ cách nhiệt 350ml có nắp",
+      "categoryId": 3,
+      "price": 129000,
+      "stock": 140,
+      "description": "Sứ cao cấp hai lớp, giữ nhiệt tốt, có nắp đậy và muỗng khuấy.",
+      "image": "/img/products/118.svg",
+      "visible": true,
+      "featured": false,
+      "bestSelling": false,
+      "createdAt": "2026-09-04T18:00:00.000Z",
+      "updatedAt": "2026-09-04T18:00:00.000Z"
+    },
+    {
+      "id": 119,
+      "name": "Đèn bàn LED chống cận 3 chế độ",
+      "categoryId": 3,
+      "price": 429000,
+      "stock": 33,
+      "description": "Ánh sáng không nhấp nháy, 3 mức màu, 5 độ sáng, cổng sạc USB.",
+      "image": "/img/products/119.svg",
+      "visible": true,
+      "featured": true,
+      "bestSelling": false,
+      "createdAt": "2026-09-18T06:00:00.000Z",
+      "updatedAt": "2026-09-18T06:00:00.000Z"
+    },
+    {
+      "id": 120,
+      "name": "Chảo chống dính vân đá 26cm",
+      "categoryId": 3,
+      "price": 389000,
+      "stock": 47,
+      "description": "Lớp chống dính vân đá, dùng được trên bếp từ, tay cầm cách nhiệt.",
+      "image": "/img/products/120.svg",
+      "visible": true,
+      "featured": false,
+      "bestSelling": false,
+      "createdAt": "2026-08-05T04:00:00.000Z",
+      "updatedAt": "2026-08-05T04:00:00.000Z"
+    },
+    {
+      "id": 121,
+      "name": "Bộ ga gối cotton 1m6 (4 món)",
+      "categoryId": 3,
+      "price": 749000,
+      "stock": 22,
+      "description": "Cotton 100% mềm mịn, không xù lông, kèm 2 vỏ gối và 1 ga phủ.",
+      "image": "/img/products/121.svg",
+      "visible": true,
+      "featured": false,
+      "bestSelling": false,
+      "createdAt": "2026-08-13T22:00:00.000Z",
+      "updatedAt": "2026-08-13T22:00:00.000Z"
+    },
+    {
+      "id": 122,
+      "name": "Hộp cơm giữ nhiệt 2 ngăn",
+      "categoryId": 3,
+      "price": 249000,
+      "stock": 61,
+      "description": "Giữ nhiệt 6 giờ, hai ngăn riêng biệt, dùng được trong lò vi sóng (tháo ruột).",
+      "image": "/img/products/122.svg",
+      "visible": true,
+      "featured": false,
+      "bestSelling": false,
+      "createdAt": "2026-10-02T19:00:00.000Z",
+      "updatedAt": "2026-10-02T19:00:00.000Z"
+    },
+    {
+      "id": 123,
+      "name": "Máy xay sinh tố mini 400ml",
+      "categoryId": 3,
+      "price": 590000,
+      "stock": 26,
+      "description": "Công suất 300W, 6 lưỡi dao inox, cốc xay mang đi tiện lợi, sạc USB.",
+      "image": "/img/products/123.svg",
+      "visible": true,
+      "featured": false,
+      "bestSelling": false,
+      "createdAt": "2026-08-03T20:00:00.000Z",
+      "updatedAt": "2026-08-03T20:00:00.000Z"
+    },
+    {
+      "id": 124,
+      "name": "Thảm lau chân thấm hút chống trượt",
+      "categoryId": 3,
+      "price": 89000,
+      "stock": 9,
+      "description": "Sợi microfiber thấm nước nhanh, đế cao su chống trượt, giặt máy được.",
+      "image": "/img/products/124.svg",
+      "visible": true,
+      "featured": false,
+      "bestSelling": false,
+      "createdAt": "2026-08-04T13:00:00.000Z",
+      "updatedAt": "2026-08-04T13:00:00.000Z"
+    },
+    {
+      "id": 125,
+      "name": "Sổ tay lò xo A5 giấy kem 200 trang",
+      "categoryId": 4,
+      "price": 79000,
+      "stock": 300,
+      "description": "Giấy kem 100gsm chống lem mực, gáy lò xo mở phẳng 360 độ.",
+      "image": "/img/products/125.svg",
+      "visible": true,
+      "featured": false,
+      "bestSelling": false,
+      "createdAt": "2026-10-06T14:00:00.000Z",
+      "updatedAt": "2026-10-06T14:00:00.000Z"
+    },
+    {
+      "id": 126,
+      "name": "Bút gel 0.5mm hộp 12 cây",
+      "categoryId": 4,
+      "price": 69000,
+      "stock": 410,
+      "description": "Mực khô nhanh, nét đều 0.5mm, thân cầm êm tay, màu mực đen.",
+      "image": "/img/products/126.svg",
+      "visible": true,
+      "featured": false,
+      "bestSelling": true,
+      "createdAt": "2026-10-16T02:00:00.000Z",
+      "updatedAt": "2026-10-16T02:00:00.000Z"
+    },
+    {
+      "id": 127,
+      "name": "Lập trình C++ từ cơ bản đến nâng cao",
+      "categoryId": 4,
+      "price": 225000,
+      "stock": 44,
+      "description": "Giáo trình C++17 với bài tập thực hành, OOP, STL và quản lý bộ nhớ.",
+      "image": "/img/products/127.svg",
+      "visible": true,
+      "featured": true,
+      "bestSelling": false,
+      "createdAt": "2026-10-02T06:00:00.000Z",
+      "updatedAt": "2026-10-02T06:00:00.000Z"
+    },
+    {
+      "id": 128,
+      "name": "Giáo trình Cấu trúc dữ liệu và Giải thuật",
+      "categoryId": 4,
+      "price": 189000,
+      "stock": 52,
+      "description": "Danh sách liên kết, ngăn xếp, hàng đợi, cây và đồ thị kèm bài tập có lời giải.",
+      "image": "/img/products/128.svg",
+      "visible": true,
+      "featured": false,
+      "bestSelling": true,
+      "createdAt": "2026-09-08T17:00:00.000Z",
+      "updatedAt": "2026-09-08T17:00:00.000Z"
+    },
+    {
+      "id": 129,
+      "name": "Bộ bút highlight 6 màu pastel",
+      "categoryId": 4,
+      "price": 59000,
+      "stock": 150,
+      "description": "Đầu bút vát bản to, mực nước không thấm sang mặt sau trang giấy.",
+      "image": "/img/products/129.svg",
+      "visible": true,
+      "featured": false,
+      "bestSelling": false,
+      "createdAt": "2026-10-02T13:00:00.000Z",
+      "updatedAt": "2026-10-02T13:00:00.000Z"
+    },
+    {
+      "id": 130,
+      "name": "Kệ sách mini để bàn 2 tầng",
+      "categoryId": 4,
+      "price": 289000,
+      "stock": 31,
+      "description": "Gỗ MDF phủ melamine chống ẩm, lắp ráp dễ dàng, tải trọng 10 kg.",
+      "image": "/img/products/130.svg",
+      "visible": true,
+      "featured": false,
+      "bestSelling": false,
+      "createdAt": "2026-09-13T05:00:00.000Z",
+      "updatedAt": "2026-09-13T05:00:00.000Z"
+    },
+    {
+      "id": 131,
+      "name": "Máy tính khoa học 570 chức năng",
+      "categoryId": 4,
+      "price": 349000,
+      "stock": 58,
+      "description": "Màn hình 2 dòng, giải phương trình, ma trận, thống kê; được phép dùng trong phòng thi.",
+      "image": "/img/products/131.svg",
+      "visible": true,
+      "featured": false,
+      "bestSelling": false,
+      "createdAt": "2026-08-30T00:00:00.000Z",
+      "updatedAt": "2026-08-30T00:00:00.000Z"
+    },
+    {
+      "id": 132,
+      "name": "Giấy A4 70gsm (ream 500 tờ)",
+      "categoryId": 4,
+      "price": 82000,
+      "stock": 500,
+      "description": "Độ trắng cao, ít bụi, chạy tốt trên máy in laser và máy photocopy.",
+      "image": "/img/products/132.svg",
+      "visible": true,
+      "featured": false,
+      "bestSelling": false,
+      "createdAt": "2026-10-03T05:00:00.000Z",
+      "updatedAt": "2026-10-03T05:00:00.000Z"
+    },
+    {
+      "id": 133,
+      "name": "Thảm tập yoga TPE 6mm",
+      "categoryId": 5,
+      "price": 249000,
+      "stock": 70,
+      "description": "Chất liệu TPE thân thiện môi trường, hai lớp chống trượt, kèm dây buộc.",
+      "image": "/img/products/133.svg",
+      "visible": true,
+      "featured": false,
+      "bestSelling": false,
+      "createdAt": "2026-09-07T01:00:00.000Z",
+      "updatedAt": "2026-09-07T01:00:00.000Z"
+    },
+    {
+      "id": 134,
+      "name": "Tạ tay bọc cao su 5kg (cặp)",
+      "categoryId": 5,
+      "price": 399000,
+      "stock": 40,
+      "description": "Lõi gang bọc cao su chống ồn và trầy sàn, tay cầm có rãnh chống trơn.",
+      "image": "/img/products/134.svg",
+      "visible": true,
+      "featured": false,
+      "bestSelling": false,
+      "createdAt": "2026-10-07T02:00:00.000Z",
+      "updatedAt": "2026-10-07T02:00:00.000Z"
+    },
+    {
+      "id": 135,
+      "name": "Dây nhảy tốc độ có bộ đếm",
+      "categoryId": 5,
+      "price": 99000,
+      "stock": 130,
+      "description": "Dây cáp thép bọc nhựa, tay cầm có bộ đếm vòng, chiều dài điều chỉnh.",
+      "image": "/img/products/135.svg",
+      "visible": true,
+      "featured": false,
+      "bestSelling": false,
+      "createdAt": "2026-10-02T08:00:00.000Z",
+      "updatedAt": "2026-10-02T08:00:00.000Z"
+    },
+    {
+      "id": 136,
+      "name": "Lều cắm trại 2 người chống thấm",
+      "categoryId": 5,
+      "price": 1290000,
+      "stock": 14,
+      "description": "Hai lớp chống thấm 3000mm, khung sợi thủy tinh, lắp trong 5 phút, nặng 2.4 kg.",
+      "image": "/img/products/136.svg",
+      "visible": true,
+      "featured": true,
+      "bestSelling": false,
+      "createdAt": "2026-10-05T20:00:00.000Z",
+      "updatedAt": "2026-10-05T20:00:00.000Z"
+    },
+    {
+      "id": 137,
+      "name": "Bình nước thể thao 1 lít",
+      "categoryId": 5,
+      "price": 149000,
+      "stock": 110,
+      "description": "Nhựa Tritan không BPA, có vạch chia dung tích và dây đeo.",
+      "image": "/img/products/137.svg",
+      "visible": true,
+      "featured": false,
+      "bestSelling": false,
+      "createdAt": "2026-08-24T17:00:00.000Z",
+      "updatedAt": "2026-08-24T17:00:00.000Z"
+    },
+    {
+      "id": 138,
+      "name": "Găng tay tập gym chống trượt",
+      "categoryId": 5,
+      "price": 139000,
+      "stock": 82,
+      "description": "Lòng bàn tay đệm silicon chống trượt, cổ tay có quấn bảo vệ.",
+      "image": "/img/products/138.svg",
+      "visible": true,
+      "featured": false,
+      "bestSelling": false,
+      "createdAt": "2026-08-31T22:00:00.000Z",
+      "updatedAt": "2026-08-31T22:00:00.000Z"
+    },
+    {
+      "id": 139,
+      "name": "Bóng đá size 5 thi đấu",
+      "categoryId": 5,
+      "price": 299000,
+      "stock": 63,
+      "description": "Da PU may máy bền bỉ, bóng ruột bơm giữ hơi tốt, đạt chuẩn thi đấu phong trào.",
+      "image": "/img/products/139.svg",
+      "visible": true,
+      "featured": false,
+      "bestSelling": false,
+      "createdAt": "2026-09-04T14:00:00.000Z",
+      "updatedAt": "2026-09-04T14:00:00.000Z"
+    },
+    {
+      "id": 140,
+      "name": "Vợt cầu lông carbon (bộ 2 cây)",
+      "categoryId": 5,
+      "price": 590000,
+      "stock": 36,
+      "description": "Khung carbon nhẹ 85g, kèm bao đựng và 2 cuốn cán, phù hợp người mới chơi.",
+      "image": "/img/products/140.svg",
+      "visible": true,
+      "featured": false,
+      "bestSelling": false,
+      "createdAt": "2026-10-05T23:00:00.000Z",
+      "updatedAt": "2026-10-05T23:00:00.000Z"
+    },
+    {
+      "id": 141,
+      "name": "Sữa rửa mặt dịu nhẹ 150ml",
+      "categoryId": 6,
+      "price": 169000,
+      "stock": 160,
+      "description": "pH 5.5 dịu nhẹ, làm sạch bụi bẩn không gây khô da, dùng được cho da nhạy cảm.",
+      "image": "/img/products/141.svg",
+      "visible": true,
+      "featured": false,
+      "bestSelling": false,
+      "createdAt": "2026-08-07T22:00:00.000Z",
+      "updatedAt": "2026-08-07T22:00:00.000Z"
+    },
+    {
+      "id": 142,
+      "name": "Kem chống nắng SPF50+ PA++++ 50ml",
+      "categoryId": 6,
+      "price": 249000,
+      "stock": 92,
+      "description": "Kết cấu mỏng nhẹ không bết dính, không để lại vệt trắng, kháng nước.",
+      "image": "/img/products/142.svg",
+      "visible": true,
+      "featured": true,
+      "bestSelling": true,
+      "createdAt": "2026-08-08T22:00:00.000Z",
+      "updatedAt": "2026-08-08T22:00:00.000Z"
+    },
+    {
+      "id": 143,
+      "name": "Serum Vitamin C 30ml",
+      "categoryId": 6,
+      "price": 329000,
+      "stock": 55,
+      "description": "Vitamin C 15% ổn định, hỗ trợ làm sáng da và mờ thâm, dạng dropper tiện dụng.",
+      "image": "/img/products/143.svg",
+      "visible": true,
+      "featured": false,
+      "bestSelling": false,
+      "createdAt": "2026-07-16T17:00:00.000Z",
+      "updatedAt": "2026-07-16T17:00:00.000Z"
+    },
+    {
+      "id": 144,
+      "name": "Dầu gội thảo dược 480ml",
+      "categoryId": 6,
+      "price": 189000,
+      "stock": 84,
+      "description": "Chiết xuất bồ kết và gừng, giảm gàu và rụng tóc, hương thơm tự nhiên.",
+      "image": "/img/products/144.svg",
+      "visible": true,
+      "featured": false,
+      "bestSelling": false,
+      "createdAt": "2026-09-28T18:00:00.000Z",
+      "updatedAt": "2026-09-28T18:00:00.000Z"
+    },
+    {
+      "id": 145,
+      "name": "Son dưỡng môi có màu",
+      "categoryId": 6,
+      "price": 99000,
+      "stock": 200,
+      "description": "Dưỡng ẩm cùng bơ hạt mỡ, lên màu nhẹ tự nhiên, không chứa chì.",
+      "image": "/img/products/145.svg",
+      "visible": true,
+      "featured": false,
+      "bestSelling": false,
+      "createdAt": "2026-08-23T05:00:00.000Z",
+      "updatedAt": "2026-08-23T05:00:00.000Z"
+    },
+    {
+      "id": 146,
+      "name": "Máy sấy tóc ion âm 1800W",
+      "categoryId": 6,
+      "price": 549000,
+      "stock": 31,
+      "description": "Công nghệ ion âm giảm xơ rối, 3 mức nhiệt, kèm đầu tạo kiểu.",
+      "image": "/img/products/146.svg",
+      "visible": true,
+      "featured": false,
+      "bestSelling": false,
+      "createdAt": "2026-09-13T18:00:00.000Z",
+      "updatedAt": "2026-09-13T18:00:00.000Z"
+    },
+    {
+      "id": 147,
+      "name": "Bộ chăm sóc da mini 4 món",
+      "categoryId": 6,
+      "price": 499000,
+      "stock": 39,
+      "description": "Gồm sữa rửa mặt, toner, serum và kem dưỡng dung tích du lịch.",
+      "image": "/img/products/147.svg",
+      "visible": true,
+      "featured": false,
+      "bestSelling": false,
+      "createdAt": "2026-10-09T17:00:00.000Z",
+      "updatedAt": "2026-10-09T17:00:00.000Z"
+    },
+    {
+      "id": 148,
+      "name": "Xịt thơm body mist 100ml",
+      "categoryId": 6,
+      "price": 219000,
+      "stock": 3,
+      "description": "Hương hoa cỏ nhẹ nhàng, lưu hương 4–6 giờ, chai xịt sương mịn.",
+      "image": "/img/products/148.svg",
+      "visible": true,
+      "featured": false,
+      "bestSelling": false,
+      "createdAt": "2026-08-04T19:00:00.000Z",
+      "updatedAt": "2026-08-04T19:00:00.000Z"
+    },
+    {
+      "id": 149,
+      "name": "Bình sữa PP cổ rộng 240ml",
+      "categoryId": 7,
+      "price": 159000,
+      "stock": 95,
+      "description": "Nhựa PP an toàn không BPA, núm ti silicon mềm, van chống sặc.",
+      "image": "/img/products/149.svg",
+      "visible": true,
+      "featured": false,
+      "bestSelling": false,
+      "createdAt": "2026-09-23T19:00:00.000Z",
+      "updatedAt": "2026-09-23T19:00:00.000Z"
+    },
+    {
+      "id": 150,
+      "name": "Tã quần size L (54 miếng)",
+      "categoryId": 7,
+      "price": 329000,
+      "stock": 66,
+      "description": "Thấm hút nhanh, lớp bề mặt khô thoáng, co giãn 360 độ.",
+      "image": "/img/products/150.svg",
+      "visible": true,
+      "featured": false,
+      "bestSelling": false,
+      "createdAt": "2026-08-19T22:00:00.000Z",
+      "updatedAt": "2026-08-19T22:00:00.000Z"
+    },
+    {
+      "id": 151,
+      "name": "Khăn sữa sợi tre (5 cái)",
+      "categoryId": 7,
+      "price": 119000,
+      "stock": 140,
+      "description": "Sợi tre kháng khuẩn tự nhiên, mềm mịn cho làn da nhạy cảm của bé.",
+      "image": "/img/products/151.svg",
+      "visible": true,
+      "featured": false,
+      "bestSelling": false,
+      "createdAt": "2026-09-23T03:00:00.000Z",
+      "updatedAt": "2026-09-23T03:00:00.000Z"
+    },
+    {
+      "id": 152,
+      "name": "Xe đẩy gấp gọn đa năng",
+      "categoryId": 7,
+      "price": 2490000,
+      "stock": 8,
+      "description": "Gấp gọn bằng một tay, mái che chống nắng UPF50+, ghế ngả 3 tư thế.",
+      "image": "/img/products/152.svg",
+      "visible": true,
+      "featured": true,
+      "bestSelling": false,
+      "createdAt": "2026-08-08T15:00:00.000Z",
+      "updatedAt": "2026-08-08T15:00:00.000Z"
+    },
+    {
+      "id": 153,
+      "name": "Bộ xếp hình sáng tạo 120 chi tiết",
+      "categoryId": 7,
+      "price": 259000,
+      "stock": 72,
+      "description": "Nhựa ABS an toàn, bo tròn các cạnh, phát triển tư duy và kỹ năng vận động.",
+      "image": "/img/products/153.svg",
+      "visible": true,
+      "featured": false,
+      "bestSelling": true,
+      "createdAt": "2026-08-22T19:00:00.000Z",
+      "updatedAt": "2026-08-22T19:00:00.000Z"
+    },
+    {
+      "id": 154,
+      "name": "Gấu bông Teddy 50cm",
+      "categoryId": 7,
+      "price": 189000,
+      "stock": 58,
+      "description": "Bông PP mềm mịn, lông ngắn không xù, có thể giặt máy.",
+      "image": "/img/products/154.svg",
+      "visible": true,
+      "featured": false,
+      "bestSelling": false,
+      "createdAt": "2026-08-10T03:00:00.000Z",
+      "updatedAt": "2026-08-10T03:00:00.000Z"
+    },
+    {
+      "id": 155,
+      "name": "Sữa tắm gội trẻ em 500ml",
+      "categoryId": 7,
+      "price": 149000,
+      "stock": 77,
+      "description": "Công thức không cay mắt, chiết xuất yến mạch, an toàn cho da bé.",
+      "image": "/img/products/155.svg",
+      "visible": true,
+      "featured": false,
+      "bestSelling": false,
+      "createdAt": "2026-08-02T09:00:00.000Z",
+      "updatedAt": "2026-08-02T09:00:00.000Z"
+    },
+    {
+      "id": 156,
+      "name": "Ghế ăn dặm tăng giảm chiều cao",
+      "categoryId": 7,
+      "price": 890000,
+      "stock": 19,
+      "description": "Khung nhựa ABS chắc chắn, khay ăn tháo rời, đai an toàn 5 điểm.",
+      "image": "/img/products/156.svg",
+      "visible": true,
+      "featured": false,
+      "bestSelling": false,
+      "createdAt": "2026-07-27T21:00:00.000Z",
+      "updatedAt": "2026-07-27T21:00:00.000Z"
+    },
+    {
+      "id": 157,
+      "name": "Cà phê rang xay nguyên chất 500g",
+      "categoryId": 8,
+      "price": 189000,
+      "stock": 120,
+      "description": "Phối trộn Robusta – Arabica, rang vừa, đậm vị hậu ngọt, van một chiều giữ hương.",
+      "image": "/img/products/157.svg",
+      "visible": true,
+      "featured": true,
+      "bestSelling": true,
+      "createdAt": "2026-09-14T03:00:00.000Z",
+      "updatedAt": "2026-09-14T03:00:00.000Z"
+    },
+    {
+      "id": 158,
+      "name": "Trà ô long túi lọc (hộp 50 gói)",
+      "categoryId": 8,
+      "price": 129000,
+      "stock": 95,
+      "description": "Trà ô long cao nguyên, hương thơm dịu, túi lọc nilon tiện pha.",
+      "image": "/img/products/158.svg",
+      "visible": true,
+      "featured": false,
+      "bestSelling": false,
+      "createdAt": "2026-08-30T20:00:00.000Z",
+      "updatedAt": "2026-08-30T20:00:00.000Z"
+    },
+    {
+      "id": 159,
+      "name": "Mật ong rừng nguyên chất 500ml",
+      "categoryId": 8,
+      "price": 259000,
+      "stock": 45,
+      "description": "Thu hoạch từ rừng Tây Nguyên, không pha đường, có phiếu kiểm nghiệm.",
+      "image": "/img/products/159.svg",
+      "visible": true,
+      "featured": false,
+      "bestSelling": false,
+      "createdAt": "2026-10-05T17:00:00.000Z",
+      "updatedAt": "2026-10-05T17:00:00.000Z"
+    },
+    {
+      "id": 160,
+      "name": "Hạt điều rang muối 500g",
+      "categoryId": 8,
+      "price": 179000,
+      "stock": 80,
+      "description": "Hạt điều Bình Phước loại lớn, rang củi giòn thơm, đóng gói hút chân không.",
+      "image": "/img/products/160.svg",
+      "visible": true,
+      "featured": false,
+      "bestSelling": false,
+      "createdAt": "2026-09-22T16:00:00.000Z",
+      "updatedAt": "2026-09-22T16:00:00.000Z"
+    },
+    {
+      "id": 161,
+      "name": "Mì Ý kèm sốt cà chua (set 2 phần)",
+      "categoryId": 8,
+      "price": 99000,
+      "stock": 108,
+      "description": "Mì Ý bột lúa mì cứng 500g kèm sốt cà chua basil ăn liền.",
+      "image": "/img/products/161.svg",
+      "visible": true,
+      "featured": false,
+      "bestSelling": false,
+      "createdAt": "2026-09-10T22:00:00.000Z",
+      "updatedAt": "2026-09-10T22:00:00.000Z"
+    },
+    {
+      "id": 162,
+      "name": "Bánh quy bơ hộp thiếc 400g",
+      "categoryId": 8,
+      "price": 149000,
+      "stock": 52,
+      "description": "Bơ lạt nhập khẩu, giòn tan, hộp thiếc dùng lại làm quà tặng.",
+      "image": "/img/products/162.svg",
+      "visible": true,
+      "featured": false,
+      "bestSelling": false,
+      "createdAt": "2026-10-03T09:00:00.000Z",
+      "updatedAt": "2026-10-03T09:00:00.000Z"
+    },
+    {
+      "id": 163,
+      "name": "Nước ép trái cây ép lạnh (6 chai)",
+      "categoryId": 8,
+      "price": 219000,
+      "stock": 36,
+      "description": "Ép lạnh nguyên chất 330ml, không đường, không chất bảo quản, hạn dùng 14 ngày.",
+      "image": "/img/products/163.svg",
+      "visible": true,
+      "featured": false,
+      "bestSelling": false,
+      "createdAt": "2026-10-10T21:00:00.000Z",
+      "updatedAt": "2026-10-10T21:00:00.000Z"
+    },
+    {
+      "id": 164,
+      "name": "Granola ngũ cốc hạt 450g",
+      "categoryId": 8,
+      "price": 139000,
+      "stock": 0,
+      "description": "Yến mạch nướng mật ong cùng hạnh nhân, óc chó và nam việt quất sấy.",
+      "image": "/img/products/164.svg",
+      "visible": true,
+      "featured": false,
+      "bestSelling": false,
+      "createdAt": "2026-10-02T19:00:00.000Z",
+      "updatedAt": "2026-10-02T19:00:00.000Z"
+    },
+    {
+      "id": 165,
+      "name": "Tai nghe gaming có dây (ngừng kinh doanh)",
+      "categoryId": 1,
+      "price": 520000,
+      "stock": 12,
+      "description": "Sản phẩm đã ngừng kinh doanh, đang ẩn khỏi cửa hàng.",
+      "image": "/img/products/101.svg",
+      "visible": false,
+      "featured": false,
+      "bestSelling": false,
+      "createdAt": "2026-06-17T09:00:00.000Z",
+      "updatedAt": "2026-10-15T09:00:00.000Z"
+    }
+  ],
+  "users": [
+    {
+      "id": "adm-0001",
+      "name": "Quản trị viên ShopPro",
+      "email": "admin@shoppro.vn",
+      "phone": "1900 1234",
+      "address": "",
+      "role": "admin",
+      "status": "active",
+      "joinedAt": "2026-04-28",
+      "passwordSalt": "0157e9b2a017d6d0e44029e1bbd1c3b5",
+      "passwordHash": "a6715950bec8b940034c2453c98092501a057786caa60082f730d4559ec29287",
+      "passwordIterations": 600000
+    },
+    {
+      "id": "cus-1001",
+      "name": "Khách Demo",
+      "email": "khach@shoppro.vn",
+      "phone": "0901234567",
+      "address": "12 Nguyễn Huệ, Phường Bến Nghé, Quận 1, TP. Hồ Chí Minh",
+      "role": "customer",
+      "status": "active",
+      "joinedAt": "2026-07-02",
+      "passwordSalt": "3949d18d861a79871a35ad35636f571b",
+      "passwordHash": "4e0d0cfeec6fe6bd124ed77fd5d0d2dea1118393a20e6971e594102d1d6a7691",
+      "passwordIterations": 600000
+    },
+    {
+      "id": "cus-1002",
+      "name": "Nguyễn Minh Anh",
+      "email": "minhanh@example.com",
+      "phone": "0912345678",
+      "address": "45 Lê Lợi, Phường Bến Thành, Quận 1, TP. Hồ Chí Minh",
+      "role": "customer",
+      "status": "active",
+      "joinedAt": "2026-09-21",
+      "passwordSalt": "8ee9e0768816afcbceb9764c30147db0",
+      "passwordHash": "dd86968f85e75ce6528e02484eb0376127ea0b44f79bbba6c9804ba0ab699d70",
+      "passwordIterations": 600000
+    },
+    {
+      "id": "cus-1003",
+      "name": "Trần Quốc Bảo",
+      "email": "quocbao@example.com",
+      "phone": "0923456789",
+      "address": "88 Trần Thái Tông, Phường Dịch Vọng, Cầu Giấy, Hà Nội",
+      "role": "customer",
+      "status": "active",
+      "joinedAt": "2026-09-19",
+      "passwordSalt": "3ee420009b469878e2721b2cfd8d316a",
+      "passwordHash": "f83b0776dfb5d73133750d5fc6031ff26de0fc1f42b4ad3802d710de88753746",
+      "passwordIterations": 600000
+    },
+    {
+      "id": "cus-1004",
+      "name": "Lê Thị Thu Hà",
+      "email": "thuha@example.com",
+      "phone": "0934567890",
+      "address": "21 Bạch Đằng, Phường Hải Châu 1, Quận Hải Châu, Đà Nẵng",
+      "role": "customer",
+      "status": "active",
+      "joinedAt": "2026-08-21",
+      "passwordSalt": "9e6bc4751f78348e14ea58be0ff4e07c",
+      "passwordHash": "522bf89c7b4bc472c58bbd8c0338fe781e4ca5d1e19d5e8cfc79633ba160a1e9",
+      "passwordIterations": 600000
+    },
+    {
+      "id": "cus-1005",
+      "name": "Phạm Đức Anh",
+      "email": "ducanh@example.com",
+      "phone": "0945678901",
+      "address": "150 Đường 30/4, Phường Xuân Khánh, Quận Ninh Kiều, Cần Thơ",
+      "role": "customer",
+      "status": "active",
+      "joinedAt": "2026-06-30",
+      "passwordSalt": "54efbd5e425f1726abab193a2f8c94f0",
+      "passwordHash": "80ab6729b673365d7ec06cc6f4edd144303dded7c8e68629bb9db582c2b69f72",
+      "passwordIterations": 600000
+    },
+    {
+      "id": "cus-1006",
+      "name": "Võ Ngọc Lan",
+      "email": "ngoclan@example.com",
+      "phone": "0956789012",
+      "address": "7 Võ Văn Ngân, Phường Linh Chiểu, TP. Thủ Đức, TP. Hồ Chí Minh",
+      "role": "customer",
+      "status": "active",
+      "joinedAt": "2026-09-13",
+      "passwordSalt": "13d12c4a05ec46e3bec04595a040eb9f",
+      "passwordHash": "966e0393968ab6e9850bc3df04ffc7ba89b09fa3143b30869b9f78f1d07781db",
+      "passwordIterations": 600000
+    },
+    {
+      "id": "cus-1007",
+      "name": "Đặng Hoàng Nam",
+      "email": "hoangnam@example.com",
+      "phone": "0967890123",
+      "address": "32 Quang Trung, Phường Quang Trung, Quận Hà Đông, Hà Nội",
+      "role": "customer",
+      "status": "active",
+      "joinedAt": "2026-06-10",
+      "passwordSalt": "4b896be4a5bdd2bf923f47fd2a2ab929",
+      "passwordHash": "3bfd7caa06db61de89300eb5669a61dbee0bae3244a13ad818dfc60221be0fd3",
+      "passwordIterations": 600000
+    },
+    {
+      "id": "cus-1008",
+      "name": "Bùi Thanh Tùng",
+      "email": "thanhtung@example.com",
+      "phone": "0978901234",
+      "address": "19 Phạm Văn Thuận, Phường Tân Tiến, TP. Biên Hòa, Đồng Nai",
+      "role": "customer",
+      "status": "active",
+      "joinedAt": "2026-08-29",
+      "passwordSalt": "9e5826a3dd97723e4740312223f729c5",
+      "passwordHash": "9069856fab57798c141afd32bbfeb4fcaefbf603899cf2792defd92e0446c8e6",
+      "passwordIterations": 600000
+    },
+    {
+      "id": "cus-1009",
+      "name": "Hoàng Mai Phương",
+      "email": "maiphuong@example.com",
+      "phone": "0989012345",
+      "address": "64 Trần Phú, Phường Lộc Thọ, TP. Nha Trang, Khánh Hòa",
+      "role": "customer",
+      "status": "active",
+      "joinedAt": "2026-09-07",
+      "passwordSalt": "87ba53273dfe9b1ec6822c7a792c03e3",
+      "passwordHash": "2ecc8491ddd3b43eb7214dfea16738529e1cb4232419411f60511c229262478b",
+      "passwordIterations": 600000
+    },
+    {
+      "id": "cus-1010",
+      "name": "Ngô Gia Huy",
+      "email": "giahuy@example.com",
+      "phone": "0990123456",
+      "address": "5 Lê Quý Đôn, Phường Phú Hội, TP. Huế, Thừa Thiên Huế",
+      "role": "customer",
+      "status": "active",
+      "joinedAt": "2026-06-12",
+      "passwordSalt": "596e3953c09b71938d2644a2a7840ea7",
+      "passwordHash": "5f9c5079ab75cc872902fcef0dceae97a391a587913ee4eff0235a0091ea622c",
+      "passwordIterations": 600000
+    },
+    {
+      "id": "cus-1011",
+      "name": "Đỗ Khánh Linh",
+      "email": "khanhlinh@example.com",
+      "phone": "0902345671",
+      "address": "101 Lạch Tray, Phường Đằng Giang, Quận Ngô Quyền, Hải Phòng",
+      "role": "customer",
+      "status": "active",
+      "joinedAt": "2026-08-10",
+      "passwordSalt": "1e04abae4bbcd840cfa941fdffbad4fa",
+      "passwordHash": "3627dd700b580c16a3d066a40eea16bd5cd3ec94055bd29237ba2b7e260d37d0",
+      "passwordIterations": 600000
+    },
+    {
+      "id": "cus-1012",
+      "name": "Dương Văn Khoa",
+      "email": "vankhoa@example.com",
+      "phone": "0913456782",
+      "address": "27 Trương Công Định, Phường 3, TP. Vũng Tàu, Bà Rịa - Vũng Tàu",
+      "role": "customer",
+      "status": "locked",
+      "joinedAt": "2026-08-12",
+      "passwordSalt": "087db2d088b5b12ff40a0577e578bab5",
+      "passwordHash": "ec6a5d284ff3a5e697eff5f3b69028fb6fa1314ba3e748b064c77d52094b9ce9",
+      "passwordIterations": 600000
+    },
+    {
+      "id": "cus-1013",
+      "name": "Lý Bích Ngọc",
+      "email": "bichngoc@example.com",
+      "phone": "0924567893",
+      "address": "300 Nguyễn Thị Thập, Phường Tân Phong, Quận 7, TP. Hồ Chí Minh",
+      "role": "customer",
+      "status": "active",
+      "joinedAt": "2026-06-27",
+      "passwordSalt": "609fd4a02e33f71ef1e17572f1cc4298",
+      "passwordHash": "eb6e2eef7bd9a84afbf93d8c262ac778921de56dcef817bed3eac763e46819ea",
+      "passwordIterations": 600000
+    },
+    {
+      "id": "cus-1014",
+      "name": "Phan Tuấn Kiệt",
+      "email": "tuankiet@example.com",
+      "phone": "0935678904",
+      "address": "15 Nguyễn Huệ, Phường Lê Lợi, TP. Quy Nhơn, Bình Định",
+      "role": "customer",
+      "status": "active",
+      "joinedAt": "2026-10-02",
+      "passwordSalt": "c9da2200b06b6243612cc3df00b533c1",
+      "passwordHash": "5dd38c0d5c0507d6d644f40e93b8803193893f78b0abe5abfbd396c7a0dab67d",
+      "passwordIterations": 600000
+    },
+    {
+      "id": "cus-1015",
+      "name": "Trịnh Hải Yến",
+      "email": "haiyen@example.com",
+      "phone": "0946789015",
+      "address": "9 Hoàng Văn Thụ, Phường 9, TP. Đà Lạt, Lâm Đồng",
+      "role": "customer",
+      "status": "active",
+      "joinedAt": "2026-10-06",
+      "passwordSalt": "029ea675b856b4adea9f2aa449a6d623",
+      "passwordHash": "42f181107f76a782b471083aa2f11d0bf231f453dbdabee66d0645a59ed45090",
+      "passwordIterations": 600000
+    }
+  ],
+  "orders": [
+    {
+      "id": "SP-261007-F308",
+      "customerId": "cus-1003",
+      "customerName": "Trần Quốc Bảo",
+      "email": "quocbao@example.com",
+      "phone": "0923456789",
+      "shippingAddress": "88 Trần Thái Tông, Phường Dịch Vọng, Cầu Giấy, Hà Nội",
+      "note": "Gọi trước khi giao 15 phút.",
+      "paymentMethod": "cod",
+      "createdAt": "2026-10-07T07:26:00.000Z",
+      "updatedAt": "2026-10-08T15:50:00.000Z",
+      "status": "completed",
+      "items": [
+        {
+          "productId": 101,
+          "productName": "Tai nghe Bluetooth chống ồn SoundWave NC700",
+          "image": "/img/products/101.svg",
+          "unitPrice": 1890000,
+          "quantity": 2
+        }
+      ],
+      "stockReserved": true,
+      "total": 3780000
+    },
+    {
+      "id": "SP-261008-1E52",
+      "customerId": "cus-1005",
+      "customerName": "Phạm Đức Anh",
+      "email": "ducanh@example.com",
+      "phone": "0945678901",
+      "shippingAddress": "150 Đường 30/4, Phường Xuân Khánh, Quận Ninh Kiều, Cần Thơ",
+      "note": "Giao giờ hành chính giúp mình nhé.",
+      "paymentMethod": "cod",
+      "createdAt": "2026-10-08T02:54:00.000Z",
+      "updatedAt": "2026-10-09T05:00:00.000Z",
+      "status": "completed",
+      "items": [
+        {
+          "productId": 122,
+          "productName": "Hộp cơm giữ nhiệt 2 ngăn",
+          "image": "/img/products/122.svg",
+          "unitPrice": 249000,
+          "quantity": 2
+        }
+      ],
+      "stockReserved": true,
+      "total": 498000
+    },
+    {
+      "id": "SP-261011-6F2F",
+      "customerId": "cus-1008",
+      "customerName": "Bùi Thanh Tùng",
+      "email": "thanhtung@example.com",
+      "phone": "0978901234",
+      "shippingAddress": "19 Phạm Văn Thuận, Phường Tân Tiến, TP. Biên Hòa, Đồng Nai",
+      "note": "Đóng gói kỹ giúp mình, cảm ơn shop!",
+      "paymentMethod": "bank",
+      "createdAt": "2026-10-11T07:54:00.000Z",
+      "updatedAt": "2026-10-12T16:27:00.000Z",
+      "status": "completed",
+      "items": [
+        {
+          "productId": 115,
+          "productName": "Túi tote vải canvas dày",
+          "image": "/img/products/115.svg",
+          "unitPrice": 159000,
+          "quantity": 2
+        },
+        {
+          "productId": 101,
+          "productName": "Tai nghe Bluetooth chống ồn SoundWave NC700",
+          "image": "/img/products/101.svg",
+          "unitPrice": 1890000,
+          "quantity": 1
+        }
+      ],
+      "stockReserved": true,
+      "total": 2208000
+    },
+    {
+      "id": "SP-261011-E5A0",
+      "customerId": "cus-1013",
+      "customerName": "Lý Bích Ngọc",
+      "email": "bichngoc@example.com",
+      "phone": "0924567893",
+      "shippingAddress": "300 Nguyễn Thị Thập, Phường Tân Phong, Quận 7, TP. Hồ Chí Minh",
+      "note": "",
+      "paymentMethod": "cod",
+      "createdAt": "2026-10-11T23:55:00.000Z",
+      "updatedAt": "2026-10-13T04:42:00.000Z",
+      "status": "completed",
+      "items": [
+        {
+          "productId": 135,
+          "productName": "Dây nhảy tốc độ có bộ đếm",
+          "image": "/img/products/135.svg",
+          "unitPrice": 99000,
+          "quantity": 3
+        },
+        {
+          "productId": 124,
+          "productName": "Thảm lau chân thấm hút chống trượt",
+          "image": "/img/products/124.svg",
+          "unitPrice": 89000,
+          "quantity": 1
+        }
+      ],
+      "stockReserved": true,
+      "total": 386000
+    },
+    {
+      "id": "SP-261012-D6DF",
+      "customerId": "cus-1015",
+      "customerName": "Trịnh Hải Yến",
+      "email": "haiyen@example.com",
+      "phone": "0946789015",
+      "shippingAddress": "9 Hoàng Văn Thụ, Phường 9, TP. Đà Lạt, Lâm Đồng",
+      "note": "",
+      "paymentMethod": "bank",
+      "createdAt": "2026-10-12T01:27:00.000Z",
+      "updatedAt": "2026-10-13T20:26:00.000Z",
+      "status": "completed",
+      "items": [
+        {
+          "productId": 160,
+          "productName": "Hạt điều rang muối 500g",
+          "image": "/img/products/160.svg",
+          "unitPrice": 179000,
+          "quantity": 2
+        },
+        {
+          "productId": 151,
+          "productName": "Khăn sữa sợi tre (5 cái)",
+          "image": "/img/products/151.svg",
+          "unitPrice": 119000,
+          "quantity": 2
+        },
+        {
+          "productId": 122,
+          "productName": "Hộp cơm giữ nhiệt 2 ngăn",
+          "image": "/img/products/122.svg",
+          "unitPrice": 249000,
+          "quantity": 1
+        },
+        {
+          "productId": 159,
+          "productName": "Mật ong rừng nguyên chất 500ml",
+          "image": "/img/products/159.svg",
+          "unitPrice": 259000,
+          "quantity": 1
+        }
+      ],
+      "stockReserved": true,
+      "total": 1104000
+    },
+    {
+      "id": "SP-261012-9B73",
+      "customerId": "cus-1007",
+      "customerName": "Đặng Hoàng Nam",
+      "email": "hoangnam@example.com",
+      "phone": "0967890123",
+      "shippingAddress": "32 Quang Trung, Phường Quang Trung, Quận Hà Đông, Hà Nội",
+      "note": "Gọi trước khi giao 15 phút.",
+      "paymentMethod": "cod",
+      "createdAt": "2026-10-12T06:02:00.000Z",
+      "updatedAt": "2026-10-13T14:53:00.000Z",
+      "status": "completed",
+      "items": [
+        {
+          "productId": 129,
+          "productName": "Bộ bút highlight 6 màu pastel",
+          "image": "/img/products/129.svg",
+          "unitPrice": 59000,
+          "quantity": 1
+        },
+        {
+          "productId": 122,
+          "productName": "Hộp cơm giữ nhiệt 2 ngăn",
+          "image": "/img/products/122.svg",
+          "unitPrice": 249000,
+          "quantity": 1
+        },
+        {
+          "productId": 111,
+          "productName": "Quần jean nam slim-fit co giãn",
+          "image": "/img/products/111.svg",
+          "unitPrice": 499000,
+          "quantity": 1
+        }
+      ],
+      "stockReserved": true,
+      "total": 807000
+    },
+    {
+      "id": "SP-261014-6732",
+      "customerId": "cus-1009",
+      "customerName": "Hoàng Mai Phương",
+      "email": "maiphuong@example.com",
+      "phone": "0989012345",
+      "shippingAddress": "64 Trần Phú, Phường Lộc Thọ, TP. Nha Trang, Khánh Hòa",
+      "note": "Gọi trước khi giao 15 phút.",
+      "paymentMethod": "cod",
+      "createdAt": "2026-10-14T00:48:00.000Z",
+      "updatedAt": "2026-10-15T16:13:00.000Z",
+      "status": "completed",
+      "items": [
+        {
+          "productId": 104,
+          "productName": "Bàn phím cơ không dây KeyCraft K84",
+          "image": "/img/products/104.svg",
+          "unitPrice": 1150000,
+          "quantity": 1
+        },
+        {
+          "productId": 136,
+          "productName": "Lều cắm trại 2 người chống thấm",
+          "image": "/img/products/136.svg",
+          "unitPrice": 1290000,
+          "quantity": 2
+        },
+        {
+          "productId": 118,
+          "productName": "Ly sứ cách nhiệt 350ml có nắp",
+          "image": "/img/products/118.svg",
+          "unitPrice": 129000,
+          "quantity": 3
+        },
+        {
+          "productId": 144,
+          "productName": "Dầu gội thảo dược 480ml",
+          "image": "/img/products/144.svg",
+          "unitPrice": 189000,
+          "quantity": 1
+        }
+      ],
+      "stockReserved": true,
+      "total": 4306000
+    },
+    {
+      "id": "SP-261014-FA8B",
+      "customerId": "cus-1010",
+      "customerName": "Ngô Gia Huy",
+      "email": "giahuy@example.com",
+      "phone": "0990123456",
+      "shippingAddress": "5 Lê Quý Đôn, Phường Phú Hội, TP. Huế, Thừa Thiên Huế",
+      "note": "Xuất hóa đơn công ty theo email.",
+      "paymentMethod": "cod",
+      "createdAt": "2026-10-14T23:52:00.000Z",
+      "updatedAt": "2026-10-16T20:26:00.000Z",
+      "status": "completed",
+      "items": [
+        {
+          "productId": 125,
+          "productName": "Sổ tay lò xo A5 giấy kem 200 trang",
+          "image": "/img/products/125.svg",
+          "unitPrice": 79000,
+          "quantity": 1
+        },
+        {
+          "productId": 102,
+          "productName": "Loa Bluetooth di động BassBox Mini 20W",
+          "image": "/img/products/102.svg",
+          "unitPrice": 790000,
+          "quantity": 2
+        }
+      ],
+      "stockReserved": true,
+      "total": 1659000
+    },
+    {
+      "id": "SP-261015-FEA2",
+      "customerId": "cus-1002",
+      "customerName": "Nguyễn Minh Anh",
+      "email": "minhanh@example.com",
+      "phone": "0912345678",
+      "shippingAddress": "45 Lê Lợi, Phường Bến Thành, Quận 1, TP. Hồ Chí Minh",
+      "note": "",
+      "paymentMethod": "cod",
+      "createdAt": "2026-10-15T03:53:00.000Z",
+      "updatedAt": "2026-10-16T10:25:00.000Z",
+      "status": "completed",
+      "items": [
+        {
+          "productId": 134,
+          "productName": "Tạ tay bọc cao su 5kg (cặp)",
+          "image": "/img/products/134.svg",
+          "unitPrice": 399000,
+          "quantity": 2
+        },
+        {
+          "productId": 139,
+          "productName": "Bóng đá size 5 thi đấu",
+          "image": "/img/products/139.svg",
+          "unitPrice": 299000,
+          "quantity": 1
+        },
+        {
+          "productId": 125,
+          "productName": "Sổ tay lò xo A5 giấy kem 200 trang",
+          "image": "/img/products/125.svg",
+          "unitPrice": 79000,
+          "quantity": 1
+        },
+        {
+          "productId": 151,
+          "productName": "Khăn sữa sợi tre (5 cái)",
+          "image": "/img/products/151.svg",
+          "unitPrice": 119000,
+          "quantity": 1
+        }
+      ],
+      "stockReserved": true,
+      "total": 1295000
+    },
+    {
+      "id": "SP-261018-28A8",
+      "customerId": "cus-1013",
+      "customerName": "Lý Bích Ngọc",
+      "email": "bichngoc@example.com",
+      "phone": "0924567893",
+      "shippingAddress": "300 Nguyễn Thị Thập, Phường Tân Phong, Quận 7, TP. Hồ Chí Minh",
+      "note": "Đóng gói kỹ giúp mình, cảm ơn shop!",
+      "paymentMethod": "bank",
+      "createdAt": "2026-10-18T08:39:00.000Z",
+      "updatedAt": "2026-10-20T03:53:00.000Z",
+      "status": "completed",
+      "items": [
+        {
+          "productId": 126,
+          "productName": "Bút gel 0.5mm hộp 12 cây",
+          "image": "/img/products/126.svg",
+          "unitPrice": 69000,
+          "quantity": 1
+        },
+        {
+          "productId": 102,
+          "productName": "Loa Bluetooth di động BassBox Mini 20W",
+          "image": "/img/products/102.svg",
+          "unitPrice": 790000,
+          "quantity": 1
+        },
+        {
+          "productId": 136,
+          "productName": "Lều cắm trại 2 người chống thấm",
+          "image": "/img/products/136.svg",
+          "unitPrice": 1290000,
+          "quantity": 1
+        },
+        {
+          "productId": 117,
+          "productName": "Bình giữ nhiệt inox 600ml",
+          "image": "/img/products/117.svg",
+          "unitPrice": 359000,
+          "quantity": 1
+        }
+      ],
+      "stockReserved": true,
+      "total": 2508000
+    },
+    {
+      "id": "SP-261020-DD59",
+      "customerId": "cus-1012",
+      "customerName": "Dương Văn Khoa",
+      "email": "vankhoa@example.com",
+      "phone": "0913456782",
+      "shippingAddress": "27 Trương Công Định, Phường 3, TP. Vũng Tàu, Bà Rịa - Vũng Tàu",
+      "note": "Đóng gói kỹ giúp mình, cảm ơn shop!",
+      "paymentMethod": "bank",
+      "createdAt": "2026-10-20T00:31:00.000Z",
+      "updatedAt": "2026-10-21T04:54:00.000Z",
+      "status": "completed",
+      "items": [
+        {
+          "productId": 127,
+          "productName": "Lập trình C++ từ cơ bản đến nâng cao",
+          "image": "/img/products/127.svg",
+          "unitPrice": 225000,
+          "quantity": 1
+        },
+        {
+          "productId": 148,
+          "productName": "Xịt thơm body mist 100ml",
+          "image": "/img/products/148.svg",
+          "unitPrice": 219000,
+          "quantity": 1
+        }
+      ],
+      "stockReserved": true,
+      "total": 444000
+    },
+    {
+      "id": "SP-261020-EE7D",
+      "customerId": "cus-1011",
+      "customerName": "Đỗ Khánh Linh",
+      "email": "khanhlinh@example.com",
+      "phone": "0902345671",
+      "shippingAddress": "101 Lạch Tray, Phường Đằng Giang, Quận Ngô Quyền, Hải Phòng",
+      "note": "",
+      "paymentMethod": "cod",
+      "createdAt": "2026-10-20T06:24:00.000Z",
+      "updatedAt": "2026-10-21T16:49:00.000Z",
+      "status": "completed",
+      "items": [
+        {
+          "productId": 117,
+          "productName": "Bình giữ nhiệt inox 600ml",
+          "image": "/img/products/117.svg",
+          "unitPrice": 359000,
+          "quantity": 1
+        },
+        {
+          "productId": 148,
+          "productName": "Xịt thơm body mist 100ml",
+          "image": "/img/products/148.svg",
+          "unitPrice": 219000,
+          "quantity": 1
+        }
+      ],
+      "stockReserved": true,
+      "total": 578000
+    },
+    {
+      "id": "SP-261020-9E2C",
+      "customerId": "cus-1012",
+      "customerName": "Dương Văn Khoa",
+      "email": "vankhoa@example.com",
+      "phone": "0913456782",
+      "shippingAddress": "27 Trương Công Định, Phường 3, TP. Vũng Tàu, Bà Rịa - Vũng Tàu",
+      "note": "",
+      "paymentMethod": "cod",
+      "createdAt": "2026-10-20T06:47:00.000Z",
+      "updatedAt": "2026-10-20T15:56:00.000Z",
+      "status": "cancelled",
+      "items": [
+        {
+          "productId": 132,
+          "productName": "Giấy A4 70gsm (ream 500 tờ)",
+          "image": "/img/products/132.svg",
+          "unitPrice": 82000,
+          "quantity": 3
+        },
+        {
+          "productId": 143,
+          "productName": "Serum Vitamin C 30ml",
+          "image": "/img/products/143.svg",
+          "unitPrice": 329000,
+          "quantity": 1
+        },
+        {
+          "productId": 155,
+          "productName": "Sữa tắm gội trẻ em 500ml",
+          "image": "/img/products/155.svg",
+          "unitPrice": 149000,
+          "quantity": 1
+        }
+      ],
+      "stockReserved": false,
+      "total": 724000
+    },
+    {
+      "id": "SP-261021-9157",
+      "customerId": "cus-1004",
+      "customerName": "Lê Thị Thu Hà",
+      "email": "thuha@example.com",
+      "phone": "0934567890",
+      "shippingAddress": "21 Bạch Đằng, Phường Hải Châu 1, Quận Hải Châu, Đà Nẵng",
+      "note": "",
+      "paymentMethod": "cod",
+      "createdAt": "2026-10-21T23:01:00.000Z",
+      "updatedAt": "2026-10-23T05:13:00.000Z",
+      "status": "completed",
+      "items": [
+        {
+          "productId": 115,
+          "productName": "Túi tote vải canvas dày",
+          "image": "/img/products/115.svg",
+          "unitPrice": 159000,
+          "quantity": 1
+        },
+        {
+          "productId": 145,
+          "productName": "Son dưỡng môi có màu",
+          "image": "/img/products/145.svg",
+          "unitPrice": 99000,
+          "quantity": 1
+        }
+      ],
+      "stockReserved": true,
+      "total": 258000
+    },
+    {
+      "id": "SP-261021-67F4",
+      "customerId": "cus-1005",
+      "customerName": "Phạm Đức Anh",
+      "email": "ducanh@example.com",
+      "phone": "0945678901",
+      "shippingAddress": "150 Đường 30/4, Phường Xuân Khánh, Quận Ninh Kiều, Cần Thơ",
+      "note": "Xuất hóa đơn công ty theo email.",
+      "paymentMethod": "cod",
+      "createdAt": "2026-10-21T23:30:00.000Z",
+      "updatedAt": "2026-10-23T06:29:00.000Z",
+      "status": "completed",
+      "items": [
+        {
+          "productId": 129,
+          "productName": "Bộ bút highlight 6 màu pastel",
+          "image": "/img/products/129.svg",
+          "unitPrice": 59000,
+          "quantity": 2
+        },
+        {
+          "productId": 152,
+          "productName": "Xe đẩy gấp gọn đa năng",
+          "image": "/img/products/152.svg",
+          "unitPrice": 2490000,
+          "quantity": 1
+        }
+      ],
+      "stockReserved": true,
+      "total": 2608000
+    },
+    {
+      "id": "SP-261022-B0D9",
+      "customerId": "cus-1010",
+      "customerName": "Ngô Gia Huy",
+      "email": "giahuy@example.com",
+      "phone": "0990123456",
+      "shippingAddress": "5 Lê Quý Đôn, Phường Phú Hội, TP. Huế, Thừa Thiên Huế",
+      "note": "",
+      "paymentMethod": "cod",
+      "createdAt": "2026-10-22T04:22:00.000Z",
+      "updatedAt": "2026-10-23T13:53:00.000Z",
+      "status": "completed",
+      "items": [
+        {
+          "productId": 114,
+          "productName": "Balo laptop chống nước 15.6 inch",
+          "image": "/img/products/114.svg",
+          "unitPrice": 559000,
+          "quantity": 1
+        },
+        {
+          "productId": 154,
+          "productName": "Gấu bông Teddy 50cm",
+          "image": "/img/products/154.svg",
+          "unitPrice": 189000,
+          "quantity": 2
+        },
+        {
+          "productId": 121,
+          "productName": "Bộ ga gối cotton 1m6 (4 món)",
+          "image": "/img/products/121.svg",
+          "unitPrice": 749000,
+          "quantity": 1
+        },
+        {
+          "productId": 143,
+          "productName": "Serum Vitamin C 30ml",
+          "image": "/img/products/143.svg",
+          "unitPrice": 329000,
+          "quantity": 1
+        }
+      ],
+      "stockReserved": true,
+      "total": 2015000
+    },
+    {
+      "id": "SP-261022-A8EA",
+      "customerId": "cus-1006",
+      "customerName": "Võ Ngọc Lan",
+      "email": "ngoclan@example.com",
+      "phone": "0956789012",
+      "shippingAddress": "7 Võ Văn Ngân, Phường Linh Chiểu, TP. Thủ Đức, TP. Hồ Chí Minh",
+      "note": "Gọi trước khi giao 15 phút.",
+      "paymentMethod": "cod",
+      "createdAt": "2026-10-22T06:26:00.000Z",
+      "updatedAt": "2026-10-23T15:29:00.000Z",
+      "status": "completed",
+      "items": [
+        {
+          "productId": 152,
+          "productName": "Xe đẩy gấp gọn đa năng",
+          "image": "/img/products/152.svg",
+          "unitPrice": 2490000,
+          "quantity": 1
+        }
+      ],
+      "stockReserved": true,
+      "total": 2490000
+    },
+    {
+      "id": "SP-261025-5DC9",
+      "customerId": "cus-1005",
+      "customerName": "Phạm Đức Anh",
+      "email": "ducanh@example.com",
+      "phone": "0945678901",
+      "shippingAddress": "150 Đường 30/4, Phường Xuân Khánh, Quận Ninh Kiều, Cần Thơ",
+      "note": "",
+      "paymentMethod": "bank",
+      "createdAt": "2026-10-25T01:08:00.000Z",
+      "updatedAt": "2026-10-26T05:19:00.000Z",
+      "status": "completed",
+      "items": [
+        {
+          "productId": 140,
+          "productName": "Vợt cầu lông carbon (bộ 2 cây)",
+          "image": "/img/products/140.svg",
+          "unitPrice": 590000,
+          "quantity": 1
+        },
+        {
+          "productId": 135,
+          "productName": "Dây nhảy tốc độ có bộ đếm",
+          "image": "/img/products/135.svg",
+          "unitPrice": 99000,
+          "quantity": 1
+        },
+        {
+          "productId": 116,
+          "productName": "Mũ lưỡi trai thêu chữ unisex",
+          "image": "/img/products/116.svg",
+          "unitPrice": 119000,
+          "quantity": 1
+        },
+        {
+          "productId": 163,
+          "productName": "Nước ép trái cây ép lạnh (6 chai)",
+          "image": "/img/products/163.svg",
+          "unitPrice": 219000,
+          "quantity": 2
+        }
+      ],
+      "stockReserved": true,
+      "total": 1246000
+    },
+    {
+      "id": "SP-261025-9E67",
+      "customerId": "cus-1013",
+      "customerName": "Lý Bích Ngọc",
+      "email": "bichngoc@example.com",
+      "phone": "0924567893",
+      "shippingAddress": "300 Nguyễn Thị Thập, Phường Tân Phong, Quận 7, TP. Hồ Chí Minh",
+      "note": "",
+      "paymentMethod": "cod",
+      "createdAt": "2026-10-25T02:57:00.000Z",
+      "updatedAt": "2026-10-26T22:26:00.000Z",
+      "status": "completed",
+      "items": [
+        {
+          "productId": 133,
+          "productName": "Thảm tập yoga TPE 6mm",
+          "image": "/img/products/133.svg",
+          "unitPrice": 249000,
+          "quantity": 1
+        },
+        {
+          "productId": 151,
+          "productName": "Khăn sữa sợi tre (5 cái)",
+          "image": "/img/products/151.svg",
+          "unitPrice": 119000,
+          "quantity": 2
+        }
+      ],
+      "stockReserved": true,
+      "total": 487000
+    },
+    {
+      "id": "SP-261025-989C",
+      "customerId": "cus-1002",
+      "customerName": "Nguyễn Minh Anh",
+      "email": "minhanh@example.com",
+      "phone": "0912345678",
+      "shippingAddress": "45 Lê Lợi, Phường Bến Thành, Quận 1, TP. Hồ Chí Minh",
+      "note": "Giao giờ hành chính giúp mình nhé.",
+      "paymentMethod": "cod",
+      "createdAt": "2026-10-25T08:59:00.000Z",
+      "updatedAt": "2026-10-26T05:34:00.000Z",
+      "status": "completed",
+      "items": [
+        {
+          "productId": 159,
+          "productName": "Mật ong rừng nguyên chất 500ml",
+          "image": "/img/products/159.svg",
+          "unitPrice": 259000,
+          "quantity": 1
+        },
+        {
+          "productId": 119,
+          "productName": "Đèn bàn LED chống cận 3 chế độ",
+          "image": "/img/products/119.svg",
+          "unitPrice": 429000,
+          "quantity": 2
+        }
+      ],
+      "stockReserved": true,
+      "total": 1117000
+    },
+    {
+      "id": "SP-261026-C9BD",
+      "customerId": "cus-1015",
+      "customerName": "Trịnh Hải Yến",
+      "email": "haiyen@example.com",
+      "phone": "0946789015",
+      "shippingAddress": "9 Hoàng Văn Thụ, Phường 9, TP. Đà Lạt, Lâm Đồng",
+      "note": "Xuất hóa đơn công ty theo email.",
+      "paymentMethod": "cod",
+      "createdAt": "2026-10-26T05:54:00.000Z",
+      "updatedAt": "2026-10-28T02:41:00.000Z",
+      "status": "completed",
+      "items": [
+        {
+          "productId": 131,
+          "productName": "Máy tính khoa học 570 chức năng",
+          "image": "/img/products/131.svg",
+          "unitPrice": 349000,
+          "quantity": 2
+        },
+        {
+          "productId": 133,
+          "productName": "Thảm tập yoga TPE 6mm",
+          "image": "/img/products/133.svg",
+          "unitPrice": 249000,
+          "quantity": 3
+        }
+      ],
+      "stockReserved": true,
+      "total": 1445000
+    },
+    {
+      "id": "SP-261026-912C",
+      "customerId": "cus-1014",
+      "customerName": "Phan Tuấn Kiệt",
+      "email": "tuankiet@example.com",
+      "phone": "0935678904",
+      "shippingAddress": "15 Nguyễn Huệ, Phường Lê Lợi, TP. Quy Nhơn, Bình Định",
+      "note": "",
+      "paymentMethod": "cod",
+      "createdAt": "2026-10-26T06:36:00.000Z",
+      "updatedAt": "2026-10-28T05:56:00.000Z",
+      "status": "completed",
+      "items": [
+        {
+          "productId": 162,
+          "productName": "Bánh quy bơ hộp thiếc 400g",
+          "image": "/img/products/162.svg",
+          "unitPrice": 149000,
+          "quantity": 2
+        },
+        {
+          "productId": 118,
+          "productName": "Ly sứ cách nhiệt 350ml có nắp",
+          "image": "/img/products/118.svg",
+          "unitPrice": 129000,
+          "quantity": 1
+        }
+      ],
+      "stockReserved": true,
+      "total": 427000
+    },
+    {
+      "id": "SP-261026-0C62",
+      "customerId": "cus-1002",
+      "customerName": "Nguyễn Minh Anh",
+      "email": "minhanh@example.com",
+      "phone": "0912345678",
+      "shippingAddress": "45 Lê Lợi, Phường Bến Thành, Quận 1, TP. Hồ Chí Minh",
+      "note": "",
+      "paymentMethod": "cod",
+      "createdAt": "2026-10-26T23:59:00.000Z",
+      "updatedAt": "2026-10-28T08:18:00.000Z",
+      "status": "completed",
+      "items": [
+        {
+          "productId": 131,
+          "productName": "Máy tính khoa học 570 chức năng",
+          "image": "/img/products/131.svg",
+          "unitPrice": 349000,
+          "quantity": 2
+        },
+        {
+          "productId": 132,
+          "productName": "Giấy A4 70gsm (ream 500 tờ)",
+          "image": "/img/products/132.svg",
+          "unitPrice": 82000,
+          "quantity": 1
+        },
+        {
+          "productId": 143,
+          "productName": "Serum Vitamin C 30ml",
+          "image": "/img/products/143.svg",
+          "unitPrice": 329000,
+          "quantity": 3
+        },
+        {
+          "productId": 104,
+          "productName": "Bàn phím cơ không dây KeyCraft K84",
+          "image": "/img/products/104.svg",
+          "unitPrice": 1150000,
+          "quantity": 2
+        }
+      ],
+      "stockReserved": true,
+      "total": 4067000
+    },
+    {
+      "id": "SP-261027-9DFF",
+      "customerId": "cus-1010",
+      "customerName": "Ngô Gia Huy",
+      "email": "giahuy@example.com",
+      "phone": "0990123456",
+      "shippingAddress": "5 Lê Quý Đôn, Phường Phú Hội, TP. Huế, Thừa Thiên Huế",
+      "note": "Để hàng ở bảo vệ nếu mình vắng.",
+      "paymentMethod": "cod",
+      "createdAt": "2026-10-27T02:32:00.000Z",
+      "updatedAt": "2026-10-28T02:22:00.000Z",
+      "status": "completed",
+      "items": [
+        {
+          "productId": 129,
+          "productName": "Bộ bút highlight 6 màu pastel",
+          "image": "/img/products/129.svg",
+          "unitPrice": 59000,
+          "quantity": 1
+        },
+        {
+          "productId": 133,
+          "productName": "Thảm tập yoga TPE 6mm",
+          "image": "/img/products/133.svg",
+          "unitPrice": 249000,
+          "quantity": 1
+        },
+        {
+          "productId": 104,
+          "productName": "Bàn phím cơ không dây KeyCraft K84",
+          "image": "/img/products/104.svg",
+          "unitPrice": 1150000,
+          "quantity": 1
+        }
+      ],
+      "stockReserved": true,
+      "total": 1458000
+    },
+    {
+      "id": "SP-261027-A005",
+      "customerId": "cus-1008",
+      "customerName": "Bùi Thanh Tùng",
+      "email": "thanhtung@example.com",
+      "phone": "0978901234",
+      "shippingAddress": "19 Phạm Văn Thuận, Phường Tân Tiến, TP. Biên Hòa, Đồng Nai",
+      "note": "Gọi trước khi giao 15 phút.",
+      "paymentMethod": "bank",
+      "createdAt": "2026-10-27T05:10:00.000Z",
+      "updatedAt": "2026-10-28T10:45:00.000Z",
+      "status": "completed",
+      "items": [
+        {
+          "productId": 145,
+          "productName": "Son dưỡng môi có màu",
+          "image": "/img/products/145.svg",
+          "unitPrice": 99000,
+          "quantity": 2
+        }
+      ],
+      "stockReserved": true,
+      "total": 198000
+    },
+    {
+      "id": "SP-261028-7468",
+      "customerId": "cus-1002",
+      "customerName": "Nguyễn Minh Anh",
+      "email": "minhanh@example.com",
+      "phone": "0912345678",
+      "shippingAddress": "45 Lê Lợi, Phường Bến Thành, Quận 1, TP. Hồ Chí Minh",
+      "note": "",
+      "paymentMethod": "bank",
+      "createdAt": "2026-10-28T02:00:00.000Z",
+      "updatedAt": "2026-10-28T23:56:00.000Z",
+      "status": "completed",
+      "items": [
+        {
+          "productId": 130,
+          "productName": "Kệ sách mini để bàn 2 tầng",
+          "image": "/img/products/130.svg",
+          "unitPrice": 289000,
+          "quantity": 1
+        }
+      ],
+      "stockReserved": true,
+      "total": 289000
+    },
+    {
+      "id": "SP-261029-102D",
+      "customerId": "cus-1010",
+      "customerName": "Ngô Gia Huy",
+      "email": "giahuy@example.com",
+      "phone": "0990123456",
+      "shippingAddress": "5 Lê Quý Đôn, Phường Phú Hội, TP. Huế, Thừa Thiên Huế",
+      "note": "Để hàng ở bảo vệ nếu mình vắng.",
+      "paymentMethod": "cod",
+      "createdAt": "2026-10-29T23:49:00.000Z",
+      "updatedAt": "2026-10-31T11:12:00.000Z",
+      "status": "completed",
+      "items": [
+        {
+          "productId": 157,
+          "productName": "Cà phê rang xay nguyên chất 500g",
+          "image": "/img/products/157.svg",
+          "unitPrice": 189000,
+          "quantity": 1
+        }
+      ],
+      "stockReserved": true,
+      "total": 189000
+    },
+    {
+      "id": "SP-261031-10FF",
+      "customerId": "cus-1014",
+      "customerName": "Phan Tuấn Kiệt",
+      "email": "tuankiet@example.com",
+      "phone": "0935678904",
+      "shippingAddress": "15 Nguyễn Huệ, Phường Lê Lợi, TP. Quy Nhơn, Bình Định",
+      "note": "",
+      "paymentMethod": "bank",
+      "createdAt": "2026-10-31T04:07:00.000Z",
+      "updatedAt": "2026-11-01T21:10:00.000Z",
+      "status": "completed",
+      "items": [
+        {
+          "productId": 155,
+          "productName": "Sữa tắm gội trẻ em 500ml",
+          "image": "/img/products/155.svg",
+          "unitPrice": 149000,
+          "quantity": 2
+        }
+      ],
+      "stockReserved": true,
+      "total": 298000
+    },
+    {
+      "id": "SP-261101-E2E1",
+      "customerId": "cus-1011",
+      "customerName": "Đỗ Khánh Linh",
+      "email": "khanhlinh@example.com",
+      "phone": "0902345671",
+      "shippingAddress": "101 Lạch Tray, Phường Đằng Giang, Quận Ngô Quyền, Hải Phòng",
+      "note": "Gọi trước khi giao 15 phút.",
+      "paymentMethod": "cod",
+      "createdAt": "2026-11-01T03:48:00.000Z",
+      "updatedAt": "2026-11-03T05:57:00.000Z",
+      "status": "completed",
+      "items": [
+        {
+          "productId": 154,
+          "productName": "Gấu bông Teddy 50cm",
+          "image": "/img/products/154.svg",
+          "unitPrice": 189000,
+          "quantity": 2
+        }
+      ],
+      "stockReserved": true,
+      "total": 378000
+    },
+    {
+      "id": "SP-261101-3EB6",
+      "customerId": "cus-1006",
+      "customerName": "Võ Ngọc Lan",
+      "email": "ngoclan@example.com",
+      "phone": "0956789012",
+      "shippingAddress": "7 Võ Văn Ngân, Phường Linh Chiểu, TP. Thủ Đức, TP. Hồ Chí Minh",
+      "note": "Giao giờ hành chính giúp mình nhé.",
+      "paymentMethod": "cod",
+      "createdAt": "2026-11-01T07:30:00.000Z",
+      "updatedAt": "2026-11-02T22:51:00.000Z",
+      "status": "completed",
+      "items": [
+        {
+          "productId": 157,
+          "productName": "Cà phê rang xay nguyên chất 500g",
+          "image": "/img/products/157.svg",
+          "unitPrice": 189000,
+          "quantity": 1
+        },
+        {
+          "productId": 112,
+          "productName": "Giày sneaker nữ trắng Urban Step",
+          "image": "/img/products/112.svg",
+          "unitPrice": 690000,
+          "quantity": 2
+        }
+      ],
+      "stockReserved": true,
+      "total": 1569000
+    },
+    {
+      "id": "SP-261102-9A91",
+      "customerId": "cus-1001",
+      "customerName": "Khách Demo",
+      "email": "khach@shoppro.vn",
+      "phone": "0901234567",
+      "shippingAddress": "12 Nguyễn Huệ, Phường Bến Nghé, Quận 1, TP. Hồ Chí Minh",
+      "note": "",
+      "paymentMethod": "bank",
+      "createdAt": "2026-11-02T03:26:00.000Z",
+      "updatedAt": "2026-11-04T03:36:00.000Z",
+      "status": "completed",
+      "items": [
+        {
+          "productId": 126,
+          "productName": "Bút gel 0.5mm hộp 12 cây",
+          "image": "/img/products/126.svg",
+          "unitPrice": 69000,
+          "quantity": 1
+        }
+      ],
+      "stockReserved": true,
+      "total": 69000
+    },
+    {
+      "id": "SP-261102-0F8F",
+      "customerId": "cus-1006",
+      "customerName": "Võ Ngọc Lan",
+      "email": "ngoclan@example.com",
+      "phone": "0956789012",
+      "shippingAddress": "7 Võ Văn Ngân, Phường Linh Chiểu, TP. Thủ Đức, TP. Hồ Chí Minh",
+      "note": "",
+      "paymentMethod": "bank",
+      "createdAt": "2026-11-02T08:40:00.000Z",
+      "updatedAt": "2026-11-03T22:22:00.000Z",
+      "status": "completed",
+      "items": [
+        {
+          "productId": 147,
+          "productName": "Bộ chăm sóc da mini 4 món",
+          "image": "/img/products/147.svg",
+          "unitPrice": 499000,
+          "quantity": 1
+        },
+        {
+          "productId": 138,
+          "productName": "Găng tay tập gym chống trượt",
+          "image": "/img/products/138.svg",
+          "unitPrice": 139000,
+          "quantity": 2
+        },
+        {
+          "productId": 162,
+          "productName": "Bánh quy bơ hộp thiếc 400g",
+          "image": "/img/products/162.svg",
+          "unitPrice": 149000,
+          "quantity": 2
+        }
+      ],
+      "stockReserved": true,
+      "total": 1075000
+    },
+    {
+      "id": "SP-261103-D270",
+      "customerId": "cus-1006",
+      "customerName": "Võ Ngọc Lan",
+      "email": "ngoclan@example.com",
+      "phone": "0956789012",
+      "shippingAddress": "7 Võ Văn Ngân, Phường Linh Chiểu, TP. Thủ Đức, TP. Hồ Chí Minh",
+      "note": "",
+      "paymentMethod": "bank",
+      "createdAt": "2026-11-03T00:32:00.000Z",
+      "updatedAt": "2026-11-04T05:53:00.000Z",
+      "status": "completed",
+      "items": [
+        {
+          "productId": 146,
+          "productName": "Máy sấy tóc ion âm 1800W",
+          "image": "/img/products/146.svg",
+          "unitPrice": 549000,
+          "quantity": 1
+        },
+        {
+          "productId": 148,
+          "productName": "Xịt thơm body mist 100ml",
+          "image": "/img/products/148.svg",
+          "unitPrice": 219000,
+          "quantity": 2
+        },
+        {
+          "productId": 107,
+          "productName": "Củ sạc nhanh GaN 65W 3 cổng",
+          "image": "/img/products/107.svg",
+          "unitPrice": 459000,
+          "quantity": 1
+        }
+      ],
+      "stockReserved": true,
+      "total": 1446000
+    },
+    {
+      "id": "SP-261103-EC74",
+      "customerId": "cus-1011",
+      "customerName": "Đỗ Khánh Linh",
+      "email": "khanhlinh@example.com",
+      "phone": "0902345671",
+      "shippingAddress": "101 Lạch Tray, Phường Đằng Giang, Quận Ngô Quyền, Hải Phòng",
+      "note": "",
+      "paymentMethod": "cod",
+      "createdAt": "2026-11-03T02:07:00.000Z",
+      "updatedAt": "2026-11-03T22:46:00.000Z",
+      "status": "completed",
+      "items": [
+        {
+          "productId": 123,
+          "productName": "Máy xay sinh tố mini 400ml",
+          "image": "/img/products/123.svg",
+          "unitPrice": 590000,
+          "quantity": 2
+        },
+        {
+          "productId": 142,
+          "productName": "Kem chống nắng SPF50+ PA++++ 50ml",
+          "image": "/img/products/142.svg",
+          "unitPrice": 249000,
+          "quantity": 2
+        },
+        {
+          "productId": 159,
+          "productName": "Mật ong rừng nguyên chất 500ml",
+          "image": "/img/products/159.svg",
+          "unitPrice": 259000,
+          "quantity": 3
+        }
+      ],
+      "stockReserved": true,
+      "total": 2455000
+    },
+    {
+      "id": "SP-261103-220C",
+      "customerId": "cus-1001",
+      "customerName": "Khách Demo",
+      "email": "khach@shoppro.vn",
+      "phone": "0901234567",
+      "shippingAddress": "12 Nguyễn Huệ, Phường Bến Nghé, Quận 1, TP. Hồ Chí Minh",
+      "note": "",
+      "paymentMethod": "cod",
+      "createdAt": "2026-11-03T03:22:00.000Z",
+      "updatedAt": "2026-11-04T12:01:00.000Z",
+      "status": "completed",
+      "items": [
+        {
+          "productId": 103,
+          "productName": "Đồng hồ thông minh FitBand S5",
+          "image": "/img/products/103.svg",
+          "unitPrice": 1290000,
+          "quantity": 1
+        },
+        {
+          "productId": 149,
+          "productName": "Bình sữa PP cổ rộng 240ml",
+          "image": "/img/products/149.svg",
+          "unitPrice": 159000,
+          "quantity": 1
+        }
+      ],
+      "stockReserved": true,
+      "total": 1449000
+    },
+    {
+      "id": "SP-261103-EE5C",
+      "customerId": "cus-1002",
+      "customerName": "Nguyễn Minh Anh",
+      "email": "minhanh@example.com",
+      "phone": "0912345678",
+      "shippingAddress": "45 Lê Lợi, Phường Bến Thành, Quận 1, TP. Hồ Chí Minh",
+      "note": "",
+      "paymentMethod": "cod",
+      "createdAt": "2026-11-03T04:40:00.000Z",
+      "updatedAt": "2026-11-04T14:24:00.000Z",
+      "status": "completed",
+      "items": [
+        {
+          "productId": 109,
+          "productName": "Áo thun cotton nam Basic Fit",
+          "image": "/img/products/109.svg",
+          "unitPrice": 199000,
+          "quantity": 1
+        }
+      ],
+      "stockReserved": true,
+      "total": 199000
+    },
+    {
+      "id": "SP-261103-F849",
+      "customerId": "cus-1009",
+      "customerName": "Hoàng Mai Phương",
+      "email": "maiphuong@example.com",
+      "phone": "0989012345",
+      "shippingAddress": "64 Trần Phú, Phường Lộc Thọ, TP. Nha Trang, Khánh Hòa",
+      "note": "Xuất hóa đơn công ty theo email.",
+      "paymentMethod": "cod",
+      "createdAt": "2026-11-03T08:41:00.000Z",
+      "updatedAt": "2026-11-04T16:20:00.000Z",
+      "status": "completed",
+      "items": [
+        {
+          "productId": 159,
+          "productName": "Mật ong rừng nguyên chất 500ml",
+          "image": "/img/products/159.svg",
+          "unitPrice": 259000,
+          "quantity": 1
+        },
+        {
+          "productId": 157,
+          "productName": "Cà phê rang xay nguyên chất 500g",
+          "image": "/img/products/157.svg",
+          "unitPrice": 189000,
+          "quantity": 1
+        }
+      ],
+      "stockReserved": true,
+      "total": 448000
+    },
+    {
+      "id": "SP-261104-FF92",
+      "customerId": "cus-1001",
+      "customerName": "Khách Demo",
+      "email": "khach@shoppro.vn",
+      "phone": "0901234567",
+      "shippingAddress": "12 Nguyễn Huệ, Phường Bến Nghé, Quận 1, TP. Hồ Chí Minh",
+      "note": "",
+      "paymentMethod": "bank",
+      "createdAt": "2026-11-04T00:19:00.000Z",
+      "updatedAt": "2026-11-05T05:56:00.000Z",
+      "status": "completed",
+      "items": [
+        {
+          "productId": 101,
+          "productName": "Tai nghe Bluetooth chống ồn SoundWave NC700",
+          "image": "/img/products/101.svg",
+          "unitPrice": 1890000,
+          "quantity": 1
+        },
+        {
+          "productId": 135,
+          "productName": "Dây nhảy tốc độ có bộ đếm",
+          "image": "/img/products/135.svg",
+          "unitPrice": 99000,
+          "quantity": 1
+        },
+        {
+          "productId": 138,
+          "productName": "Găng tay tập gym chống trượt",
+          "image": "/img/products/138.svg",
+          "unitPrice": 139000,
+          "quantity": 2
+        },
+        {
+          "productId": 121,
+          "productName": "Bộ ga gối cotton 1m6 (4 món)",
+          "image": "/img/products/121.svg",
+          "unitPrice": 749000,
+          "quantity": 1
+        }
+      ],
+      "stockReserved": true,
+      "total": 3016000
+    },
+    {
+      "id": "SP-261104-6573",
+      "customerId": "cus-1007",
+      "customerName": "Đặng Hoàng Nam",
+      "email": "hoangnam@example.com",
+      "phone": "0967890123",
+      "shippingAddress": "32 Quang Trung, Phường Quang Trung, Quận Hà Đông, Hà Nội",
+      "note": "Đóng gói kỹ giúp mình, cảm ơn shop!",
+      "paymentMethod": "cod",
+      "createdAt": "2026-11-04T00:21:00.000Z",
+      "updatedAt": "2026-11-05T01:45:00.000Z",
+      "status": "completed",
+      "items": [
+        {
+          "productId": 150,
+          "productName": "Tã quần size L (54 miếng)",
+          "image": "/img/products/150.svg",
+          "unitPrice": 329000,
+          "quantity": 1
+        },
+        {
+          "productId": 137,
+          "productName": "Bình nước thể thao 1 lít",
+          "image": "/img/products/137.svg",
+          "unitPrice": 149000,
+          "quantity": 1
+        },
+        {
+          "productId": 116,
+          "productName": "Mũ lưỡi trai thêu chữ unisex",
+          "image": "/img/products/116.svg",
+          "unitPrice": 119000,
+          "quantity": 1
+        }
+      ],
+      "stockReserved": true,
+      "total": 597000
+    },
+    {
+      "id": "SP-261104-C467",
+      "customerId": "cus-1008",
+      "customerName": "Bùi Thanh Tùng",
+      "email": "thanhtung@example.com",
+      "phone": "0978901234",
+      "shippingAddress": "19 Phạm Văn Thuận, Phường Tân Tiến, TP. Biên Hòa, Đồng Nai",
+      "note": "",
+      "paymentMethod": "cod",
+      "createdAt": "2026-11-04T05:59:00.000Z",
+      "updatedAt": "2026-11-05T12:06:00.000Z",
+      "status": "completed",
+      "items": [
+        {
+          "productId": 113,
+          "productName": "Giày chạy bộ nam AirRun 2",
+          "image": "/img/products/113.svg",
+          "unitPrice": 1150000,
+          "quantity": 2
+        },
+        {
+          "productId": 118,
+          "productName": "Ly sứ cách nhiệt 350ml có nắp",
+          "image": "/img/products/118.svg",
+          "unitPrice": 129000,
+          "quantity": 2
+        }
+      ],
+      "stockReserved": true,
+      "total": 2558000
+    },
+    {
+      "id": "SP-261104-0727",
+      "customerId": "cus-1004",
+      "customerName": "Lê Thị Thu Hà",
+      "email": "thuha@example.com",
+      "phone": "0934567890",
+      "shippingAddress": "21 Bạch Đằng, Phường Hải Châu 1, Quận Hải Châu, Đà Nẵng",
+      "note": "Xuất hóa đơn công ty theo email.",
+      "paymentMethod": "bank",
+      "createdAt": "2026-11-04T07:17:00.000Z",
+      "updatedAt": "2026-11-06T16:54:00.000Z",
+      "status": "completed",
+      "items": [
+        {
+          "productId": 134,
+          "productName": "Tạ tay bọc cao su 5kg (cặp)",
+          "image": "/img/products/134.svg",
+          "unitPrice": 399000,
+          "quantity": 3
+        },
+        {
+          "productId": 157,
+          "productName": "Cà phê rang xay nguyên chất 500g",
+          "image": "/img/products/157.svg",
+          "unitPrice": 189000,
+          "quantity": 3
+        },
+        {
+          "productId": 160,
+          "productName": "Hạt điều rang muối 500g",
+          "image": "/img/products/160.svg",
+          "unitPrice": 179000,
+          "quantity": 3
+        },
+        {
+          "productId": 138,
+          "productName": "Găng tay tập gym chống trượt",
+          "image": "/img/products/138.svg",
+          "unitPrice": 139000,
+          "quantity": 1
+        }
+      ],
+      "stockReserved": true,
+      "total": 2440000
+    },
+    {
+      "id": "SP-261104-1401",
+      "customerId": "cus-1011",
+      "customerName": "Đỗ Khánh Linh",
+      "email": "khanhlinh@example.com",
+      "phone": "0902345671",
+      "shippingAddress": "101 Lạch Tray, Phường Đằng Giang, Quận Ngô Quyền, Hải Phòng",
+      "note": "Gọi trước khi giao 15 phút.",
+      "paymentMethod": "bank",
+      "createdAt": "2026-11-04T08:29:00.000Z",
+      "updatedAt": "2026-11-05T23:32:00.000Z",
+      "status": "completed",
+      "items": [
+        {
+          "productId": 118,
+          "productName": "Ly sứ cách nhiệt 350ml có nắp",
+          "image": "/img/products/118.svg",
+          "unitPrice": 129000,
+          "quantity": 3
+        },
+        {
+          "productId": 111,
+          "productName": "Quần jean nam slim-fit co giãn",
+          "image": "/img/products/111.svg",
+          "unitPrice": 499000,
+          "quantity": 1
+        }
+      ],
+      "stockReserved": true,
+      "total": 886000
+    },
+    {
+      "id": "SP-261105-30CD",
+      "customerId": "cus-1001",
+      "customerName": "Khách Demo",
+      "email": "khach@shoppro.vn",
+      "phone": "0901234567",
+      "shippingAddress": "12 Nguyễn Huệ, Phường Bến Nghé, Quận 1, TP. Hồ Chí Minh",
+      "note": "Để hàng ở bảo vệ nếu mình vắng.",
+      "paymentMethod": "cod",
+      "createdAt": "2026-11-05T04:43:00.000Z",
+      "updatedAt": "2026-11-06T14:53:00.000Z",
+      "status": "completed",
+      "items": [
+        {
+          "productId": 105,
+          "productName": "Chuột không dây ErgoGlide M3",
+          "image": "/img/products/105.svg",
+          "unitPrice": 349000,
+          "quantity": 2
+        },
+        {
+          "productId": 122,
+          "productName": "Hộp cơm giữ nhiệt 2 ngăn",
+          "image": "/img/products/122.svg",
+          "unitPrice": 249000,
+          "quantity": 1
+        }
+      ],
+      "stockReserved": true,
+      "total": 947000
+    },
+    {
+      "id": "SP-261105-421D",
+      "customerId": "cus-1011",
+      "customerName": "Đỗ Khánh Linh",
+      "email": "khanhlinh@example.com",
+      "phone": "0902345671",
+      "shippingAddress": "101 Lạch Tray, Phường Đằng Giang, Quận Ngô Quyền, Hải Phòng",
+      "note": "",
+      "paymentMethod": "cod",
+      "createdAt": "2026-11-05T04:46:00.000Z",
+      "updatedAt": "2026-11-06T17:43:00.000Z",
+      "status": "completed",
+      "items": [
+        {
+          "productId": 144,
+          "productName": "Dầu gội thảo dược 480ml",
+          "image": "/img/products/144.svg",
+          "unitPrice": 189000,
+          "quantity": 1
+        },
+        {
+          "productId": 150,
+          "productName": "Tã quần size L (54 miếng)",
+          "image": "/img/products/150.svg",
+          "unitPrice": 329000,
+          "quantity": 1
+        },
+        {
+          "productId": 154,
+          "productName": "Gấu bông Teddy 50cm",
+          "image": "/img/products/154.svg",
+          "unitPrice": 189000,
+          "quantity": 2
+        },
+        {
+          "productId": 129,
+          "productName": "Bộ bút highlight 6 màu pastel",
+          "image": "/img/products/129.svg",
+          "unitPrice": 59000,
+          "quantity": 1
+        }
+      ],
+      "stockReserved": true,
+      "total": 955000
+    },
+    {
+      "id": "SP-261105-E0D2",
+      "customerId": "cus-1004",
+      "customerName": "Lê Thị Thu Hà",
+      "email": "thuha@example.com",
+      "phone": "0934567890",
+      "shippingAddress": "21 Bạch Đằng, Phường Hải Châu 1, Quận Hải Châu, Đà Nẵng",
+      "note": "",
+      "paymentMethod": "cod",
+      "createdAt": "2026-11-05T04:54:00.000Z",
+      "updatedAt": "2026-11-07T03:58:00.000Z",
+      "status": "completed",
+      "items": [
+        {
+          "productId": 143,
+          "productName": "Serum Vitamin C 30ml",
+          "image": "/img/products/143.svg",
+          "unitPrice": 329000,
+          "quantity": 1
+        },
+        {
+          "productId": 153,
+          "productName": "Bộ xếp hình sáng tạo 120 chi tiết",
+          "image": "/img/products/153.svg",
+          "unitPrice": 259000,
+          "quantity": 2
+        },
+        {
+          "productId": 106,
+          "productName": "Sạc dự phòng PowerCell 20.000mAh 65W",
+          "image": "/img/products/106.svg",
+          "unitPrice": 899000,
+          "quantity": 1
+        },
+        {
+          "productId": 122,
+          "productName": "Hộp cơm giữ nhiệt 2 ngăn",
+          "image": "/img/products/122.svg",
+          "unitPrice": 249000,
+          "quantity": 2
+        }
+      ],
+      "stockReserved": true,
+      "total": 2244000
+    },
+    {
+      "id": "SP-261105-70FE",
+      "customerId": "cus-1014",
+      "customerName": "Phan Tuấn Kiệt",
+      "email": "tuankiet@example.com",
+      "phone": "0935678904",
+      "shippingAddress": "15 Nguyễn Huệ, Phường Lê Lợi, TP. Quy Nhơn, Bình Định",
+      "note": "",
+      "paymentMethod": "cod",
+      "createdAt": "2026-11-05T05:08:00.000Z",
+      "updatedAt": "2026-11-07T01:57:00.000Z",
+      "status": "completed",
+      "items": [
+        {
+          "productId": 160,
+          "productName": "Hạt điều rang muối 500g",
+          "image": "/img/products/160.svg",
+          "unitPrice": 179000,
+          "quantity": 1
+        }
+      ],
+      "stockReserved": true,
+      "total": 179000
+    },
+    {
+      "id": "SP-261106-3F10",
+      "customerId": "cus-1006",
+      "customerName": "Võ Ngọc Lan",
+      "email": "ngoclan@example.com",
+      "phone": "0956789012",
+      "shippingAddress": "7 Võ Văn Ngân, Phường Linh Chiểu, TP. Thủ Đức, TP. Hồ Chí Minh",
+      "note": "",
+      "paymentMethod": "cod",
+      "createdAt": "2026-11-06T00:34:00.000Z",
+      "updatedAt": "2026-11-07T12:15:00.000Z",
+      "status": "completed",
+      "items": [
+        {
+          "productId": 144,
+          "productName": "Dầu gội thảo dược 480ml",
+          "image": "/img/products/144.svg",
+          "unitPrice": 189000,
+          "quantity": 3
+        }
+      ],
+      "stockReserved": true,
+      "total": 567000
+    },
+    {
+      "id": "SP-261106-40D1",
+      "customerId": "cus-1005",
+      "customerName": "Phạm Đức Anh",
+      "email": "ducanh@example.com",
+      "phone": "0945678901",
+      "shippingAddress": "150 Đường 30/4, Phường Xuân Khánh, Quận Ninh Kiều, Cần Thơ",
+      "note": "",
+      "paymentMethod": "bank",
+      "createdAt": "2026-11-06T08:55:00.000Z",
+      "updatedAt": "2026-11-08T04:33:00.000Z",
+      "status": "completed",
+      "items": [
+        {
+          "productId": 117,
+          "productName": "Bình giữ nhiệt inox 600ml",
+          "image": "/img/products/117.svg",
+          "unitPrice": 359000,
+          "quantity": 3
+        },
+        {
+          "productId": 164,
+          "productName": "Granola ngũ cốc hạt 450g",
+          "image": "/img/products/164.svg",
+          "unitPrice": 139000,
+          "quantity": 1
+        }
+      ],
+      "stockReserved": true,
+      "total": 1216000
+    },
+    {
+      "id": "SP-261107-33F5",
+      "customerId": "cus-1003",
+      "customerName": "Trần Quốc Bảo",
+      "email": "quocbao@example.com",
+      "phone": "0923456789",
+      "shippingAddress": "88 Trần Thái Tông, Phường Dịch Vọng, Cầu Giấy, Hà Nội",
+      "note": "Giao giờ hành chính giúp mình nhé.",
+      "paymentMethod": "bank",
+      "createdAt": "2026-11-07T06:46:00.000Z",
+      "updatedAt": "2026-11-08T04:19:00.000Z",
+      "status": "shipping",
+      "items": [
+        {
+          "productId": 160,
+          "productName": "Hạt điều rang muối 500g",
+          "image": "/img/products/160.svg",
+          "unitPrice": 179000,
+          "quantity": 1
+        }
+      ],
+      "stockReserved": true,
+      "total": 179000
+    },
+    {
+      "id": "SP-261107-F5B7",
+      "customerId": "cus-1004",
+      "customerName": "Lê Thị Thu Hà",
+      "email": "thuha@example.com",
+      "phone": "0934567890",
+      "shippingAddress": "21 Bạch Đằng, Phường Hải Châu 1, Quận Hải Châu, Đà Nẵng",
+      "note": "",
+      "paymentMethod": "cod",
+      "createdAt": "2026-11-07T08:05:00.000Z",
+      "updatedAt": "2026-11-08T10:26:00.000Z",
+      "status": "completed",
+      "items": [
+        {
+          "productId": 111,
+          "productName": "Quần jean nam slim-fit co giãn",
+          "image": "/img/products/111.svg",
+          "unitPrice": 499000,
+          "quantity": 1
+        }
+      ],
+      "stockReserved": true,
+      "total": 499000
+    },
+    {
+      "id": "SP-261107-78E2",
+      "customerId": "cus-1004",
+      "customerName": "Lê Thị Thu Hà",
+      "email": "thuha@example.com",
+      "phone": "0934567890",
+      "shippingAddress": "21 Bạch Đằng, Phường Hải Châu 1, Quận Hải Châu, Đà Nẵng",
+      "note": "",
+      "paymentMethod": "bank",
+      "createdAt": "2026-11-07T23:27:00.000Z",
+      "updatedAt": "2026-11-10T00:44:00.000Z",
+      "status": "completed",
+      "items": [
+        {
+          "productId": 126,
+          "productName": "Bút gel 0.5mm hộp 12 cây",
+          "image": "/img/products/126.svg",
+          "unitPrice": 69000,
+          "quantity": 1
+        }
+      ],
+      "stockReserved": true,
+      "total": 69000
+    },
+    {
+      "id": "SP-261108-5438",
+      "customerId": "cus-1002",
+      "customerName": "Nguyễn Minh Anh",
+      "email": "minhanh@example.com",
+      "phone": "0912345678",
+      "shippingAddress": "45 Lê Lợi, Phường Bến Thành, Quận 1, TP. Hồ Chí Minh",
+      "note": "Để hàng ở bảo vệ nếu mình vắng.",
+      "paymentMethod": "cod",
+      "createdAt": "2026-11-08T03:27:00.000Z",
+      "updatedAt": "2026-11-08T13:24:00.000Z",
+      "status": "cancelled",
+      "items": [
+        {
+          "productId": 114,
+          "productName": "Balo laptop chống nước 15.6 inch",
+          "image": "/img/products/114.svg",
+          "unitPrice": 559000,
+          "quantity": 1
+        }
+      ],
+      "stockReserved": false,
+      "total": 559000
+    },
+    {
+      "id": "SP-261108-C4AE",
+      "customerId": "cus-1003",
+      "customerName": "Trần Quốc Bảo",
+      "email": "quocbao@example.com",
+      "phone": "0923456789",
+      "shippingAddress": "88 Trần Thái Tông, Phường Dịch Vọng, Cầu Giấy, Hà Nội",
+      "note": "Xuất hóa đơn công ty theo email.",
+      "paymentMethod": "cod",
+      "createdAt": "2026-11-08T04:35:00.000Z",
+      "updatedAt": "2026-11-08T15:27:00.000Z",
+      "status": "confirmed",
+      "items": [
+        {
+          "productId": 162,
+          "productName": "Bánh quy bơ hộp thiếc 400g",
+          "image": "/img/products/162.svg",
+          "unitPrice": 149000,
+          "quantity": 1
+        },
+        {
+          "productId": 115,
+          "productName": "Túi tote vải canvas dày",
+          "image": "/img/products/115.svg",
+          "unitPrice": 159000,
+          "quantity": 3
+        },
+        {
+          "productId": 145,
+          "productName": "Son dưỡng môi có màu",
+          "image": "/img/products/145.svg",
+          "unitPrice": 99000,
+          "quantity": 1
+        },
+        {
+          "productId": 113,
+          "productName": "Giày chạy bộ nam AirRun 2",
+          "image": "/img/products/113.svg",
+          "unitPrice": 1150000,
+          "quantity": 1
+        }
+      ],
+      "stockReserved": true,
+      "total": 1875000
+    },
+    {
+      "id": "SP-261108-6735",
+      "customerId": "cus-1011",
+      "customerName": "Đỗ Khánh Linh",
+      "email": "khanhlinh@example.com",
+      "phone": "0902345671",
+      "shippingAddress": "101 Lạch Tray, Phường Đằng Giang, Quận Ngô Quyền, Hải Phòng",
+      "note": "Gọi trước khi giao 15 phút.",
+      "paymentMethod": "cod",
+      "createdAt": "2026-11-08T07:23:00.000Z",
+      "updatedAt": "2026-11-08T13:18:00.000Z",
+      "status": "confirmed",
+      "items": [
+        {
+          "productId": 133,
+          "productName": "Thảm tập yoga TPE 6mm",
+          "image": "/img/products/133.svg",
+          "unitPrice": 249000,
+          "quantity": 1
+        },
+        {
+          "productId": 144,
+          "productName": "Dầu gội thảo dược 480ml",
+          "image": "/img/products/144.svg",
+          "unitPrice": 189000,
+          "quantity": 1
+        }
+      ],
+      "stockReserved": true,
+      "total": 438000
+    },
+    {
+      "id": "SP-261109-B341",
+      "customerId": "cus-1007",
+      "customerName": "Đặng Hoàng Nam",
+      "email": "hoangnam@example.com",
+      "phone": "0967890123",
+      "shippingAddress": "32 Quang Trung, Phường Quang Trung, Quận Hà Đông, Hà Nội",
+      "note": "Xuất hóa đơn công ty theo email.",
+      "paymentMethod": "cod",
+      "createdAt": "2026-11-09T00:40:00.000Z",
+      "updatedAt": "2026-11-09T20:19:00.000Z",
+      "status": "shipping",
+      "items": [
+        {
+          "productId": 156,
+          "productName": "Ghế ăn dặm tăng giảm chiều cao",
+          "image": "/img/products/156.svg",
+          "unitPrice": 890000,
+          "quantity": 2
+        },
+        {
+          "productId": 110,
+          "productName": "Áo sơ mi nữ linen tay lỡ",
+          "image": "/img/products/110.svg",
+          "unitPrice": 349000,
+          "quantity": 1
+        }
+      ],
+      "stockReserved": true,
+      "total": 2129000
+    },
+    {
+      "id": "SP-261109-35A6",
+      "customerId": "cus-1001",
+      "customerName": "Khách Demo",
+      "email": "khach@shoppro.vn",
+      "phone": "0901234567",
+      "shippingAddress": "12 Nguyễn Huệ, Phường Bến Nghé, Quận 1, TP. Hồ Chí Minh",
+      "note": "Gọi trước khi giao 15 phút.",
+      "paymentMethod": "bank",
+      "createdAt": "2026-11-09T01:01:00.000Z",
+      "updatedAt": "2026-11-10T05:31:00.000Z",
+      "status": "shipping",
+      "items": [
+        {
+          "productId": 140,
+          "productName": "Vợt cầu lông carbon (bộ 2 cây)",
+          "image": "/img/products/140.svg",
+          "unitPrice": 590000,
+          "quantity": 1
+        },
+        {
+          "productId": 162,
+          "productName": "Bánh quy bơ hộp thiếc 400g",
+          "image": "/img/products/162.svg",
+          "unitPrice": 149000,
+          "quantity": 2
+        }
+      ],
+      "stockReserved": true,
+      "total": 888000
+    },
+    {
+      "id": "SP-261109-CA8F",
+      "customerId": "cus-1008",
+      "customerName": "Bùi Thanh Tùng",
+      "email": "thanhtung@example.com",
+      "phone": "0978901234",
+      "shippingAddress": "19 Phạm Văn Thuận, Phường Tân Tiến, TP. Biên Hòa, Đồng Nai",
+      "note": "Đóng gói kỹ giúp mình, cảm ơn shop!",
+      "paymentMethod": "cod",
+      "createdAt": "2026-11-09T01:50:00.000Z",
+      "updatedAt": "2026-11-09T23:48:00.000Z",
+      "status": "shipping",
+      "items": [
+        {
+          "productId": 154,
+          "productName": "Gấu bông Teddy 50cm",
+          "image": "/img/products/154.svg",
+          "unitPrice": 189000,
+          "quantity": 1
+        },
+        {
+          "productId": 156,
+          "productName": "Ghế ăn dặm tăng giảm chiều cao",
+          "image": "/img/products/156.svg",
+          "unitPrice": 890000,
+          "quantity": 1
+        }
+      ],
+      "stockReserved": true,
+      "total": 1079000
+    },
+    {
+      "id": "SP-261109-53B7",
+      "customerId": "cus-1001",
+      "customerName": "Khách Demo",
+      "email": "khach@shoppro.vn",
+      "phone": "0901234567",
+      "shippingAddress": "12 Nguyễn Huệ, Phường Bến Nghé, Quận 1, TP. Hồ Chí Minh",
+      "note": "Để hàng ở bảo vệ nếu mình vắng.",
+      "paymentMethod": "cod",
+      "createdAt": "2026-11-09T03:32:00.000Z",
+      "updatedAt": "2026-11-09T20:13:00.000Z",
+      "status": "cancelled",
+      "items": [
+        {
+          "productId": 154,
+          "productName": "Gấu bông Teddy 50cm",
+          "image": "/img/products/154.svg",
+          "unitPrice": 189000,
+          "quantity": 1
+        },
+        {
+          "productId": 118,
+          "productName": "Ly sứ cách nhiệt 350ml có nắp",
+          "image": "/img/products/118.svg",
+          "unitPrice": 129000,
+          "quantity": 1
+        },
+        {
+          "productId": 115,
+          "productName": "Túi tote vải canvas dày",
+          "image": "/img/products/115.svg",
+          "unitPrice": 159000,
+          "quantity": 3
+        },
+        {
+          "productId": 122,
+          "productName": "Hộp cơm giữ nhiệt 2 ngăn",
+          "image": "/img/products/122.svg",
+          "unitPrice": 249000,
+          "quantity": 2
+        }
+      ],
+      "stockReserved": false,
+      "total": 1293000
+    },
+    {
+      "id": "SP-261109-6A85",
+      "customerId": "cus-1006",
+      "customerName": "Võ Ngọc Lan",
+      "email": "ngoclan@example.com",
+      "phone": "0956789012",
+      "shippingAddress": "7 Võ Văn Ngân, Phường Linh Chiểu, TP. Thủ Đức, TP. Hồ Chí Minh",
+      "note": "",
+      "paymentMethod": "cod",
+      "createdAt": "2026-11-09T05:05:00.000Z",
+      "updatedAt": "2026-11-11T01:07:00.000Z",
+      "status": "completed",
+      "items": [
+        {
+          "productId": 126,
+          "productName": "Bút gel 0.5mm hộp 12 cây",
+          "image": "/img/products/126.svg",
+          "unitPrice": 69000,
+          "quantity": 1
+        },
+        {
+          "productId": 157,
+          "productName": "Cà phê rang xay nguyên chất 500g",
+          "image": "/img/products/157.svg",
+          "unitPrice": 189000,
+          "quantity": 1
+        },
+        {
+          "productId": 137,
+          "productName": "Bình nước thể thao 1 lít",
+          "image": "/img/products/137.svg",
+          "unitPrice": 149000,
+          "quantity": 2
+        },
+        {
+          "productId": 155,
+          "productName": "Sữa tắm gội trẻ em 500ml",
+          "image": "/img/products/155.svg",
+          "unitPrice": 149000,
+          "quantity": 3
+        }
+      ],
+      "stockReserved": true,
+      "total": 1003000
+    },
+    {
+      "id": "SP-261110-2146",
+      "customerId": "cus-1002",
+      "customerName": "Nguyễn Minh Anh",
+      "email": "minhanh@example.com",
+      "phone": "0912345678",
+      "shippingAddress": "45 Lê Lợi, Phường Bến Thành, Quận 1, TP. Hồ Chí Minh",
+      "note": "",
+      "paymentMethod": "cod",
+      "createdAt": "2026-11-10T02:32:00.000Z",
+      "updatedAt": "2026-11-10T09:50:00.000Z",
+      "status": "confirmed",
+      "items": [
+        {
+          "productId": 103,
+          "productName": "Đồng hồ thông minh FitBand S5",
+          "image": "/img/products/103.svg",
+          "unitPrice": 1290000,
+          "quantity": 1
+        },
+        {
+          "productId": 116,
+          "productName": "Mũ lưỡi trai thêu chữ unisex",
+          "image": "/img/products/116.svg",
+          "unitPrice": 119000,
+          "quantity": 2
+        },
+        {
+          "productId": 122,
+          "productName": "Hộp cơm giữ nhiệt 2 ngăn",
+          "image": "/img/products/122.svg",
+          "unitPrice": 249000,
+          "quantity": 3
+        },
+        {
+          "productId": 114,
+          "productName": "Balo laptop chống nước 15.6 inch",
+          "image": "/img/products/114.svg",
+          "unitPrice": 559000,
+          "quantity": 1
+        }
+      ],
+      "stockReserved": true,
+      "total": 2834000
+    },
+    {
+      "id": "SP-261110-F37C",
+      "customerId": "cus-1003",
+      "customerName": "Trần Quốc Bảo",
+      "email": "quocbao@example.com",
+      "phone": "0923456789",
+      "shippingAddress": "88 Trần Thái Tông, Phường Dịch Vọng, Cầu Giấy, Hà Nội",
+      "note": "Đóng gói kỹ giúp mình, cảm ơn shop!",
+      "paymentMethod": "bank",
+      "createdAt": "2026-11-10T04:53:00.000Z",
+      "updatedAt": "2026-11-10T07:03:00.000Z",
+      "status": "confirmed",
+      "items": [
+        {
+          "productId": 146,
+          "productName": "Máy sấy tóc ion âm 1800W",
+          "image": "/img/products/146.svg",
+          "unitPrice": 549000,
+          "quantity": 1
+        },
+        {
+          "productId": 107,
+          "productName": "Củ sạc nhanh GaN 65W 3 cổng",
+          "image": "/img/products/107.svg",
+          "unitPrice": 459000,
+          "quantity": 1
+        }
+      ],
+      "stockReserved": true,
+      "total": 1008000
+    },
+    {
+      "id": "SP-261110-AC6C",
+      "customerId": "cus-1002",
+      "customerName": "Nguyễn Minh Anh",
+      "email": "minhanh@example.com",
+      "phone": "0912345678",
+      "shippingAddress": "45 Lê Lợi, Phường Bến Thành, Quận 1, TP. Hồ Chí Minh",
+      "note": "Giao giờ hành chính giúp mình nhé.",
+      "paymentMethod": "cod",
+      "createdAt": "2026-11-10T05:31:00.000Z",
+      "updatedAt": "2026-11-11T11:20:00.000Z",
+      "status": "completed",
+      "items": [
+        {
+          "productId": 144,
+          "productName": "Dầu gội thảo dược 480ml",
+          "image": "/img/products/144.svg",
+          "unitPrice": 189000,
+          "quantity": 1
+        },
+        {
+          "productId": 126,
+          "productName": "Bút gel 0.5mm hộp 12 cây",
+          "image": "/img/products/126.svg",
+          "unitPrice": 69000,
+          "quantity": 3
+        },
+        {
+          "productId": 147,
+          "productName": "Bộ chăm sóc da mini 4 món",
+          "image": "/img/products/147.svg",
+          "unitPrice": 499000,
+          "quantity": 1
+        }
+      ],
+      "stockReserved": true,
+      "total": 895000
+    },
+    {
+      "id": "SP-261110-AC7A",
+      "customerId": "cus-1004",
+      "customerName": "Lê Thị Thu Hà",
+      "email": "thuha@example.com",
+      "phone": "0934567890",
+      "shippingAddress": "21 Bạch Đằng, Phường Hải Châu 1, Quận Hải Châu, Đà Nẵng",
+      "note": "Gọi trước khi giao 15 phút.",
+      "paymentMethod": "cod",
+      "createdAt": "2026-11-10T05:50:00.000Z",
+      "updatedAt": "2026-11-11T18:22:00.000Z",
+      "status": "shipping",
+      "items": [
+        {
+          "productId": 124,
+          "productName": "Thảm lau chân thấm hút chống trượt",
+          "image": "/img/products/124.svg",
+          "unitPrice": 89000,
+          "quantity": 1
+        },
+        {
+          "productId": 156,
+          "productName": "Ghế ăn dặm tăng giảm chiều cao",
+          "image": "/img/products/156.svg",
+          "unitPrice": 890000,
+          "quantity": 1
+        }
+      ],
+      "stockReserved": true,
+      "total": 979000
+    },
+    {
+      "id": "SP-261112-BEF7",
+      "customerId": "cus-1001",
+      "customerName": "Khách Demo",
+      "email": "khach@shoppro.vn",
+      "phone": "0901234567",
+      "shippingAddress": "12 Nguyễn Huệ, Phường Bến Nghé, Quận 1, TP. Hồ Chí Minh",
+      "note": "Giao giờ hành chính giúp mình nhé.",
+      "paymentMethod": "cod",
+      "createdAt": "2026-11-12T03:54:00.000Z",
+      "updatedAt": "2026-11-12T03:54:00.000Z",
+      "status": "pending",
+      "items": [
+        {
+          "productId": 142,
+          "productName": "Kem chống nắng SPF50+ PA++++ 50ml",
+          "image": "/img/products/142.svg",
+          "unitPrice": 249000,
+          "quantity": 1
+        },
+        {
+          "productId": 119,
+          "productName": "Đèn bàn LED chống cận 3 chế độ",
+          "image": "/img/products/119.svg",
+          "unitPrice": 429000,
+          "quantity": 1
+        }
+      ],
+      "stockReserved": true,
+      "total": 678000
+    }
+  ],
+  "carts": {
+    "cus-1001": [
+      {
+        "productId": 136,
+        "quantity": 1
+      },
+      {
+        "productId": 102,
+        "quantity": 2
+      },
+      {
+        "productId": 126,
+        "quantity": 1
+      },
+      {
+        "productId": 109,
+        "quantity": 3
+      }
+    ]
+  },
+  "settings": {
+    "storeName": "ShopPro",
+    "supportEmail": "support@shoppro.vn",
+    "supportPhone": "1900 1234",
+    "lowStockThreshold": 10,
+    "currency": "VND"
+  }
+}

@@ -1,0 +1,10 @@
+.git
+build*/
+Backend/data/runtime/
+Backend/data/tools/
+docs/
+scripts/
+*.zip
+*.md
+!Backend/**/*.md
+**/__pycache__

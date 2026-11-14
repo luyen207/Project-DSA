@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>ShopPro – Chọn giao diện</title>
+  <link rel="icon" href="/img/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="/assets/shared.css">
+  <style>
+    body { min-height: 100vh; display: grid; align-content: center; background: linear-gradient(180deg, #e7f0fc, var(--bg)); }
+    .launch { width: min(1080px, 100% - 2rem); margin: 0 auto; padding: 2.5rem 0 3rem; }
+    .launch header { text-align: center; margin-bottom: 2.2rem; }
+    .launch .logo { display: inline-flex; align-items: center; gap: .8rem; font-family: var(--font-display); font-weight: 800; font-size: 2.2rem; color: var(--ink); letter-spacing: -.02em; }
+    .launch .logo span { width: 56px; height: 56px; border-radius: 16px; background: var(--accent); color: var(--ink); display: grid; place-items: center; }
+    .launch .logo svg { width: 32px; height: 32px; }
+    .launch h1 { font-family: var(--font-serif); margin-top: 1.2rem; font-size: clamp(1.8rem, 3.6vw, 2.6rem); }
+    .launch header p { color: var(--muted); font-size: 1.15rem; margin-top: .6rem; }
+    .choices { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1.4rem; }
+    .choice { display: flex; flex-direction: column; gap: .9rem; padding: 1.8rem; border-radius: 22px; text-decoration: none; border: 2px solid transparent; box-shadow: var(--shadow-1); transition: transform .15s, box-shadow .15s; min-height: 280px; }
+    .choice:hover { transform: translateY(-4px); box-shadow: var(--shadow-2); }
+    .choice .ic { width: 60px; height: 60px; border-radius: 16px; display: grid; place-items: center; }
+    .choice .ic svg { width: 32px; height: 32px; }
+    .choice h2 { font-size: 1.7rem; }
+    .choice p { font-size: 1.08rem; line-height: 1.55; }
+    .choice ul { display: grid; gap: .35rem; margin-top: auto; font-weight: 500; }
+    .choice li::before { content: "✓ "; font-weight: 700; }
+    .choice .go { display: inline-flex; align-items: center; gap: .5rem; font-weight: 700; font-size: 1.1rem; margin-top: .4rem; }
+    .choice .go svg { width: 22px; height: 22px; }
+    .shop { background: #fff; color: var(--text); border-color: var(--line); }
+    .shop .ic { background: var(--accent); color: var(--ink); }
+    .shop h2, .shop .go { color: var(--ink); }
+    .admin { background: #0b3b40; color: #d3e8ea; }
+    .admin .ic { background: #ffb703; color: #0b3b40; }
+    .admin h2, .admin .go { color: #fff; }
+    .tip { margin-top: 1.6rem; padding: 1rem 1.2rem; border-radius: 14px; background: #fff7dd; border: 2px dashed #e0b43a; color: #4d3500; text-align: center; }
+    .tip a { color: #4d3500; font-weight: 700; }
+    @media (max-width: 760px) { .choices { grid-template-columns: 1fr; } }
+  </style>
+</head>
+<body>
+  <main class="launch">
+    <header>
+      <div class="logo"><span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="9" cy="20" r="1.5"/><circle cx="18" cy="20" r="1.5"/><path d="M2 3h3l2.6 12.4a2 2 0 0 0 2 1.6h7.7a2 2 0 0 0 2-1.5L21 8H6"/></svg></span>ShopPro</div>
+      <h1>Hệ thống quản lý giỏ hàng trực tuyến</h1>
+      <p>Một máy chủ C++ phục vụ đồng thời hai giao diện. Mở cả hai để trình diễn song song.</p>
+    </header>
+    <div class="choices">
+      <a class="choice shop" href="/shop/" target="shop">
+        <span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 9 5 4h14l2 5M3 9v11h18V9M3 9h18"/><path d="M9 20v-6h6v6"/></svg></span>
+        <h2>Cửa hàng – Khách hàng</h2>
+        <p>Duyệt sản phẩm, giỏ hàng dùng danh sách liên kết đôi, đặt hàng và theo dõi đơn.</p>
+        <ul><li>Tìm kiếm, lọc, sắp xếp sản phẩm</li><li>Giỏ hàng: sắp xếp, tìm kiếm, xem cấu trúc node</li><li>Trợ lý gợi ý theo ngân sách</li></ul>
+        <span class="go">Mở cửa hàng <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+      </a>
+      <a class="choice admin" href="/admin/" target="admin">
+        <span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 20V10M10 20V4M16 20v-7M22 20H2"/></svg></span>
+        <h2>Quản trị viên</h2>
+        <p>Theo dõi doanh thu, xử lý đơn theo quy trình, quản lý kho, khách hàng và nhật ký.</p>
+        <ul><li>Dashboard và biểu đồ doanh thu</li><li>Sản phẩm, danh mục, đơn hàng, khách hàng</li><li>Báo cáo xuất CSV, nhật ký hoạt động</li></ul>
+        <span class="go">Mở trang quản trị <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+      </a>
+    </div>
+    <p class="tip">Mẹo trình diễn: mở hai cửa sổ cạnh nhau. Khi khách đặt hàng ở cửa hàng, Admin tự hiện thông báo <b>đơn mới</b> trong vài giây.</p>
+  </main>
+</body>
+</html>

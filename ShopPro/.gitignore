@@ -1,0 +1,16 @@
+# Sản phẩm biên dịch
+build*/
+cmake-build-*/
+out/
+*.o
+*.obj
+*.a
+*.exe
+# Dữ liệu chạy thật (được tạo từ seed.json ở lần chạy đầu)
+Backend/data/runtime/
+# Khác
+__pycache__/
+*.zip
+.vscode/
+.idea/
+.DS_Store
